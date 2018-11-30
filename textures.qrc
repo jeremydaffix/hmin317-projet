@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/Textures/cube.png</file>
+        <file>Resources/Textures/cube2.png</file>
+        <file>Resources/Textures/island_heightmap.png</file>
+    </qresource>
+</RCC>

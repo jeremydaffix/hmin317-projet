@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/Shaders/fshader.glsl</file>
+        <file>Resources/Shaders/fshader_color.glsl</file>
+        <file>Resources/Shaders/fshader_Objet.glsl</file>
+        <file>Resources/Shaders/vshader.glsl</file>
+        <file>Resources/Shaders/vshader_autumn.glsl</file>
+        <file>Resources/Shaders/vshader_color.glsl</file>
+        <file>Resources/Shaders/vshader_spring.glsl</file>
+        <file>Resources/Shaders/vshader_summer.glsl</file>
+        <file>Resources/Shaders/vshader_winter.glsl</file>
+    </qresource>
+</RCC>

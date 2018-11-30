@@ -1,6 +1,5 @@
 ~*
+*.autosave
+projet.pro.user
+build-Project-Desktop-Debug
 
-objet3d.cpp.autosave
-mainwidget.cpp.autosave
-cube.pro.user
-objet3d.cpp

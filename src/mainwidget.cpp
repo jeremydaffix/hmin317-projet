@@ -245,7 +245,7 @@ void MainWidget::initializeGL()
 
     // CREATION DU GRAPHE DE SCENE ET DES OBJETS 3D
 
-    Cube *cube = new Cube(QVector3D(-0.5, 5, -5.), QQuaternion::fromEulerAngles(0, 20, 0), QVector3D(1.5, 2.0, 1.0));
+    Cube *cube = new Cube(QVector3D(-0.5, 5, -5.), QQuaternion::fromEulerAngles(0, 20, 0), QVector3D(1.5, 2.0, 1.0), NULL, textureDice2);
     Cube *cube2 = new Cube(QVector3D(0.5, 5, -5));
     Cube *cube3 = new Cube(QVector3D(2, 2, 0), QQuaternion(), QVector3D(1, 1, 1));
    // Objet3d *test = new Objet3d(QVector3D(2, 2, 0), QQuaternion(), QVector3D(1, 1, 1));
@@ -293,9 +293,9 @@ void MainWidget::initShaders()
     GameScene::setCurrentNumInstance(idScene);
 
 
-    loadShader(shaderTexture, ":/Resources/Shaders/vshader.glsl", ":/fshader.glsl");
-    loadShader(shaderTest, ":/Resources/Shaders/vshader.glsl", ":/fshader_Objet.glsl");
-    loadShader(shaderTerrain, ":/vshader_color.glsl", ":/fshader_color.glsl");
+    loadShader(shaderTexture, ":/Resources/Shaders/vshader.glsl", ":/Resources/Shaders/fshader.glsl");
+    loadShader(shaderTest, ":/Resources/Shaders/vshader.glsl", ":/Resources/Shaders/shader_Objet.glsl");
+    loadShader(shaderTerrain, ":/Resources/vshader_color.glsl", ":/Resources/Shaders/fshader_color.glsl");
 
     loadShader(shaderTerrainWinter, ":/Resources/Shaders/vshader_winter.glsl", ":/Resources/Shaders/fshader_color.glsl");
     loadShader(shaderTerrainSpring, ":/Resources/Shaders/vshader_spring.glsl", ":/Resources/Shaders/fshader_color.glsl");
@@ -308,13 +308,35 @@ void MainWidget::initShaders()
 }
 //! [3]
 
+
+QOpenGLTexture *MainWidget::loadTexture(QString path)
+{
+
+    QOpenGLTexture *texture = new QOpenGLTexture(QImage(path).mirrored());
+
+    // Set nearest filtering mode for texture minification
+    texture->setMinificationFilter(QOpenGLTexture::Nearest);
+    // Set bilinear filtering mode for texture magnification
+    texture->setMagnificationFilter(QOpenGLTexture::Linear);
+    // Wrap texture coordinates by repeating
+    // f.ex. texture coordinate (1.1, 1.2) is same as (0.1, 0.2)
+    texture->setWrapMode(QOpenGLTexture::Repeat);
+
+    return texture;
+}
+
 // chargement des textures utilisées
 void MainWidget::initTextures()
 {
+
+    textureDice = loadTexture(":/Resources/Textures/cube.png");
+    textureDice2 = loadTexture(":/Resources/Textures/cube2.png");
+
+/*
     // Load cube.png image
     textureDice = new QOpenGLTexture(QImage(":/Resources/Textures/cube.png").mirrored());
 
-    //heightmap = new QImage(QImage(":/island_heightmap.png"));
+    heightmap = new QImage(QImage(":/island_heightmap.png"));
 
     // Set nearest filtering mode for texture minification
     textureDice->setMinificationFilter(QOpenGLTexture::Nearest);
@@ -322,7 +344,7 @@ void MainWidget::initTextures()
     textureDice->setMagnificationFilter(QOpenGLTexture::Linear);
     // Wrap texture coordinates by repeating
     // f.ex. texture coordinate (1.1, 1.2) is same as (0.1, 0.2)
-    textureDice->setWrapMode(QOpenGLTexture::Repeat);
+    textureDice->setWrapMode(QOpenGLTexture::Repeat);*/
 
     GameScene::getInstance()->setDefaultTexture(textureDice);
 }

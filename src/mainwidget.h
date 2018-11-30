@@ -121,10 +121,13 @@ private:
     // raccourci pour charger un shader
     void loadShader(QOpenGLShaderProgram &shader, QString vpath, QString fpath);
 
+    // raccourci pour charger une texture
+    QOpenGLTexture *loadTexture(QString path);
+
     QBasicTimer timer;
     QOpenGLShaderProgram shaderTexture, shaderTerrain, shaderTerrainWinter, shaderTerrainSpring, shaderTerrainSummer, shaderTerrainAutumn, shaderTest;
 
-    QOpenGLTexture *textureDice;
+    QOpenGLTexture *textureDice, *textureDice2;
 
     //QMatrix4x4 projection;
 
