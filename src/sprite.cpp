@@ -6,6 +6,12 @@ Sprite::Sprite(QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgra
 }
 
 
+Sprite::Sprite(QString path, QVector2D pos, float rot, QVector2D sc, QOpenGLShaderProgram* sh)
+{
+
+}
+
+
 void Sprite::createGeometry()
 {
     float size = 16. / nbrVertices; // même taille quel que soit le nombre de sommet

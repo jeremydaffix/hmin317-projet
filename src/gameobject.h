@@ -9,7 +9,7 @@
 #include <QOpenGLBuffer>
 #include <QImage>
 
-#include<component.h>
+#include <component.h>
 
 
 // Classe représentant un GameObject.

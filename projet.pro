@@ -19,7 +19,8 @@ SOURCES += \
     src/objet3d.cpp \
     src/plane.cpp \
     src/sprite.cpp \
-    src/terrain.cpp
+    src/terrain.cpp \
+    src/resourcesmanager.cpp
 
 SOURCES +=
 
@@ -36,7 +37,8 @@ HEADERS += \
     src/objet3d.h \
     src/plane.h \
     src/sprite.h \
-    src/terrain.h
+    src/terrain.h \
+    src/resourcesmanager.h
 
 RESOURCES += \
     textures.qrc \

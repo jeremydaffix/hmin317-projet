@@ -56,12 +56,12 @@
 
 #include <gamescene.h>
 #include <cube.h>
-#include<objet3d.h>
+#include <objet3d.h>
 #include <terrain.h>
-//#include <quadtree.h>
 #include <plane.h>
 #include <sprite.h>
 #include <movingcubecomponent.h>
+#include <resourcesmanager.h>
 
 #include <QOpenGLWidget>
 #include <QOpenGLFunctions>
@@ -71,6 +71,9 @@
 #include <QBasicTimer>
 #include <QOpenGLShaderProgram>
 #include <QOpenGLTexture>
+#include <QMouseEvent>
+
+#include <math.h>
 
 
 
@@ -117,12 +120,6 @@ protected:
 
 
 private:
-
-    // raccourci pour charger un shader
-    void loadShader(QOpenGLShaderProgram &shader, QString vpath, QString fpath);
-
-    // raccourci pour charger une texture
-    QOpenGLTexture *loadTexture(QString path);
 
     QBasicTimer timer;
     QOpenGLShaderProgram shaderTexture, shaderTerrain, shaderTerrainWinter, shaderTerrainSpring, shaderTerrainSummer, shaderTerrainAutumn, shaderTest;
