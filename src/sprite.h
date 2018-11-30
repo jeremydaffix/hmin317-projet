@@ -17,6 +17,7 @@ public:
 
     // constructeur plus adapté à une "vision 2D"
     Sprite(QString path, QVector2D pos = QVector2D(), float rot = 0, QVector2D sc = QVector2D(1, 1), QOpenGLShaderProgram* sh = NULL);
+    Sprite(QOpenGLTexture *tex, QVector2D pos = QVector2D(), float rot = 0, QVector2D sc = QVector2D(1, 1), QOpenGLShaderProgram* sh = NULL);
 
     // les 2 méthodes à redéfinir et spécifiques à la création / affichage des sommets du Plan !
     void createGeometry();
@@ -27,6 +28,7 @@ public:
 
 protected:
     const int nbrVertices = 3;
+    void init(QOpenGLTexture *tex, QVector2D pos, float rot, QVector2D sc, QOpenGLShaderProgram* sh);
 };
 
 #endif // SPRITE_H

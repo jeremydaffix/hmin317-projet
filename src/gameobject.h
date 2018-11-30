@@ -10,6 +10,7 @@
 #include <QImage>
 
 #include <component.h>
+#include <resourcesmanager.h>
 
 
 // Classe représentant un GameObject.

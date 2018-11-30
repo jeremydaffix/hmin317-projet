@@ -263,7 +263,9 @@ void MainWidget::initializeGL()
     GameScene::getInstance()->addChild(terrain);*/
 
 
-    Sprite *spr = new Sprite(QVector3D(0, -3, 0), QQuaternion::fromEulerAngles(0, 0, 0), QVector3D(1, 1, 1));
+    //Sprite *spr = new Sprite(QVector3D(0, -3, 0), QQuaternion::fromEulerAngles(0, 0, 0), QVector3D(1, 1, 1));
+      //Sprite *spr = new Sprite(":/Resources/Textures/cube2.png", QVector2D(2, 2), 45, QVector2D(1, 1));
+     Sprite *spr = new Sprite(ResourcesManager::getInstance()->loadTexture(":/Resources/Textures/cube2.png"), QVector2D(0, 0), 10, QVector2D(1, 1));
     GameScene::getInstance()->addChild(spr);
 
 
@@ -286,7 +288,7 @@ void MainWidget::initShaders()
 
     ResourcesManager::getInstance()->loadShader(shaderTexture, ":/Resources/Shaders/vshader.glsl", ":/Resources/Shaders/fshader.glsl");
     ResourcesManager::getInstance()->loadShader(shaderTest, ":/Resources/Shaders/vshader.glsl", ":/Resources/Shaders/shader_Objet.glsl");
-    ResourcesManager::getInstance()->loadShader(shaderTerrain, ":/Resources/vshader_color.glsl", ":/Resources/Shaders/fshader_color.glsl");
+    ResourcesManager::getInstance()->loadShader(shaderTerrain, ":/Resources/Shaders/vshader_color.glsl", ":/Resources/Shaders/fshader_color.glsl");
 
     ResourcesManager::getInstance()->loadShader(shaderTerrainWinter, ":/Resources/Shaders/vshader_winter.glsl", ":/Resources/Shaders/fshader_color.glsl");
     ResourcesManager::getInstance()->loadShader(shaderTerrainSpring, ":/Resources/Shaders/vshader_spring.glsl", ":/Resources/Shaders/fshader_color.glsl");
