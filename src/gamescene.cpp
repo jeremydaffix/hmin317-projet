@@ -21,6 +21,16 @@ GameScene::GameScene()
 
 }
 
+QOpenGLTexture *GameScene::getDefaultTexture() const
+{
+    return defaultTexture;
+}
+
+void GameScene::setDefaultTexture(QOpenGLTexture *value)
+{
+    defaultTexture = value;
+}
+
 int GameScene::getCurrentNumInstance()
 {
     return currentNumInstance;

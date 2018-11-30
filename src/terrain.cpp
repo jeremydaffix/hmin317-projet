@@ -1,20 +1,43 @@
-#include "plane.h"
+#include "terrain.h"
 
-Plane::Plane(int vert, QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgram* sh) : Model3D (pos, rot, sc, sh)
+
+Terrain::Terrain(QString path, int vert, QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgram* sh, QOpenGLTexture *tex) : Model3D (pos, rot, sc, sh, tex)
 {
     setNbrVertices(vert);
+
+    //heightmap = new QImage(QImage(":/island_heightmap.png"));
+
+    if(!path.isNull() && !path.isEmpty()) {
+        heightmap = new QImage(QImage(path));
+    }
+}
+
+Terrain::~Terrain()
+{
+    delete heightmap;
 }
 
 
-void Plane::createGeometry()
+void Terrain::createGeometry()
 {
     float size = 16. / nbrVertices; // même taille quel que soit le nombre de sommet
-    float centerOffset = (nbrVertices - 1) * size / 2.; // pour que le plan soit centré sur sa position
+    float centerOffset = (nbrVertices - 1) * size / 2.; // pour que le terrain soit centré sur sa position
 
     int nbrFaces = nbrVertices - 1;
     int nbrIndices = (nbrFaces * nbrFaces * 6) + (nbrFaces * 4);
 
     VertexData vertices[nbrVertices * nbrVertices]; // tableau des sommets
+
+    // relief généré par heightmap
+    float stepHeightmap;
+    if(heightmap != NULL)
+    {
+        // la heightmap peut être très grande
+        // on prendra des échantillons en fonction de la taille de notre terrain
+        stepHeightmap =  heightmap->size().width() / nbrVertices;
+    }
+
+    int scaleRelief = nbrVertices / 16;
 
     // pour tous les sommets
     for(int i = 0 ; i < nbrVertices ; ++i) { // ligne
@@ -25,7 +48,22 @@ void Plane::createGeometry()
 
             int pos = i * nbrVertices + j;
 
-            vertices[pos].position = QVector3D((float)j * size - centerOffset, (float)i * size - centerOffset, 0.0);
+            // relief généré par heightmap
+            if(heightmap != NULL)
+            {
+                QColor col = heightmap->pixel(j * stepHeightmap, i * stepHeightmap);
+
+                int r, g, b, a;
+                col.getRgb(&r, &g, &b, &a);
+
+                float coef = 2.0;
+
+                float z = (r + g + b + a) / 255. / 4. * coef;
+
+                vertices[pos].position = QVector3D((float)j * size - centerOffset, (float)i * size - centerOffset, z);
+                //vertices[pos].position = QVector3D((float)j * size, (float)i * size, z);
+            }
+
 
             vertices[pos].texCoord = QVector2D(1. / nbrFaces * j, 1. / nbrFaces * i);
 
@@ -75,6 +113,7 @@ void Plane::createGeometry()
         }
     }
 
+
     // Transfer vertex data to VBO 0
     arrayBuf.bind();
     arrayBuf.allocate(vertices, nbrVertices * nbrVertices * sizeof(VertexData));
@@ -86,12 +125,15 @@ void Plane::createGeometry()
 }
 
 
-void Plane::draw()
+void Terrain::draw()
 {
     if(shader == NULL) shader = GameScene::getInstance()->getDefaultShader();
+    if(texture == NULL) texture = GameScene::getInstance()->getDefaultTexture();
 
     if (!shader->bind())
             return;
+
+    texture->bind();
 
     QMatrix4x4 matrix = getTransform(); // transform dans le repère monde
 
@@ -128,15 +170,12 @@ void Plane::draw()
 }
 
 
-int Plane::getNbrVertices() const
+int Terrain::getNbrVertices() const
 {
     return nbrVertices;
 }
 
-void Plane::setNbrVertices(int value)
+void Terrain::setNbrVertices(int value)
 {
     nbrVertices = value;
 }
-
-
-

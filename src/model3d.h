@@ -1,6 +1,8 @@
 #ifndef DISPLAYABLEOBJECT_H
 #define DISPLAYABLEOBJECT_H
 
+#include <QOpenGLTexture>
+
 #include <gamescene.h>
 //#include <gameobject.h>
 
@@ -16,7 +18,7 @@ class Model3D : public GameObject, protected QOpenGLFunctions
 {
 public:
 
-    Model3D(QVector3D pos = QVector3D(), QQuaternion rot = QQuaternion(), QVector3D sc = QVector3D(1, 1, 1), QOpenGLShaderProgram* sh = NULL);
+    Model3D(QVector3D pos = QVector3D(), QQuaternion rot = QQuaternion(), QVector3D sc = QVector3D(1, 1, 1), QOpenGLShaderProgram* sh = NULL, QOpenGLTexture *tex = NULL);
     virtual ~Model3D();
 
     //virtual void CreateGeometry();
@@ -24,6 +26,9 @@ public:
 
     QOpenGLShaderProgram *getShader() const;
     void setShader(QOpenGLShaderProgram *value);
+
+    QOpenGLTexture *getTexture() const;
+    void setTexture(QOpenGLTexture *value);
 
 protected:
 
@@ -33,6 +38,8 @@ protected:
 
     // shader de l'objet 3D
     QOpenGLShaderProgram *shader = NULL;
+
+    QOpenGLTexture *texture = NULL;
 
 };
 

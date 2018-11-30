@@ -1,6 +1,7 @@
 #ifndef GAMESCENE_H
 #define GAMESCENE_H
 
+#include <QOpenGLTexture>
 #include <gameobject.h>
 
 
@@ -31,6 +32,9 @@ public:
     static int getCurrentNumInstance();
     static void setCurrentNumInstance(int value);
 
+    QOpenGLTexture *getDefaultTexture() const;
+    void setDefaultTexture(QOpenGLTexture *value);
+
 private:
     GameScene(); // SINGLETON
 
@@ -38,6 +42,7 @@ private:
 protected:
 
     QOpenGLShaderProgram* defaultShader;
+    QOpenGLTexture *defaultTexture;
     //static GameScene* instance;
 
     static GameScene *instances[4]; // POUR LE TP3 ON EST OBLIGES D'AVOIR 4 INSTANCES INDEPENDANTES DANS UN TABLEAU

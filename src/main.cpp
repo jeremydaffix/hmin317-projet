@@ -48,110 +48,52 @@
 **
 ****************************************************************************/
 
-#ifndef MAINWIDGET_H
-#define MAINWIDGET_H
-
-//#include "geometryengine.h"
-
-
-#include <gamescene.h>
-#include <cube.h>
-#include<objet3d.h>
-#include <terrain.h>
-//#include <quadtree.h>
-#include <plane.h>
-#include <movingcubecomponent.h>
-
-#include <QOpenGLWidget>
-#include <QOpenGLFunctions>
-#include <QMatrix4x4>
-#include <QQuaternion>
-#include <QVector2D>
-#include <QBasicTimer>
-#include <QOpenGLShaderProgram>
-#include <QOpenGLTexture>
+#include <QApplication>
+#include <QGridLayout>
+#include <QLabel>
+#include <QSurfaceFormat>
 
 
-
-// direction pour le déplacement de la caméra
-enum DIRECTION {
-  NO,
-  UP,
-  DOWN,
-  LEFT,
-  RIGHT,
-  TURN_LEFT,
-  TURN_RIGHT
-};
+#ifndef QT_NO_OPENGL
+//#include <gridmainwidget.h>
+#include "calendar.h"
+#include "mainwidget.h"
+#endif
 
 
-
-// Classe représentant un widget supportant l'affichage OpenGL.
-class MainWidget : public QOpenGLWidget, protected QOpenGLFunctions
+int main(int argc, char *argv[])
 {
-    Q_OBJECT
+    QApplication app(argc, argv);
 
-public:
-    explicit MainWidget(int _fps = 60, int _idScene = 0, QWidget *parent = 0);
-    ~MainWidget();
+    QSurfaceFormat format;
+    format.setDepthBufferSize(24);
+    QSurfaceFormat::setDefaultFormat(format);
 
-    void setSeason(int season);
+    app.setApplicationName("cube");
+    app.setApplicationVersion("0.1");
+#ifndef QT_NO_OPENGL
 
-protected:
-
-    // événements entrée utilisateur
-    void mousePressEvent(QMouseEvent *e) override;
-    void mouseReleaseEvent(QMouseEvent *e) override;
-    void keyPressEvent(QKeyEvent* e) override;
-    void keyReleaseEvent(QKeyEvent* e) override;
-    void timerEvent(QTimerEvent *e) override;
-
-    // événements OpenGL
-    void initializeGL() override;
-    void resizeGL(int w, int h) override;
-    void paintGL() override;
-
-    void initShaders();
-    void initTextures();
+   MainWidget widget;
+   widget.show();
 
 
-private:
+    /*MainWidget widget1(1, 0), widget10(10, 1), widget100(100, 2), widget1000(1000, 3); // 4 fenetres
 
-    // raccourci pour charger un shader
-    void loadShader(QOpenGLShaderProgram &shader, QString vpath, QString fpath);
+    Calendar calendar(&widget1, &widget10, &widget100, &widget1000); // timer pour les saisons
 
-    QBasicTimer timer;
-    QOpenGLShaderProgram shaderDice, shaderTerrain, shaderTerrainWinter, shaderTerrainSpring, shaderTerrainSummer, shaderTerrainAutumn, shaderTest;
-
-    QOpenGLTexture *texture;
-
-    //QMatrix4x4 projection;
-
-    QVector2D mousePressPosition;
-    QVector3D rotationAxis;
-    qreal angularSpeed;
+    widget1.show();
+    widget10.show();
+    widget100.show();
+    widget1000.show();*/
 
 
-    DIRECTION movementDirection = DIRECTION::NO;
+    //GridMainWidget mw; // fenetre unique pour afficher les 4 sous-fenetres, avec un qgridlayout !
+    // PROBLEME : events keyboards pas passés aux mainwidget fils
 
 
-    int fps = 0;
-
-
-
-    // graph de scene
-
-    int idScene = 0;
-
-    Terrain *terrain;
-
-
-//public slots:
-//    void setSeason(int season);
-
-};
-
-
-
-
-#endif // MAINWIDGET_H
+#else
+    QLabel note("OpenGL Support required");
+    note.show();
+#endif
+    return app.exec();
+}

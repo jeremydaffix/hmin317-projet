@@ -1,7 +1,7 @@
 #include "cube.h"
 
 
-Cube::Cube(QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgram* sh) : Model3D (pos, rot, sc, sh)
+Cube::Cube(QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgram* sh, QOpenGLTexture *tex) : Model3D (pos, rot, sc, sh, tex)
 {
 
 }
@@ -91,9 +91,13 @@ void Cube::draw()
     //qDebug() << "DRAW CUBE " << localPosition << " " << localRotation;
 
     if(shader == NULL) shader = GameScene::getInstance()->getDefaultShader();
+    if(texture == NULL) texture = GameScene::getInstance()->getDefaultTexture();
 
     if (!shader->bind())
             return;
+
+    qDebug() << texture;
+    texture->bind();
 
     QMatrix4x4 matrix = getTransform(); // transform dans le repère monde
 

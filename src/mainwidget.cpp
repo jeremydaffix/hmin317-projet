@@ -58,7 +58,7 @@
 MainWidget::MainWidget(int _fps, int _idScene, QWidget *parent) :
     QOpenGLWidget(parent),
     //geometries(0),
-    texture(0),
+    textureDice(0),
     angularSpeed(0)
 {
 
@@ -72,7 +72,7 @@ MainWidget::~MainWidget()
     // Make sure the context is current when deleting the texture
     // and the buffers.
     makeCurrent();
-    delete texture;
+    delete textureDice;
     //delete heightmap;
     doneCurrent();
 }
@@ -260,10 +260,13 @@ void MainWidget::initializeGL()
 
     cube2->addComponent(new MovingCubeComponent());
 
-    terrain = new Terrain(":/island_heightmap.png",
+    /*terrain = new Terrain(":/island_heightmap.png",
                           128, QVector3D(0, -3, 0), QQuaternion::fromEulerAngles(-90, 0, 0), QVector3D(2, 2, 2));
     terrain->setShader(&shaderTerrain);
-    GameScene::getInstance()->addChild(terrain);
+    GameScene::getInstance()->addChild(terrain);*/
+
+    Sprite *spr = new Sprite(QVector3D(0, -3, 0), QQuaternion::fromEulerAngles(-90, 0, 0), QVector3D(2, 2, 2));
+    GameScene::getInstance()->addChild(spr);
 
     GameScene::getInstance()->createGeometry();
 
@@ -290,17 +293,17 @@ void MainWidget::initShaders()
     GameScene::setCurrentNumInstance(idScene);
 
 
-    loadShader(shaderDice, ":/vshader.glsl", ":/fshader.glsl");
-    loadShader(shaderTest, ":/vshader.glsl", ":/fshader_Objet.glsl");
+    loadShader(shaderTexture, ":/Resources/Shaders/vshader.glsl", ":/fshader.glsl");
+    loadShader(shaderTest, ":/Resources/Shaders/vshader.glsl", ":/fshader_Objet.glsl");
     loadShader(shaderTerrain, ":/vshader_color.glsl", ":/fshader_color.glsl");
 
-    loadShader(shaderTerrainWinter, ":/vshader_winter.glsl", ":/fshader_color.glsl");
-    loadShader(shaderTerrainSpring, ":/vshader_spring.glsl", ":/fshader_color.glsl");
-    loadShader(shaderTerrainSummer, ":/vshader_summer.glsl", ":/fshader_color.glsl");
-    loadShader(shaderTerrainAutumn, ":/vshader_autumn.glsl", ":/fshader_color.glsl");
+    loadShader(shaderTerrainWinter, ":/Resources/Shaders/vshader_winter.glsl", ":/Resources/Shaders/fshader_color.glsl");
+    loadShader(shaderTerrainSpring, ":/Resources/Shaders/vshader_spring.glsl", ":/Resources/Shaders/fshader_color.glsl");
+    loadShader(shaderTerrainSummer, ":/Resources/Shaders/vshader_summer.glsl", ":/Resources/Shaders/fshader_color.glsl");
+    loadShader(shaderTerrainAutumn, ":/Resources/Shaders/vshader_autumn.glsl", ":/Resources/Shaders/fshader_color.glsl");
 
 
-    GameScene::getInstance()->setDefaultShader(&shaderDice);
+    GameScene::getInstance()->setDefaultShader(&shaderTexture);
 
 }
 //! [3]
@@ -309,17 +312,19 @@ void MainWidget::initShaders()
 void MainWidget::initTextures()
 {
     // Load cube.png image
-    texture = new QOpenGLTexture(QImage(":/cube.png").mirrored());
+    textureDice = new QOpenGLTexture(QImage(":/Resources/Textures/cube.png").mirrored());
 
     //heightmap = new QImage(QImage(":/island_heightmap.png"));
 
     // Set nearest filtering mode for texture minification
-    texture->setMinificationFilter(QOpenGLTexture::Nearest);
+    textureDice->setMinificationFilter(QOpenGLTexture::Nearest);
     // Set bilinear filtering mode for texture magnification
-    texture->setMagnificationFilter(QOpenGLTexture::Linear);
+    textureDice->setMagnificationFilter(QOpenGLTexture::Linear);
     // Wrap texture coordinates by repeating
     // f.ex. texture coordinate (1.1, 1.2) is same as (0.1, 0.2)
-    texture->setWrapMode(QOpenGLTexture::Repeat);
+    textureDice->setWrapMode(QOpenGLTexture::Repeat);
+
+    GameScene::getInstance()->setDefaultTexture(textureDice);
 }
 //! [4]
 
@@ -356,7 +361,7 @@ void MainWidget::paintGL()
     // Clear color and depth buffer
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    texture->bind();
+    //textureDice->bind();
 
 
     // à chaque rafraîchissement :

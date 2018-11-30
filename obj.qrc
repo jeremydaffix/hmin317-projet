@@ -1,7 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>pillow_high.obj</file>
-        <file>pillow_low.obj</file>
-        <file>pillow_med.obj</file>
-    </qresource>
-</RCC>

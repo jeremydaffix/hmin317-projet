@@ -2,10 +2,11 @@
 
 
 
-Model3D::Model3D(QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgram* sh) : GameObject (pos, rot, sc), indexBuf(QOpenGLBuffer::IndexBuffer)
+Model3D::Model3D(QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgram* sh, QOpenGLTexture *tex) : GameObject (pos, rot, sc), indexBuf(QOpenGLBuffer::IndexBuffer)
 {
     /*if(sh == NULL) shader = GameScene::getInstance()->getDefaultShader();
     else*/ shader = sh;
+    texture = tex;
 
     initializeOpenGLFunctions();
 
@@ -27,6 +28,16 @@ QOpenGLShaderProgram *Model3D::getShader() const
 void Model3D::setShader(QOpenGLShaderProgram *value)
 {
     shader = value;
+}
+
+QOpenGLTexture *Model3D::getTexture() const
+{
+    return texture;
+}
+
+void Model3D::setTexture(QOpenGLTexture *value)
+{
+    texture = value;
 }
 
 

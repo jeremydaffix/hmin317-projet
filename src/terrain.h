@@ -12,7 +12,7 @@
 class Terrain : public Model3D
 {
 public:
-    Terrain(QString path, int vert = 16, QVector3D pos = QVector3D(), QQuaternion rot = QQuaternion(), QVector3D sc = QVector3D(1, 1, 1), QOpenGLShaderProgram* sh = NULL);
+    Terrain(QString path, int vert = 16, QVector3D pos = QVector3D(), QQuaternion rot = QQuaternion(), QVector3D sc = QVector3D(1, 1, 1), QOpenGLShaderProgram* sh = NULL, QOpenGLTexture *tex = NULL);
     ~Terrain();
 
     // les 2 méthodes à redéfinir et spécifiques à la création / affichage des sommets du Terrain !
