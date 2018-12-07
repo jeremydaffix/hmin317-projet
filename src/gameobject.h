@@ -8,6 +8,7 @@
 #include <QOpenGLShaderProgram>
 #include <QOpenGLBuffer>
 #include <QImage>
+#include <algorithm>
 
 #include <component.h>
 #include <resourcesmanager.h>
@@ -81,6 +82,7 @@ public:
     virtual void fixedUpdate();
 
 
+    void destroy(); // pour libérer proprement les ressources
 
 protected:
     QVector3D localPosition;

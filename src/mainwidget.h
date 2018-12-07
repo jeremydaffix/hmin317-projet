@@ -101,6 +101,9 @@ public:
 
     void setSeason(int season);
 
+    int getFps() const;
+    void setFps(int value);
+
 protected:
 
     // événements entrée utilisateur

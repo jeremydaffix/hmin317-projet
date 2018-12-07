@@ -37,7 +37,7 @@ void Terrain::createGeometry()
         stepHeightmap =  heightmap->size().width() / nbrVertices;
     }
 
-    int scaleRelief = nbrVertices / 16;
+    //int scaleRelief = nbrVertices / 16;
 
     // pour tous les sommets
     for(int i = 0 ; i < nbrVertices ; ++i) { // ligne

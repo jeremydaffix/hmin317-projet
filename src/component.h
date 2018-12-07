@@ -12,7 +12,8 @@ class GameObject;
 class Component
 {
 public:
-    Component();
+    //Component();
+    virtual ~Component();
 
     virtual void update() = 0;
     virtual void fixedUpdate() = 0;

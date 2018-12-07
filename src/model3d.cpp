@@ -18,6 +18,8 @@ Model3D::~Model3D()
 {
     arrayBuf.destroy();
     indexBuf.destroy();
+
+    delete texture;
 }
 
 QOpenGLShaderProgram *Model3D::getShader() const

@@ -35,6 +35,7 @@ public:
     QOpenGLTexture *getDefaultTexture() const;
     void setDefaultTexture(QOpenGLTexture *value);
 
+
 private:
     GameScene(); // SINGLETON
 

@@ -20,8 +20,9 @@ SOURCES += \
     src/sprite.cpp \
     src/terrain.cpp \
     src/resourcesmanager.cpp \
-    src/animation2d.cpp \
-    src/movingballcomponent.cpp
+    src/movingballcomponent.cpp \
+    src/game.cpp \
+    src/spriteanimationcomponent.cpp
 
 SOURCES +=
 
@@ -39,8 +40,9 @@ HEADERS += \
     src/sprite.h \
     src/terrain.h \
     src/resourcesmanager.h \
-    src/animation2d.h \
-    src/movingballcomponent.h
+    src/movingballcomponent.h \
+    src/game.h \
+    src/spriteanimationcomponent.h
 
 RESOURCES += \
     textures.qrc \

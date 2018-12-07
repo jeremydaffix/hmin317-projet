@@ -69,8 +69,23 @@ MainWidget::~MainWidget()
     // Make sure the context is current when deleting the texture
     // and the buffers.
     makeCurrent();
+
     delete textureDice;
-    //delete heightmap;
+
+    GameScene::getInstance()->destroy(); // destruction de toute la hiérarchie et des components
+    delete GameScene::getInstance();
+
+
+    // pas besoin puisque pas créés avec new
+
+    /*delete shaderTerrain;
+    delete shaderTerrainAutumn;
+    delete shaderTerrainSpring;
+    delete shaderTerrainSummer;
+    delete shaderTerrainWinter;
+    delete shaderTest;
+    delete shaderTexture;*/
+
     doneCurrent();
 }
 
@@ -328,6 +343,16 @@ void MainWidget::initTextures()
 
     glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
     glEnable(GL_BLEND);
+}
+
+int MainWidget::getFps() const
+{
+    return fps;
+}
+
+void MainWidget::setFps(int value)
+{
+    fps = value;
 }
 //! [4]
 

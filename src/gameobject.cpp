@@ -44,7 +44,7 @@ void GameObject::addChild(GameObject *child)
 
 void GameObject::removeChild(GameObject *child)
 {
-    children.remove(child);
+    if(std::find(children.begin(), children.end(), child) != children.end()) children.remove(child);
     child->setParent(NULL);
 }
 
@@ -68,7 +68,7 @@ void GameObject::addComponent(Component *c)
 
 void GameObject::removeComponent(Component *c)
 {
-    components.remove(c);
+    if(std::find(components.begin(), components.end(), c) != components.end()) components.remove(c);
     c->setContainer(NULL);
 }
 
@@ -140,6 +140,30 @@ void GameObject::fixedUpdate()
     for (it = children.begin(); it != children.end(); ++it)
     {
         (*it)->fixedUpdate();
+    }
+}
+
+void GameObject::destroy()
+{
+    // libération des components
+    // (les ressources qu'ils utilisent sont libérées dans leur destructeur)
+
+    std::list<Component *> l = getComponents();
+
+    std::list<Component*>::iterator itComp;
+    for (itComp = l.begin() ; itComp != l.end(); ++itComp)
+    {
+        delete (*itComp);
+    }
+
+
+    // libération des gameobjects enfants
+
+    std::list<GameObject*>::iterator it;
+    for (it = children.begin(); it != children.end(); ++it)
+    {
+        (*it)->destroy();
+        delete (*itComp);
     }
 }
 
