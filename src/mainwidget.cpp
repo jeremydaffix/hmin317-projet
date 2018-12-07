@@ -264,8 +264,9 @@ void MainWidget::initializeGL()
 
 
     //Sprite *spr = new Sprite(QVector3D(0, -3, 0), QQuaternion::fromEulerAngles(0, 0, 0), QVector3D(1, 1, 1));
-      //Sprite *spr = new Sprite(":/Resources/Textures/cube2.png", QVector2D(2, 2), 45, QVector2D(1, 1));
-     Sprite *spr = new Sprite(ResourcesManager::getInstance()->loadTexture(":/Resources/Textures/testalpha.png"), QVector2D(0, 0), 10, QVector2D(1, 1));
+    //Sprite *spr = new Sprite(":/Resources/Textures/cube2.png", QVector2D(2, 2), 45, QVector2D(1, 1));
+    Sprite *spr = new Sprite(ResourcesManager::getInstance()->loadTexture(":/Resources/Textures/testalpha.png"), QVector2D(0, 0), 10, QVector2D(0.1, 0.1));
+    spr->addComponent(new MovingBallComponent());
     GameScene::getInstance()->addChild(spr);
 
 

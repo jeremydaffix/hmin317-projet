@@ -97,10 +97,23 @@ void GameObject::draw()
 
 
 
-// pour les composants (en cours de dév)
+// pour les composants
 
 void GameObject::update()
 {
+    // pour tous les composants du gameobject courant
+
+    std::list<Component *> l = getComponents();
+
+    std::list<Component*>::iterator itComp;
+    for (itComp = l.begin() ; itComp != l.end(); ++itComp)
+    {
+        if((*itComp)->getEnabled()) (*itComp)->update(); // on exécute si activé
+    }
+
+
+    // ensuite on passage le message à la suite de la hiérarchie
+
     std::list<GameObject*>::iterator it;
     for (it = children.begin(); it != children.end(); ++it)
     {
@@ -110,6 +123,19 @@ void GameObject::update()
 
 void GameObject::fixedUpdate()
 {
+    // pour tous les composants du gameobject courant
+
+    std::list<Component *> l = getComponents();
+
+    std::list<Component*>::iterator itComp;
+    for (itComp = l.begin() ; itComp != l.end(); ++itComp)
+    {
+        if((*itComp)->getEnabled()) (*itComp)->fixedUpdate(); // on exécute si activé
+    }
+
+
+    // ensuite on passage le message à la suite de la hiérarchie
+
     std::list<GameObject*>::iterator it;
     for (it = children.begin(); it != children.end(); ++it)
     {

@@ -4,15 +4,18 @@
 #include <gameobject.h>
 
 
-// Component pour faire bouger un cube.
-// EN COURS DE DEV
-class MovingCubeComponent : public Component
+// Component pour faire bouger une balle.
+class MovingBallComponent : public Component
 {
 public:
-    MovingCubeComponent();
+    MovingBallComponent();
 
     void update();
     void fixedUpdate();
+
+protected:
+
+    QVector2D direction;
 };
 
 #endif // MOVINGCUBECOMPONENT_H

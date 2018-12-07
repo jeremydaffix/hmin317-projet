@@ -15,13 +15,13 @@ SOURCES += \
     src/main.cpp \
     src/mainwidget.cpp \
     src/model3d.cpp \
-    src/movingcubecomponent.cpp \
     src/objet3d.cpp \
     src/plane.cpp \
     src/sprite.cpp \
     src/terrain.cpp \
     src/resourcesmanager.cpp \
-    src/animation2d.cpp
+    src/animation2d.cpp \
+    src/movingballcomponent.cpp
 
 SOURCES +=
 
@@ -34,13 +34,13 @@ HEADERS += \
     src/gridmainwidget.h \
     src/mainwidget.h \
     src/model3d.h \
-    src/movingcubecomponent.h \
     src/objet3d.h \
     src/plane.h \
     src/sprite.h \
     src/terrain.h \
     src/resourcesmanager.h \
-    src/animation2d.h
+    src/animation2d.h \
+    src/movingballcomponent.h
 
 RESOURCES += \
     textures.qrc \

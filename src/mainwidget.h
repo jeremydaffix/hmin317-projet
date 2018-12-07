@@ -60,7 +60,7 @@
 #include <terrain.h>
 #include <plane.h>
 #include <sprite.h>
-#include <movingcubecomponent.h>
+#include <movingballcomponent.h>
 #include <resourcesmanager.h>
 
 #include <QOpenGLWidget>

@@ -9,7 +9,6 @@ class GameObject;
 // Classe représentant un composant, associé à un GameObject
 // A intervalle régulier, les update() et fixedUpdate() de tous
 // les composants de tous les GameObject sont appelés
-// EN COURS DE DEV
 class Component
 {
 public:
@@ -22,9 +21,13 @@ public:
     GameObject *getContainer() const;
     void setContainer(GameObject *value);
 
+    bool getEnabled() const;
+    void setEnabled(bool value);
+
 protected:
 
     GameObject* container = NULL;
+    bool enabled = true;
 };
 
 #endif // COMPONENT_H
