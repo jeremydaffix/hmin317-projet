@@ -3,5 +3,6 @@
         <file>Resources/Textures/cube.png</file>
         <file>Resources/Textures/cube2.png</file>
         <file>Resources/Textures/island_heightmap.png</file>
+        <file>Resources/Textures/testalpha.png</file>
     </qresource>
 </RCC>

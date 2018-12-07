@@ -20,7 +20,8 @@ SOURCES += \
     src/plane.cpp \
     src/sprite.cpp \
     src/terrain.cpp \
-    src/resourcesmanager.cpp
+    src/resourcesmanager.cpp \
+    src/animation2d.cpp
 
 SOURCES +=
 
@@ -38,7 +39,8 @@ HEADERS += \
     src/plane.h \
     src/sprite.h \
     src/terrain.h \
-    src/resourcesmanager.h
+    src/resourcesmanager.h \
+    src/animation2d.h
 
 RESOURCES += \
     textures.qrc \

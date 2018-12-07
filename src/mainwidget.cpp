@@ -265,12 +265,11 @@ void MainWidget::initializeGL()
 
     //Sprite *spr = new Sprite(QVector3D(0, -3, 0), QQuaternion::fromEulerAngles(0, 0, 0), QVector3D(1, 1, 1));
       //Sprite *spr = new Sprite(":/Resources/Textures/cube2.png", QVector2D(2, 2), 45, QVector2D(1, 1));
-     Sprite *spr = new Sprite(ResourcesManager::getInstance()->loadTexture(":/Resources/Textures/cube2.png"), QVector2D(0, 0), 10, QVector2D(1, 1));
+     Sprite *spr = new Sprite(ResourcesManager::getInstance()->loadTexture(":/Resources/Textures/testalpha.png"), QVector2D(0, 0), 10, QVector2D(1, 1));
     GameScene::getInstance()->addChild(spr);
 
 
     GameScene::getInstance()->createGeometry();
-
     GameScene::getInstance()->setLocalRotation(QQuaternion::fromEulerAngles(0, 0, 0));
     GameScene::getInstance()->setLocalPosition(QVector3D(0,0,50));
 
@@ -325,6 +324,9 @@ void MainWidget::initTextures()
     textureDice->setWrapMode(QOpenGLTexture::Repeat);*/
 
     GameScene::getInstance()->setDefaultTexture(textureDice);
+
+    glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_BLEND);
 }
 //! [4]
 
