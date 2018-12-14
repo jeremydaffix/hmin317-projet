@@ -52,16 +52,12 @@
 
 
 
-MainWidget::MainWidget(int _fps, int _idScene, QWidget *parent) :
+MainWidget::MainWidget(int _fps, QWidget *parent) :
     QOpenGLWidget(parent),
-    //geometries(0),
-    textureDice(0),
     angularSpeed(0)
 {
 
     fps = _fps;
-    idScene = _idScene;
-
 }
 
 MainWidget::~MainWidget()
@@ -74,17 +70,6 @@ MainWidget::~MainWidget()
 
     GameScene::getInstance()->destroy(); // destruction de toute la hiérarchie et des components
     delete GameScene::getInstance();
-
-
-    // pas besoin puisque pas créés avec new
-
-    /*delete shaderTerrain;
-    delete shaderTerrainAutumn;
-    delete shaderTerrainSpring;
-    delete shaderTerrainSummer;
-    delete shaderTerrainWinter;
-    delete shaderTest;
-    delete shaderTexture;*/
 
     doneCurrent();
 }
@@ -104,8 +89,6 @@ void MainWidget::mouseReleaseEvent(QMouseEvent *e)
 //! [1]
 void MainWidget::timerEvent(QTimerEvent *)
 {
-    GameScene::setCurrentNumInstance(idScene);
-
     GameScene::getInstance()->fixedUpdate();
 
 
@@ -169,9 +152,6 @@ void MainWidget::timerEvent(QTimerEvent *)
 
 void MainWidget::keyPressEvent(QKeyEvent* e)
 {
-
-    GameScene::setCurrentNumInstance(idScene);
-
     switch(e->key())
     {
         case Qt::Key_Z:
@@ -204,20 +184,6 @@ void MainWidget::keyPressEvent(QKeyEvent* e)
     }
 
 
-    /*switch(e->key())
-    {
-        case Qt::Key_Up:
-            if(rotationSpeed < 10.0) rotationSpeed += 0.1;
-        break;
-
-        case Qt::Key_Down:
-            if(rotationSpeed > 0.2) rotationSpeed -= 0.1;
-        break;
-
-        default:
-        break;
-    }*/
-
 }
 
 void MainWidget::keyReleaseEvent(QKeyEvent* e)
@@ -229,8 +195,6 @@ void MainWidget::keyReleaseEvent(QKeyEvent* e)
 
 void MainWidget::initializeGL()
 {
-    GameScene::setCurrentNumInstance(idScene);
-
 
     initializeOpenGLFunctions();
 
@@ -319,8 +283,6 @@ void MainWidget::initializeGL()
 // chargement de tous les shaders
 void MainWidget::initShaders()
 {
-    GameScene::setCurrentNumInstance(idScene);
-
 
     ResourcesManager::getInstance()->loadShader(shaderTexture, ":/resources/shaders/vshader.glsl", ":/resources/shaders/fshader.glsl");
     ResourcesManager::getInstance()->loadShader(shaderTest, ":/resources/shaders/vshader.glsl", ":/resources/shaders/shader_Objet.glsl");
@@ -346,20 +308,6 @@ void MainWidget::initTextures()
     textureDice = ResourcesManager::getInstance()->loadTexture(":/Resources/Textures/cube.png");
     textureDice2 = ResourcesManager::getInstance()->loadTexture(":/Resources/Textures/cube2.png");
 
-/*
-    // Load cube.png image
-    textureDice = new QOpenGLTexture(QImage(":/Resources/Textures/cube.png").mirrored());
-
-    heightmap = new QImage(QImage(":/island_heightmap.png"));
-
-    // Set nearest filtering mode for texture minification
-    textureDice->setMinificationFilter(QOpenGLTexture::Nearest);
-    // Set bilinear filtering mode for texture magnification
-    textureDice->setMagnificationFilter(QOpenGLTexture::Linear);
-    // Wrap texture coordinates by repeating
-    // f.ex. texture coordinate (1.1, 1.2) is same as (0.1, 0.2)
-    textureDice->setWrapMode(QOpenGLTexture::Repeat);*/
-
     GameScene::getInstance()->setDefaultTexture(textureDice);
 
     glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
@@ -380,14 +328,11 @@ void MainWidget::setFps(int value)
 //! [5]
 void MainWidget::resizeGL(int w, int h)
 {
-    GameScene::setCurrentNumInstance(idScene);
-
 
     // Calculate aspect ratio
     qreal aspect = qreal(w) / qreal(h ? h : 1);
 
     // Set near plane to 3.0, far plane to 7.0, field of view 45 degrees
-    ////const qreal zNear = 3.0, zFar = 7.0, fov = 45.0;
     const qreal zNear = 1.0, zFar = 100.0, fov = 45.0;
 
 
@@ -404,35 +349,17 @@ void MainWidget::resizeGL(int w, int h)
 
 void MainWidget::paintGL()
 {
-    GameScene::setCurrentNumInstance(idScene);
-
 
     // Clear color and depth buffer
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-    //textureDice->bind();
 
 
     // à chaque rafraîchissement :
     // on parse l'arbre du graphe de scène pour appeler les draw() de tous les objets (GameObject) à afficher
 
-    GameScene::getInstance()->update(); // pour les components, EN COURS DE DEV
+    GameScene::getInstance()->update(); // pour les components
     GameScene::getInstance()->draw();
 }
 
 
-
-
-
-void MainWidget::setSeason(int season)
-{
-    qDebug() << "Scene " << idScene << " : SEASON " << season;
-
-    if(season == 0) terrain->setShader(&shaderTerrainWinter);
-    else if(season == 1) terrain->setShader(&shaderTerrainSpring);
-    else if(season == 2) terrain->setShader(&shaderTerrainSummer);
-    else terrain->setShader(&shaderTerrainAutumn);
-
-    update();
-}
 

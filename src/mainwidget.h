@@ -51,8 +51,6 @@
 #ifndef MAINWIDGET_H
 #define MAINWIDGET_H
 
-//#include "geometryengine.h"
-
 
 #include <gamescene.h>
 #include <cube.h>
@@ -97,10 +95,8 @@ class MainWidget : public QOpenGLWidget, protected QOpenGLFunctions
     Q_OBJECT
 
 public:
-    explicit MainWidget(int _fps = 60, int _idScene = 0, QWidget *parent = 0);
+    explicit MainWidget(int _fps = 60, QWidget *parent = 0);
     ~MainWidget();
-
-    void setSeason(int season);
 
     int getFps() const;
     void setFps(int value);
@@ -130,8 +126,6 @@ private:
 
     QOpenGLTexture *textureDice, *textureDice2;
 
-    //QMatrix4x4 projection;
-
     QVector2D mousePressPosition;
     QVector3D rotationAxis;
     qreal angularSpeed;
@@ -145,8 +139,6 @@ private:
 
 
     // graph de scene
-
-    int idScene = 0;
 
     Terrain *terrain;
 

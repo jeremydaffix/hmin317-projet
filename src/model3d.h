@@ -4,7 +4,6 @@
 #include <QOpenGLTexture>
 
 #include <gamescene.h>
-//#include <gameobject.h>
 
 //class GameScene;
 

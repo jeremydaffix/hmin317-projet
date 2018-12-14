@@ -6,12 +6,10 @@ TEMPLATE = app
 INCLUDEPATH += src/
 
 SOURCES += \
-    src/calendar.cpp \
     src/component.cpp \
     src/cube.cpp \
     src/gameobject.cpp \
     src/gamescene.cpp \
-    src/gridmainwidget.cpp \
     src/main.cpp \
     src/mainwidget.cpp \
     src/model3d.cpp \
@@ -27,12 +25,10 @@ SOURCES += \
 SOURCES +=
 
 HEADERS += \
-    src/calendar.h \
     src/component.h \
     src/cube.h \
     src/gameobject.h \
     src/gamescene.h \
-    src/gridmainwidget.h \
     src/mainwidget.h \
     src/model3d.h \
     src/objet3d.h \

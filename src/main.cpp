@@ -55,9 +55,8 @@
 
 
 #ifndef QT_NO_OPENGL
-//#include <gridmainwidget.h>
-#include "calendar.h"
-#include "mainwidget.h"
+#include "game.h"
+//#include "mainwidget.h"
 #endif
 
 
@@ -69,26 +68,15 @@ int main(int argc, char *argv[])
     format.setDepthBufferSize(24);
     QSurfaceFormat::setDefaultFormat(format);
 
-    app.setApplicationName("cube");
+    app.setApplicationName("IMAGINA Wars");
     app.setApplicationVersion("0.1");
 #ifndef QT_NO_OPENGL
 
-   MainWidget widget;
-   widget.show();
+
+   Game game;
+   game.show();
 
 
-    /*MainWidget widget1(1, 0), widget10(10, 1), widget100(100, 2), widget1000(1000, 3); // 4 fenetres
-
-    Calendar calendar(&widget1, &widget10, &widget100, &widget1000); // timer pour les saisons
-
-    widget1.show();
-    widget10.show();
-    widget100.show();
-    widget1000.show();*/
-
-
-    //GridMainWidget mw; // fenetre unique pour afficher les 4 sous-fenetres, avec un qgridlayout !
-    // PROBLEME : events keyboards pas passés aux mainwidget fils
 
 
 #else
