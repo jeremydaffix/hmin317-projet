@@ -4,7 +4,7 @@
 #include <component.h>
 #include <sprite.h>
 
-#include <list>
+#include <vector>
 #include <qopengltexture.h>
 
 
@@ -15,7 +15,7 @@
 class SpriteAnimationComponent : public Component
 {
 public:
-    SpriteAnimationComponent(int _fps = 1, std::list<QOpenGLTexture *> listTextures = std::list<QOpenGLTexture *>());
+    SpriteAnimationComponent(int _fps = 1, std::vector<QOpenGLTexture *> listTextures = std::vector<QOpenGLTexture *>());
     ~SpriteAnimationComponent();
 
     void update();
@@ -25,13 +25,15 @@ public:
     void setFps(int value);
 
     void addTexture(QOpenGLTexture* t);
-    void removeTexture(QOpenGLTexture* t);
+    //void removeTexture(QOpenGLTexture* t);
     void clearTextures();
 
 protected:
 
     int fps;
-    std::list<QOpenGLTexture *> textures;
+    std::vector<QOpenGLTexture *> textures;
+    int cptFrame = 0;
+    int currentTexture = 0;
 
 
 };

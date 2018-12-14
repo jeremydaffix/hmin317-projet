@@ -61,6 +61,7 @@
 #include <plane.h>
 #include <sprite.h>
 #include <movingballcomponent.h>
+#include <spriteanimationcomponent.h>>
 #include <resourcesmanager.h>
 
 #include <QOpenGLWidget>

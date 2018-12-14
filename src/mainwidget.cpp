@@ -279,10 +279,31 @@ void MainWidget::initializeGL()
 
 
     //Sprite *spr = new Sprite(QVector3D(0, -3, 0), QQuaternion::fromEulerAngles(0, 0, 0), QVector3D(1, 1, 1));
-    //Sprite *spr = new Sprite(":/Resources/Textures/cube2.png", QVector2D(2, 2), 45, QVector2D(1, 1));
-    Sprite *spr = new Sprite(ResourcesManager::getInstance()->loadTexture(":/Resources/Textures/testalpha.png"), QVector2D(0, 0), 10, QVector2D(0.1, 0.1));
+    //Sprite *spr = new Sprite(":/resources/textures/cube2.png", QVector2D(2, 2), 45, QVector2D(1, 1));
+
+    Sprite *spr = new Sprite(ResourcesManager::getInstance()->loadTexture(":/resources/textures/testalpha.png"), QVector2D(0, 0), 10, QVector2D(0.1, 0.1));
     spr->addComponent(new MovingBallComponent());
+
+    SpriteAnimationComponent *anim = new SpriteAnimationComponent(20);
+
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0000.png"));
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0001.png"));
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0002.png"));
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0003.png"));
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0004.png"));
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0005.png"));
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0006.png"));
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0007.png"));
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0008.png"));
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0009.png"));
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0010.png"));
+    anim->addTexture(ResourcesManager::getInstance()->loadTexture(":/resources/textures/units/knight/city/walking s0011.png"));
+
+    spr->addComponent(anim);
+
     GameScene::getInstance()->addChild(spr);
+
+
 
 
     GameScene::getInstance()->createGeometry();
@@ -301,14 +322,14 @@ void MainWidget::initShaders()
     GameScene::setCurrentNumInstance(idScene);
 
 
-    ResourcesManager::getInstance()->loadShader(shaderTexture, ":/Resources/Shaders/vshader.glsl", ":/Resources/Shaders/fshader.glsl");
-    ResourcesManager::getInstance()->loadShader(shaderTest, ":/Resources/Shaders/vshader.glsl", ":/Resources/Shaders/shader_Objet.glsl");
-    ResourcesManager::getInstance()->loadShader(shaderTerrain, ":/Resources/Shaders/vshader_color.glsl", ":/Resources/Shaders/fshader_color.glsl");
+    ResourcesManager::getInstance()->loadShader(shaderTexture, ":/resources/shaders/vshader.glsl", ":/resources/shaders/fshader.glsl");
+    ResourcesManager::getInstance()->loadShader(shaderTest, ":/resources/shaders/vshader.glsl", ":/resources/shaders/shader_Objet.glsl");
+    ResourcesManager::getInstance()->loadShader(shaderTerrain, ":/resources/shaders/vshader_color.glsl", ":/resources/shaders/fshader_color.glsl");
 
-    ResourcesManager::getInstance()->loadShader(shaderTerrainWinter, ":/Resources/Shaders/vshader_winter.glsl", ":/Resources/Shaders/fshader_color.glsl");
-    ResourcesManager::getInstance()->loadShader(shaderTerrainSpring, ":/Resources/Shaders/vshader_spring.glsl", ":/Resources/Shaders/fshader_color.glsl");
-    ResourcesManager::getInstance()->loadShader(shaderTerrainSummer, ":/Resources/Shaders/vshader_summer.glsl", ":/Resources/Shaders/fshader_color.glsl");
-    ResourcesManager::getInstance()->loadShader(shaderTerrainAutumn, ":/Resources/Shaders/vshader_autumn.glsl", ":/Resources/Shaders/fshader_color.glsl");
+    ResourcesManager::getInstance()->loadShader(shaderTerrainWinter, ":/resources/shaders/vshader_winter.glsl", ":/resources/shaders/fshader_color.glsl");
+    ResourcesManager::getInstance()->loadShader(shaderTerrainSpring, ":/resources/shaders/vshader_spring.glsl", ":/resources/shaders/fshader_color.glsl");
+    ResourcesManager::getInstance()->loadShader(shaderTerrainSummer, ":/resources/shaders/vshader_summer.glsl", ":/resources/shaders/fshader_color.glsl");
+    ResourcesManager::getInstance()->loadShader(shaderTerrainAutumn, ":/resources/shaders/vshader_autumn.glsl", ":/resources/shaders/fshader_color.glsl");
 
 
     GameScene::getInstance()->setDefaultShader(&shaderTexture);

@@ -23,6 +23,6 @@ void MovingBallComponent::fixedUpdate()
 
 
 
-    getContainer()->setLocalPosition(pos + direction / 20.);
+    getContainer()->setLocalPosition(pos + direction / 50.);
 
 }
