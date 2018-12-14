@@ -1,10 +1,12 @@
 #ifndef OBJET3D_H
 #define OBJET3D_H
 
-#include <model3d.h>
+#include <engine/model3d.h>
+
 #include <string>
 #include <QFile>
 #include <QOpenGLBuffer>
+
 using namespace std;
 
 //la classe qui charge les objets 3d

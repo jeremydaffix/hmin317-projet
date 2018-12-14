@@ -1,4 +1,4 @@
-#include "objet3d.h"
+#include "engine/objet3d.h"
 
 Objet3d::Objet3d(QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgram* sh) : Model3D (pos, rot, sc, sh)
 {

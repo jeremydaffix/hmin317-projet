@@ -2,7 +2,8 @@
 #define GAMESCENE_H
 
 #include <QOpenGLTexture>
-#include <gameobject.h>
+
+#include <engine/gameobject.h>
 
 
 // Classe représentant la Scène / Caméra.

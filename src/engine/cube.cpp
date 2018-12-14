@@ -1,4 +1,4 @@
-#include "cube.h"
+#include "engine/cube.h"
 
 
 Cube::Cube(QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgram* sh, QOpenGLTexture *tex) : Model3D (pos, rot, sc, sh, tex)

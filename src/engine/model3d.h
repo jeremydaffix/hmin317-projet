@@ -3,7 +3,7 @@
 
 #include <QOpenGLTexture>
 
-#include <gamescene.h>
+#include <engine/gamescene.h>
 
 //class GameScene;
 

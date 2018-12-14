@@ -6,39 +6,39 @@ TEMPLATE = app
 INCLUDEPATH += src/
 
 SOURCES += \
-    src/component.cpp \
-    src/cube.cpp \
-    src/gameobject.cpp \
-    src/gamescene.cpp \
-    src/main.cpp \
-    src/mainwidget.cpp \
-    src/model3d.cpp \
-    src/objet3d.cpp \
-    src/plane.cpp \
-    src/sprite.cpp \
-    src/terrain.cpp \
-    src/resourcesmanager.cpp \
-    src/movingballcomponent.cpp \
-    src/game.cpp \
-    src/spriteanimationcomponent.cpp
+    src/engine/component.cpp \
+    src/engine/cube.cpp \
+    src/engine/gameobject.cpp \
+    src/engine/gamescene.cpp \
+    src/game/main.cpp \
+    src/engine/mainwidget.cpp \
+    src/engine/model3d.cpp \
+    src/engine/objet3d.cpp \
+    src/engine/plane.cpp \
+    src/engine/sprite.cpp \
+    src/engine/terrain.cpp \
+    src/engine/resourcesmanager.cpp \
+    src/engine/movingballcomponent.cpp \
+    src/engine/game.cpp \
+    src/engine/spriteanimationcomponent.cpp
 
 SOURCES +=
 
 HEADERS += \
-    src/component.h \
-    src/cube.h \
-    src/gameobject.h \
-    src/gamescene.h \
-    src/mainwidget.h \
-    src/model3d.h \
-    src/objet3d.h \
-    src/plane.h \
-    src/sprite.h \
-    src/terrain.h \
-    src/resourcesmanager.h \
-    src/movingballcomponent.h \
-    src/game.h \
-    src/spriteanimationcomponent.h
+    src/engine/component.h \
+    src/engine/cube.h \
+    src/engine/gameobject.h \
+    src/engine/gamescene.h \
+    src/engine/mainwidget.h \
+    src/engine/model3d.h \
+    src/engine/objet3d.h \
+    src/engine/plane.h \
+    src/engine/sprite.h \
+    src/engine/terrain.h \
+    src/engine/resourcesmanager.h \
+    src/engine/movingballcomponent.h \
+    src/engine/game.h \
+    src/engine/spriteanimationcomponent.h
 
 RESOURCES += \
     textures.qrc \

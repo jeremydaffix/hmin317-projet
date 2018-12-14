@@ -1,4 +1,4 @@
-#include "gameobject.h"
+#include "engine/gameobject.h"
 
 GameObject::GameObject(QVector3D pos, QQuaternion rot, QVector3D sc)
 {

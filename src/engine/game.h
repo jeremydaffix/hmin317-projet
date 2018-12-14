@@ -4,15 +4,15 @@
 // classe abstraite dont doit hériter la classe principale du jeu
 
 
-#include <gamescene.h>
-#include <cube.h>
-#include <objet3d.h>
-#include <terrain.h>
-#include <plane.h>
-#include <sprite.h>
-#include <movingballcomponent.h>
-#include <spriteanimationcomponent.h>
-#include <resourcesmanager.h>
+#include <engine/gamescene.h>
+#include <engine/cube.h>
+#include <engine/objet3d.h>
+#include <engine/terrain.h>
+#include <engine/plane.h>
+#include <engine/sprite.h>
+#include <engine/movingballcomponent.h>
+#include <engine/spriteanimationcomponent.h>
+#include <engine/resourcesmanager.h>
 
 #include <QOpenGLWidget>
 #include <QOpenGLFunctions>

@@ -48,107 +48,39 @@
 **
 ****************************************************************************/
 
-#ifndef MAINWIDGET_H
-#define MAINWIDGET_H
+#include <QApplication>
+#include <QGridLayout>
+#include <QLabel>
+#include <QSurfaceFormat>
 
 
-#include <gamescene.h>
-#include <cube.h>
-#include <objet3d.h>
-#include <terrain.h>
-#include <plane.h>
-#include <sprite.h>
-#include <movingballcomponent.h>
-#include <spriteanimationcomponent.h>>
-#include <resourcesmanager.h>
-
-#include <QOpenGLWidget>
-#include <QOpenGLFunctions>
-#include <QMatrix4x4>
-#include <QQuaternion>
-#include <QVector2D>
-#include <QBasicTimer>
-#include <QOpenGLShaderProgram>
-#include <QOpenGLTexture>
-#include <QMouseEvent>
-
-#include <math.h>
+#ifndef QT_NO_OPENGL
+#include "engine/game.h"
+#endif
 
 
-
-// direction pour le déplacement de la caméra
-enum DIRECTION {
-  NO,
-  UP,
-  DOWN,
-  LEFT,
-  RIGHT,
-  TURN_LEFT,
-  TURN_RIGHT
-};
-
-
-
-// Classe représentant un widget supportant l'affichage OpenGL.
-class MainWidget : public QOpenGLWidget, protected QOpenGLFunctions
+int main(int argc, char *argv[])
 {
-    Q_OBJECT
+    QApplication app(argc, argv);
 
-public:
-    explicit MainWidget(int _fps = 60, QWidget *parent = 0);
-    ~MainWidget();
+    QSurfaceFormat format;
+    format.setDepthBufferSize(24);
+    QSurfaceFormat::setDefaultFormat(format);
 
-    int getFps() const;
-    void setFps(int value);
-
-protected:
-
-    // événements entrée utilisateur
-    void mousePressEvent(QMouseEvent *e) override;
-    void mouseReleaseEvent(QMouseEvent *e) override;
-    void keyPressEvent(QKeyEvent* e) override;
-    void keyReleaseEvent(QKeyEvent* e) override;
-    void timerEvent(QTimerEvent *e) override;
-
-    // événements OpenGL
-    void initializeGL() override;
-    void resizeGL(int w, int h) override;
-    void paintGL() override;
-
-    void initShaders();
-    void initTextures();
+    app.setApplicationName("IMAGINA Wars");
+    app.setApplicationVersion("0.1");
+#ifndef QT_NO_OPENGL
 
 
-private:
-
-    QBasicTimer timer;
-    QOpenGLShaderProgram shaderTexture, shaderTerrain, shaderTerrainWinter, shaderTerrainSpring, shaderTerrainSummer, shaderTerrainAutumn, shaderTest;
-
-    QOpenGLTexture *textureDice, *textureDice2;
-
-    QVector2D mousePressPosition;
-    QVector3D rotationAxis;
-    qreal angularSpeed;
-
-
-    DIRECTION movementDirection = DIRECTION::NO;
-
-
-    int fps = 0;
-
-
-
-    // graph de scene
-
-    Terrain *terrain;
-
-
-//public slots:
-//    void setSeason(int season);
-
-};
+   Game game;
+   game.show();
 
 
 
 
-#endif // MAINWIDGET_H
+#else
+    QLabel note("OpenGL Support required");
+    note.show();
+#endif
+    return app.exec();
+}

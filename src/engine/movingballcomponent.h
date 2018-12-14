@@ -1,7 +1,7 @@
 #ifndef MOVINGCUBECOMPONENT_H
 #define MOVINGCUBECOMPONENT_H
 
-#include <gameobject.h>
+#include <engine/gameobject.h>
 
 
 // Component pour faire bouger une balle.

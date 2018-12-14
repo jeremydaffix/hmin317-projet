@@ -1,8 +1,8 @@
 #ifndef SPRITEANIMATIONCOMPONENT_H
 #define SPRITEANIMATIONCOMPONENT_H
 
-#include <component.h>
-#include <sprite.h>
+#include <engine/component.h>
+#include <engine/sprite.h>
 
 #include <vector>
 #include <qopengltexture.h>

@@ -1,4 +1,4 @@
-#include "movingballcomponent.h"
+#include "engine/movingballcomponent.h"
 
 MovingBallComponent::MovingBallComponent()
 {

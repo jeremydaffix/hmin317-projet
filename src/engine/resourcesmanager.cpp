@@ -1,4 +1,4 @@
-#include "resourcesmanager.h"
+#include "engine/resourcesmanager.h"
 
 ResourcesManager* ResourcesManager::instance = NULL;
 

@@ -1,7 +1,7 @@
 #ifndef CUBE_H
 #define CUBE_H
 
-#include <model3d.h>
+#include <engine/model3d.h>
 
 
 // Class représentant un Cube.

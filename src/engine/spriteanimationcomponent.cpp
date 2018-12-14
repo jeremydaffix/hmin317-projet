@@ -1,4 +1,4 @@
-#include "spriteanimationcomponent.h"
+#include "engine/spriteanimationcomponent.h"
 
 
 SpriteAnimationComponent::SpriteAnimationComponent(int _fps, std::vector<QOpenGLTexture *> listTextures)

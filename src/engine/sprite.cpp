@@ -1,12 +1,35 @@
-#include "plane.h"
+#include "engine/sprite.h"
 
-Plane::Plane(int vert, QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgram* sh,QOpenGLTexture *tex) : Model3D (pos, rot, sc, sh, tex)
+
+Sprite::Sprite(QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgram* sh, QOpenGLTexture *tex) : Model3D (pos, rot, sc, sh, tex)
 {
-    setNbrVertices(vert);
 }
 
 
-void Plane::createGeometry()
+Sprite::Sprite(QString path, QVector2D pos, float rot, QVector2D sc, QOpenGLShaderProgram* sh)// :  Model3D ()
+{
+    init(ResourcesManager::getInstance()->loadTexture(path), pos, rot, sc, sh);
+}
+
+Sprite::Sprite(QOpenGLTexture *tex, QVector2D pos, float rot, QVector2D sc, QOpenGLShaderProgram* sh)// :  Model3D ()
+{
+    init(tex, pos, rot, sc, sh);
+}
+
+
+
+void Sprite::init(QOpenGLTexture *tex, QVector2D pos, float rot, QVector2D sc, QOpenGLShaderProgram *sh)
+{
+    localPosition = QVector3D(pos.x(), pos.y(), 0);
+    localRotation = QQuaternion::fromEulerAngles(0, 0, -rot);
+    localScale = QVector3D(sc.x(), sc.y(), 1);
+
+    setShader(sh);
+    setTexture(tex);
+}
+
+
+void Sprite::createGeometry()
 {
     float size = 16. / nbrVertices; // même taille quel que soit le nombre de sommet
     float centerOffset = (nbrVertices - 1) * size / 2.; // pour que le plan soit centré sur sa position
@@ -86,7 +109,7 @@ void Plane::createGeometry()
 }
 
 
-void Plane::draw()
+void Sprite::draw()
 {
     if(shader == NULL) shader = GameScene::getInstance()->getDefaultShader();
     if(texture == NULL) texture = GameScene::getInstance()->getDefaultTexture();
@@ -129,17 +152,4 @@ void Plane::draw()
     // Draw plane geometry using indices from VBO 1
     glDrawElements(GL_TRIANGLE_STRIP, nbrIndices, GL_UNSIGNED_SHORT, 0);
 }
-
-
-int Plane::getNbrVertices() const
-{
-    return nbrVertices;
-}
-
-void Plane::setNbrVertices(int value)
-{
-    nbrVertices = value;
-}
-
-
 

@@ -1,4 +1,4 @@
-#include "terrain.h"
+#include "engine/terrain.h"
 
 
 Terrain::Terrain(QString path, int vert, QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgram* sh, QOpenGLTexture *tex) : Model3D (pos, rot, sc, sh, tex)
