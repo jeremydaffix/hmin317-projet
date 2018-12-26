@@ -9,6 +9,53 @@ ResourcesManager *ResourcesManager::getInstance() {
     return instance;
 }
 
+ResourcesManager::~ResourcesManager()
+{
+    // libérer en un seul lieu :
+    //  images
+    //  sons
+    //  shaders
+
+    // les objets du moteur (gameobject, components,...) sont libérés par le destructeur de la scène (puis de chaque objet de la hiérarchie)
+
+
+
+    for( const auto& s : gameShaders )
+    {
+        std::cout << "freeing shader " << s.first << std::endl;
+
+        delete s.second;
+    }
+
+
+    for( const auto& t : gameTextures )
+    {
+        std::cout << "freeing texture " << t.first << std::endl;
+
+        delete t.second;
+    }
+}
+
+void ResourcesManager::addGameShader(std::string name, QOpenGLShaderProgram *sh)
+{
+    gameShaders[name] = sh;
+}
+
+void ResourcesManager::addGameTexture(std::string name, QOpenGLTexture *tex)
+{
+    gameTextures[name] = tex;
+}
+
+QOpenGLShaderProgram *ResourcesManager::getGameShader(std::string name)
+{
+    return gameShaders[name];
+}
+
+QOpenGLTexture *ResourcesManager::getGameTexture(std::string name)
+{
+    return gameTextures[name];
+}
+
 
 ResourcesManager::ResourcesManager()
 {
@@ -17,6 +64,7 @@ ResourcesManager::ResourcesManager()
 
 
 // méthode pour simplifier le chargement d'un shader
+
  void ResourcesManager::loadShader(QOpenGLShaderProgram &shader, QString vpath, QString fpath)
  {
      // Compile vertex shader
@@ -27,6 +75,22 @@ ResourcesManager::ResourcesManager()
      if (!shader.addShaderFromSourceFile(QOpenGLShader::Fragment, fpath))
          return;//close();
  }
+
+QOpenGLShaderProgram *ResourcesManager::loadShader(QString vpath, QString fpath)
+{
+    QOpenGLShaderProgram *shader = new QOpenGLShaderProgram();
+
+    // Compile vertex shader
+    if (!shader->addShaderFromSourceFile(QOpenGLShader::Vertex, vpath))
+        return NULL;//close();
+
+    // Compile fragment shader
+    if (!shader->addShaderFromSourceFile(QOpenGLShader::Fragment, fpath))
+        return NULL;//close();
+
+    return shader;
+}
+
 
 
 

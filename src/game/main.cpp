@@ -55,7 +55,9 @@
 
 
 #ifndef QT_NO_OPENGL
-#include "engine/game.h"
+//#include "engine/mainwidget.h"
+//#include "engine/game.h"
+#include "game/imaginawars.h"
 #endif
 
 
@@ -69,18 +71,17 @@ int main(int argc, char *argv[])
 
     app.setApplicationName("IMAGINA Wars");
     app.setApplicationVersion("0.1");
+
 #ifndef QT_NO_OPENGL
 
-
-   Game game;
+   ImaginaWars game;
    game.show();
-
-
 
 
 #else
     QLabel note("OpenGL Support required");
     note.show();
 #endif
+
     return app.exec();
 }

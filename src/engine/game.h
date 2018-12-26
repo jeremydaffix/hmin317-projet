@@ -52,6 +52,9 @@ public:
     int getFps() const;
     void setFps(int value);
 
+
+    virtual void startGame();
+
 protected:
 
     // événements entrée utilisateur
@@ -66,32 +69,20 @@ protected:
     void resizeGL(int w, int h) override;
     void paintGL() override;
 
-    void initShaders();
-    void initTextures();
+    // chargement ressources
+    virtual void initShaders();
+    virtual void initTextures();
 
 
 private:
 
     QBasicTimer timer;
-    QOpenGLShaderProgram shaderTexture, shaderTerrain, shaderTerrainWinter, shaderTerrainSpring, shaderTerrainSummer, shaderTerrainAutumn, shaderTest;
-
-    QOpenGLTexture *textureDice, *textureDice2;
-
-
-    DIRECTION movementDirection = DIRECTION::NO;
-
 
     int fps = 0;
 
 
-
-    // graph de scene
-
-    Terrain *terrain;
-
-
 //public slots:
-//    void setSeason(int season);
+
 
 };
 

@@ -10,16 +10,19 @@ SpriteAnimationComponent::SpriteAnimationComponent(int _fps, std::vector<QOpenGL
 
 SpriteAnimationComponent::~SpriteAnimationComponent()
 {
-    ((Sprite*)getContainer())->setTexture(NULL); // pour ne pas détruire la texture courante 2 fois
+    //((Sprite*)getContainer())->setTexture(NULL); // pour ne pas détruire la texture courante 2 fois
 
 
     // libération des textures
+    // mieux : utiliser pointeurs intelligents ?
 
-    std::vector<QOpenGLTexture*>::iterator it;
+    // MAINTENANT GERE DANS LE RESOURCESMANAGER
+
+    /*std::vector<QOpenGLTexture*>::iterator it;
     for (it = textures.begin(); it != textures.end(); ++it)
     {
         delete (*it);
-    }
+    }*/
 }
 
 void SpriteAnimationComponent::update()
