@@ -2,6 +2,7 @@
 #define IMAGINAWARS_H
 
 #include "engine/game.h"
+#include "game/gamemap.h"
 
 #include <sstream>
 #include <iomanip>

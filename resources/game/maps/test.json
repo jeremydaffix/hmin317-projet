@@ -1,0 +1,13 @@
+{
+    "mapname": "Test Map",
+    "width:": 32,
+    "height": 32,
+
+    "defaultsprite": "",
+
+    "sprites": [],
+    "obstacles": [],
+    "npcs": [],
+    "neutralbuildings": []
+
+}

@@ -10,7 +10,6 @@ void ImaginaWars::startGame()
     qDebug() << "IMAGINA WARS";
 
 
-
     Sprite *spr = new Sprite(NULL,
                              QVector2D(0, 0),
                              10,
@@ -32,9 +31,16 @@ void ImaginaWars::startGame()
 
 
 
+    GameMap *gm = new GameMap(":/resources/game/maps/test.json");
+    GameScene::getInstance()->addChild(gm);
+
+
+
     GameScene::getInstance()->createGeometry();
     GameScene::getInstance()->setLocalRotation(QQuaternion::fromEulerAngles(0, 0, 0));
     GameScene::getInstance()->setLocalPosition(QVector3D(0,0,10));
+
+
 }
 
 

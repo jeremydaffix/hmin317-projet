@@ -21,7 +21,8 @@ SOURCES += \
     src/engine/movingballcomponent.cpp \
     src/engine/game.cpp \
     src/engine/spriteanimationcomponent.cpp \
-    src/game/imaginawars.cpp
+    src/game/imaginawars.cpp \
+    src/game/gamemap.cpp
 
 SOURCES +=
 
@@ -40,11 +41,13 @@ HEADERS += \
     src/engine/movingballcomponent.h \
     src/engine/game.h \
     src/engine/spriteanimationcomponent.h \
-    src/game/imaginawars.h
+    src/game/imaginawars.h \
+    src/game/gamemap.h
 
 RESOURCES += \
     textures.qrc \
-    shaders.qrc
+    shaders.qrc \
+    game.qrc
 
 # install
 target.path = $$[QT_INSTALL_EXAMPLES]/opengl/projet
