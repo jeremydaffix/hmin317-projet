@@ -6,21 +6,29 @@ Sprite::Sprite(QVector3D pos, QQuaternion rot, QVector3D sc, QOpenGLShaderProgra
 }
 
 
-Sprite::Sprite(QString path, QVector2D pos, float rot, QVector2D sc, QOpenGLShaderProgram* sh)// :  Model3D ()
+
+
+/*Sprite::Sprite(QString path, QVector2D pos, float rot, QVector2D sc, QOpenGLShaderProgram* sh)// :  Model3D ()
 {
     init(ResourcesManager::getInstance()->loadTexture(path), pos, rot, sc, sh);
+}*/
+
+Sprite::Sprite(std::string name, QVector3D pos, float rot, QVector2D sc, QOpenGLShaderProgram *sh)
+{
+    init(ResourcesManager::getInstance()->getGameTexture(name), pos, rot, sc, sh);
 }
 
-Sprite::Sprite(QOpenGLTexture *tex, QVector2D pos, float rot, QVector2D sc, QOpenGLShaderProgram* sh)// :  Model3D ()
+Sprite::Sprite(QOpenGLTexture *tex, QVector3D pos, float rot, QVector2D sc, QOpenGLShaderProgram* sh)// :  Model3D ()
 {
     init(tex, pos, rot, sc, sh);
 }
 
 
 
-void Sprite::init(QOpenGLTexture *tex, QVector2D pos, float rot, QVector2D sc, QOpenGLShaderProgram *sh)
+void Sprite::init(QOpenGLTexture *tex, QVector3D pos, float rot, QVector2D sc, QOpenGLShaderProgram *sh)
 {
-    localPosition = QVector3D(pos.x(), pos.y(), 0);
+    //localPosition = QVector3D(pos.x(), pos.y(), 0);
+    localPosition = pos;
     localRotation = QQuaternion::fromEulerAngles(0, 0, -rot);
     localScale = QVector3D(sc.x(), sc.y(), 1);
 

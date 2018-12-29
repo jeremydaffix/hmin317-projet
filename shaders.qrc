@@ -9,5 +9,7 @@
         <file>resources/shaders/vshader_spring.glsl</file>
         <file>resources/shaders/vshader_summer.glsl</file>
         <file>resources/shaders/vshader_winter.glsl</file>
+        <file>resources/shaders/fshader_toon.glsl</file>
+        <file>resources/shaders/vshader_toon.glsl</file>
     </qresource>
 </RCC>

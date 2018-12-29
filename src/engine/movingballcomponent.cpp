@@ -2,7 +2,7 @@
 
 MovingBallComponent::MovingBallComponent()
 {
-    direction = QVector2D(1., 1.);
+    direction = QVector2D(-1., -1.);
 }
 
 void MovingBallComponent::update()
@@ -23,6 +23,6 @@ void MovingBallComponent::fixedUpdate()
 
 
 
-    getContainer()->setLocalPosition(pos + direction / 50.);
+    getContainer()->setLocalPosition(pos + direction /100.);
 
 }

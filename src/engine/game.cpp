@@ -65,10 +65,11 @@ void Game::initializeGL()
 
     initTextures();
     glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+    //glBlendFunc(GL_SRC_ALPHA, GL_ONE) ;
     glEnable(GL_BLEND);
 
     // Enable depth buffer
-    glEnable(GL_DEPTH_TEST);
+    //glEnable(GL_DEPTH_TEST);
 
     // Enable back face culling
     glEnable(GL_CULL_FACE);
@@ -136,6 +137,7 @@ void Game::resizeGL(int w, int h)
     proj.perspective(fov, aspect, zNear, zFar);
 
     GameScene::getInstance()->setProjection(proj);
+
 }
 
 

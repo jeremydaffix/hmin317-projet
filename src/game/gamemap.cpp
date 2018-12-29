@@ -24,40 +24,60 @@ GameMap::GameMap(QString path) : GameObject ()
     // a partir de là, chaque noeud =
     // soit un autre objet, soit un tableau, soit une valeur "de base"
 
-    QString mapName = json["mapname"].toString();
-    QString defaultSprite = json["defaultsprite"].toString();
+    //QString defaultSprite = json["defaultsprite"].toString();
+    QJsonArray defaultTiles = json["defaulttiles"].toArray();
 
-    if (json.contains("sprites") && json["sprites"].isArray())
+
+    width = json["width"].toInt();
+    height = json["height"].toInt();
+
+
+    // on commence par afficher les tiles de fond
+    for(int i = 0 ; i < width ; ++i)
     {
-            QJsonArray spritesArray = json["sprites"].toArray();
+        for(int j = 0 ; j < height ; ++j)
+        {
+            int n = QRandomGenerator::global()->bounded(defaultTiles.size());
+            //int rot = QRandomGenerator::global()->bounded(4) * 90;
 
-            //mNpcs.clear();
-            //mNpcs.reserve(npcArray.size());
+            std::string spr = defaultTiles[n].toString().toStdString();
 
-            for (int i = 0; i < spritesArray.size(); ++i)
+            addSprite(spr, i, j);
+        }
+    }
+
+
+    // tiles de la carte
+    if (json.contains("tiles") && json["tiles"].isObject())
+    {
+            QJsonObject tiles = json["tiles"].toObject();
+
+            for (int i = 0; i < tiles.size(); ++i) // pour chaque tile
             {
-                QJsonObject obj = spritesArray[i].toObject();
+                QString tileName = tiles.keys().at(i);
+                QJsonArray listPos = tiles.value(tileName).toArray();
 
+                for(int j = 0 ; j < listPos.size() ; ++j) // pour chaque case où mettre ce tile
+                {
+                    QJsonArray coords = listPos[j].toArray();
 
+                    int x = coords[0].toInt();
+                    int y = coords[1].toInt();
 
-                //Sprite *spr = new Sprite();
+                    addSprite(tileName.toStdString(), x, y);
+                }
 
             }
         }
 
+}
 
-          /*QJsonValue value = sett2.value(QString("appName"));
-          qWarning() << value;
-          QJsonObject item = value.toObject();
-          qWarning() << tr("QJsonObject of description: ") << item;
 
-          // in case of string value get value and convert into string
-          qWarning() << tr("QJsonObject[appName] of description: ") << item["description"];
-          QJsonValue subobj = item["description"];
-          qWarning() << subobj.toString();
+Sprite *GameMap::addSprite(std::string name, int caseX, int caseY, int rot)
+{
+    Sprite *s = new Sprite(name, QVector3D((-width / 2.) + caseX, (-height / 2.) + caseY, 0), rot, QVector2D(0.094,0.094));
 
-          // in case of array get array and convert into string
-          qWarning() << tr("QJsonObject[appName] of value: ") << item["imp"];
-          QJsonArray test = item["imp"].toArray();
-          qWarning() << test[1].toString();*/
+    addChild(s);
+
+    return s;
 }
