@@ -1220,5 +1220,13 @@
         <file>resources/textures/medievalrtspack/Unit/medievalUnit_23.png</file>
         <file>resources/textures/medievalrtspack/Unit/medievalUnit_24.png</file>
         <file>resources/textures/medievalrtspack/License.txt</file>
+        <file>resources/textures/medievalrtspack/Tile/medievalTile_59.png</file>
+        <file>resources/textures/medievalrtspack/Tile/medievalTile_60.png</file>
+        <file>resources/textures/medievalrtspack/Tile/medievalTile_61.png</file>
+        <file>resources/textures/medievalrtspack/Tile/medievalTile_62.png</file>
+        <file>resources/textures/medievalrtspack/Tile/medievalTile_63.png</file>
+        <file>resources/textures/medievalrtspack/Tile/medievalTile_64.png</file>
+        <file>resources/textures/medievalrtspack/Tile/medievalTile_65.png</file>
+        <file>resources/textures/medievalrtspack/Tile/medievalTile_66.png</file>
     </qresource>
 </RCC>

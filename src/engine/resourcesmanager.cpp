@@ -22,7 +22,7 @@ ResourcesManager::~ResourcesManager()
 
     for( const auto& s : gameShaders )
     {
-        std::cout << "freeing shader " << s.first << std::endl;
+        //std::cout << "freeing shader " << s.first << std::endl;
 
         delete s.second;
     }
@@ -30,7 +30,7 @@ ResourcesManager::~ResourcesManager()
 
     for( const auto& t : gameTextures )
     {
-        std::cout << "freeing texture " << t.first << std::endl;
+        //std::cout << "freeing texture " << t.first << std::endl;
 
         delete t.second;
     }

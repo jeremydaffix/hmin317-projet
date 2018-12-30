@@ -13,16 +13,27 @@
 #include <iostream>
 #include <string>
 
+#include "3rd/pathfinders.h"
+
 #include "engine/sprite.h"
+#include"engine/model3d.h"
 
 
-class GameMap : public GameObject
+class GameMap : public Model3D
 {
 public:
-    GameMap(QString path);
+    GameMap(QString _path);
+    virtual ~GameMap();
+    void BuildMap();
+
+    std::list<QVector2D> calcPath(QVector2D start, QVector2D target);
+
 protected:
-    Sprite* addSprite(std::string name, int caseX, int caseY, int rot = 0);
+    Sprite* addSprite(std::string name, int caseX, int caseY, int rot = 0, float z = 0.00);
     int width, height;
+    QString path;
+    unsigned char* walkableMap = NULL;
+    void initWalkableMap();
 };
 
 #endif // GAMEMAP_H

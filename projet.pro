@@ -4,6 +4,7 @@ TARGET = projet
 TEMPLATE = app
 
 INCLUDEPATH += src/
+INCLUDEPATH += /usr/include/boost/
 
 SOURCES += \
     src/engine/component.cpp \
@@ -22,7 +23,9 @@ SOURCES += \
     src/engine/game.cpp \
     src/engine/spriteanimationcomponent.cpp \
     src/game/imaginawars.cpp \
-    src/game/gamemap.cpp
+    src/game/gamemap.cpp \
+    src/3rd/pathfinders.cpp \
+    src/engine/walkpathfindingcomponent.cpp
 
 SOURCES +=
 
@@ -42,12 +45,16 @@ HEADERS += \
     src/engine/game.h \
     src/engine/spriteanimationcomponent.h \
     src/game/imaginawars.h \
-    src/game/gamemap.h
+    src/game/gamemap.h \
+    src/3rd/pathfinders.h \
+    src/engine/walkpathfindingcomponent.h
 
 RESOURCES += \
     textures.qrc \
     shaders.qrc \
     game.qrc
+
+LIBS += -lboost_system -lboost_random
 
 # install
 target.path = $$[QT_INSTALL_EXAMPLES]/opengl/projet

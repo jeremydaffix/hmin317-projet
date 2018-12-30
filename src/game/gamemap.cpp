@@ -2,8 +2,23 @@
 
 
 
-GameMap::GameMap(QString path) : GameObject ()
+GameMap::GameMap(QString _path) : Model3D ()
 {
+    path = _path;
+
+}
+
+GameMap::~GameMap()
+{
+    if(walkableMap != NULL)
+    {
+        delete walkableMap;
+    }
+}
+
+void GameMap::BuildMap()
+{
+
     qDebug() << "LOADING MAP " << path;
 
 
@@ -30,6 +45,9 @@ GameMap::GameMap(QString path) : GameObject ()
 
     width = json["width"].toInt();
     height = json["height"].toInt();
+
+
+   initWalkableMap();
 
 
     // on commence par afficher les tiles de fond
@@ -70,14 +88,94 @@ GameMap::GameMap(QString path) : GameObject ()
             }
         }
 
+    // obstacles (= tiles non marchables) de la carte
+    if (json.contains("obstacles") && json["obstacles"].isObject())
+    {
+            QJsonObject obstacles = json["obstacles"].toObject();
+
+            for (int i = 0; i < obstacles.size(); ++i) // pour chaque tile
+            {
+                QString tileName = obstacles.keys().at(i);
+                QJsonArray listPos = obstacles.value(tileName).toArray();
+
+                for(int j = 0 ; j < listPos.size() ; ++j) // pour chaque case où mettre ce tile
+                {
+                    QJsonArray coords = listPos[j].toArray();
+
+                    int x = coords[0].toInt();
+                    int y = coords[1].toInt();
+
+                    addSprite(tileName.toStdString(), x, y, 0);
+
+                    walkableMap[width * y + x] = 0;
+                }
+
+            }
+    }
+}
+
+std::list<QVector2D> GameMap::calcPath(QVector2D start, QVector2D target)
+{
+    std::list<QVector2D> ret;
+
+    int pOutBuffer[42];
+
+    int size = AStarFindPathDiag((int)start.x(), (int)start.y(),
+                    (int)target.x(), (int)target.y(),
+                    walkableMap, width, height,
+                    pOutBuffer, 42);
+
+    for(int k = 0 ; k < size ; ++k)
+    {
+        //index = (width * row) + col
+
+        int index = pOutBuffer[k];
+
+        int x = index % width;
+        int y = index / width;
+
+        QVector2D pos = QVector2D(x, y);
+
+        ret.push_back(pos);
+
+        //qDebug() << pos;
+    }
+
+    qDebug() << ret;
+
+    return ret;
 }
 
 
-Sprite *GameMap::addSprite(std::string name, int caseX, int caseY, int rot)
+Sprite *GameMap::addSprite(std::string name, int caseX, int caseY, int rot, float z)
 {
-    Sprite *s = new Sprite(name, QVector3D((-width / 2.) + caseX, (-height / 2.) + caseY, 0), rot, QVector2D(0.094,0.094));
+    Sprite *s = new Sprite(name, QVector3D((-width / 2.) + caseX, (-height / 2.) + caseY, z), rot, QVector2D(0.094,0.094), getShader());
 
     addChild(s);
 
     return s;
+}
+
+void GameMap::initWalkableMap()
+{
+    walkableMap = new unsigned char[height*width];
+
+    std::vector<int> traversable;
+
+    for (int i = 0; i < width; i++)
+    {
+        for (int j = 0; j < height; j++)
+        {
+          //char c;
+          //cin >> c;
+
+          //walkableMap[width * j + i] = (count(passable.begin(), passable.end(), c) > 0);
+
+          //if (count(passable.begin(), passable.end(), c) > 0)
+          //      traversable.push_back(width*j + i);
+
+
+            walkableMap[width * j + i] = 1;
+        }
+    }
 }

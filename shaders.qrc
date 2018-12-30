@@ -2,14 +2,9 @@
     <qresource prefix="/">
         <file>resources/shaders/fshader.glsl</file>
         <file>resources/shaders/fshader_color.glsl</file>
-        <file>resources/shaders/fshader_Objet.glsl</file>
         <file>resources/shaders/vshader.glsl</file>
-        <file>resources/shaders/vshader_autumn.glsl</file>
         <file>resources/shaders/vshader_color.glsl</file>
-        <file>resources/shaders/vshader_spring.glsl</file>
-        <file>resources/shaders/vshader_summer.glsl</file>
-        <file>resources/shaders/vshader_winter.glsl</file>
         <file>resources/shaders/fshader_toon.glsl</file>
-        <file>resources/shaders/vshader_toon.glsl</file>
+        <file>resources/shaders/fshader_dark.glsl</file>
     </qresource>
 </RCC>
