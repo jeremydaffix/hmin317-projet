@@ -15,12 +15,19 @@ public:
 
     ImaginaWars(int _fps = 60);
 
-    void startGame();
+    void startGame() override;
 
 protected:
 
-    void initShaders();
-    void initTextures();
+    void initShaders() override;
+    void initTextures() override;
+
+    void mouseReleaseEvent(QMouseEvent *e) override;
+
+
+    GameMap *gm;
+    Sprite *spr;
+    WalkPathfindingComponent *pathfinding;
 };
 
 #endif // IMAGINAWARS_H

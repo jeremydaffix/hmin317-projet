@@ -138,6 +138,8 @@ void Game::resizeGL(int w, int h)
 
     GameScene::getInstance()->setProjection(proj);
 
+    glWidth = w;
+    glHeight = h;
 }
 
 

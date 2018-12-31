@@ -9,7 +9,7 @@ void ImaginaWars::startGame()
 {
     qDebug() << "IMAGINA WARS";
 
-    GameMap *gm = new GameMap(":/resources/game/maps/test.json");
+    /*GameMap */gm = new GameMap(":/resources/game/maps/test.json");
     gm->setLocalPosition(QVector3D(0.5,0.5,0));
     gm->setShader(ResourcesManager::getInstance()->getGameShader("texturedark"));
     gm->BuildMap();
@@ -18,20 +18,23 @@ void ImaginaWars::startGame()
     //gm->calcPath(QVector2D(1, 1), QVector2D(9, 9));
 
 
-    Sprite *spr = new Sprite(NULL,
+    /*Sprite */spr = new Sprite(NULL,
                              QVector2D(0, 0),
                              0,
                              QVector2D(0.08, 0.08),
                              ResourcesManager::getInstance()->getGameShader("texturetoon"));
 
     //spr->addComponent(new MovingBallComponent());
-    spr->addComponent(new WalkPathfindingComponent(gm));
 
-    //qDebug() << gm->CaseToPos(QVector2D(0,0));
+    pathfinding = new WalkPathfindingComponent(gm);
+
+    spr->addComponent(pathfinding);
+
+     //spr->setLocalPosition(gm->CaseToPos(QVector2D(5,0)));
 
 
 
-    SpriteAnimationComponent *anim = new SpriteAnimationComponent(15);
+    SpriteAnimationComponent *anim = new SpriteAnimationComponent(12);
 
     for(int i = 0 ; i < 12 ; ++i)
     {
@@ -132,4 +135,56 @@ void ImaginaWars::initTextures()
 
 
     GameScene::getInstance()->setDefaultTexture(textureDice);
+}
+
+
+
+void ImaginaWars::mouseReleaseEvent(QMouseEvent *e)
+{
+    //qDebug() << "CLICK " << e->x() << ";" << e->y();
+
+
+    // il va falloir transformer tout ça dans le repère monde :o
+
+    // merci http://antongerdelan.net/opengl/raycasting.html
+
+
+    // 2d Viewport Coordinates -> 3d Normalised Device Coordinates
+
+    float x = (2.0f * e->x()) / glWidth - 1.0f;
+    float y = 1.0f - (2.0f * e->y()) / glHeight;
+    float z = 1.0f;
+    QVector3D ray_nds = QVector3D(x, y, z);
+
+    // 4d Homogeneous Clip Coordinates
+
+    QVector4D ray_clip = QVector4D(ray_nds.x(), ray_nds.y(), -1.0, 1.0);
+
+
+   // 4d Eye (Camera) Coordinates
+
+    QMatrix4x4 proj = GameScene::getInstance()->getProjection();
+
+    QVector4D ray_eye = proj.inverted() * ray_clip;
+    ray_eye = QVector4D(ray_eye.x(), ray_eye.y(), -1.0, 0.0);
+
+
+    // 4d World Coordinates
+
+    //QVector3D ray_wor = (inverse(view_matrix) * ray_eye).xyz;
+    QVector4D q = QVector4D(GameScene::getInstance()->getLocalTransform() * ray_eye);
+    QVector3D ray_wor = QVector3D(q.x(), q.y(), q.z());
+    // don't forget to normalise the vector at some point
+    ray_wor = ray_wor.normalized();
+
+
+   //qDebug() << "CLICK WORLD " << ray_wor.x() << ";" << ray_wor.y() << ";" << ray_wor.z();
+
+
+    QVector2D cas = gm->posToCase(QVector2D(ray_wor.x() * 20, ray_wor.y() * 20));
+
+    qDebug() << "CLICKED CASE " << cas;
+
+    pathfinding->setTargetCase(cas);
+
 }

@@ -16,11 +16,15 @@ public:
     void update();
     void fixedUpdate();
 
+    QVector2D getTargetCase() const;
+    void setTargetCase(const QVector2D &value);
+
 protected:
 
     //QVector2D direction;
     std::list<QVector2D> path;
     GameMap *gameMap;
+    QVector2D targetCase;
 };
 
 

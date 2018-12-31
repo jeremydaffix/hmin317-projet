@@ -57,6 +57,8 @@ public:
 
 protected:
 
+    int glWidth = 0, glHeight = 0;
+
     // événements entrée utilisateur
     void mousePressEvent(QMouseEvent *e) override;
     void mouseReleaseEvent(QMouseEvent *e) override;
