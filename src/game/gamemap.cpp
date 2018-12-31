@@ -125,6 +125,8 @@ std::list<QVector2D> GameMap::calcPath(QVector2D start, QVector2D target)
                     walkableMap, width, height,
                     pOutBuffer, 42);
 
+    qDebug() << "size path " << size;
+
     for(int k = 0 ; k < size ; ++k)
     {
         //index = (width * row) + col
@@ -141,9 +143,24 @@ std::list<QVector2D> GameMap::calcPath(QVector2D start, QVector2D target)
         //qDebug() << pos;
     }
 
+    qDebug() << "path btw " << start << target;
     qDebug() << ret;
 
     return ret;
+}
+
+QVector2D GameMap::posToCase(QVector2D pos)
+{
+    // repère en bas à gauche de l'écran
+    float xorigin = pos.x() + width / 2.;
+    float yorigin = pos.y() + height / 2.;
+
+    return QVector2D((int)xorigin, (int)yorigin);
+}
+
+QVector2D GameMap::CaseToPos(QVector2D cas)
+{
+    return QVector2D((-width / 2.) + cas.x() + 0.5, (-height / 2.) + cas.y() + 0.5);
 }
 
 

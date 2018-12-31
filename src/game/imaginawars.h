@@ -3,6 +3,7 @@
 
 #include "engine/game.h"
 #include "game/gamemap.h"
+#include "game/walkpathfindingcomponent.h"
 
 #include <sstream>
 #include <iomanip>

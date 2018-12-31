@@ -24,7 +24,12 @@ void ImaginaWars::startGame()
                              QVector2D(0.08, 0.08),
                              ResourcesManager::getInstance()->getGameShader("texturetoon"));
 
-    spr->addComponent(new MovingBallComponent());
+    //spr->addComponent(new MovingBallComponent());
+    spr->addComponent(new WalkPathfindingComponent(gm));
+
+    //qDebug() << gm->CaseToPos(QVector2D(0,0));
+
+
 
     SpriteAnimationComponent *anim = new SpriteAnimationComponent(15);
 
@@ -34,6 +39,8 @@ void ImaginaWars::startGame()
     }
 
     spr->addComponent(anim);
+
+
 
     GameScene::getInstance()->addChild(spr);
 

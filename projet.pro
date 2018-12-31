@@ -25,7 +25,7 @@ SOURCES += \
     src/game/imaginawars.cpp \
     src/game/gamemap.cpp \
     src/3rd/pathfinders.cpp \
-    src/engine/walkpathfindingcomponent.cpp
+    src/game/walkpathfindingcomponent.cpp
 
 SOURCES +=
 
@@ -47,7 +47,7 @@ HEADERS += \
     src/game/imaginawars.h \
     src/game/gamemap.h \
     src/3rd/pathfinders.h \
-    src/engine/walkpathfindingcomponent.h
+    src/game/walkpathfindingcomponent.h
 
 RESOURCES += \
     textures.qrc \

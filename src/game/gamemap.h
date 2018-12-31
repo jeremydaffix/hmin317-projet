@@ -27,6 +27,8 @@ public:
     void BuildMap();
 
     std::list<QVector2D> calcPath(QVector2D start, QVector2D target);
+    QVector2D posToCase(QVector2D pos);
+    QVector2D CaseToPos(QVector2D cas);
 
 protected:
     Sprite* addSprite(std::string name, int caseX, int caseY, int rot = 0, float z = 0.00);
