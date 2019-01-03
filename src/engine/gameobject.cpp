@@ -46,6 +46,7 @@ void GameObject::removeChild(GameObject *child)
 {
     if(std::find(children.begin(), children.end(), child) != children.end()) children.remove(child);
     child->setParent(NULL);
+    //delete child; // pas à lui de de libérer car on peut très bien juste changer la hiérarchie
 }
 
 
@@ -70,6 +71,7 @@ void GameObject::removeComponent(Component *c)
 {
     if(std::find(components.begin(), components.end(), c) != components.end()) components.remove(c);
     c->setContainer(NULL);
+    delete c; ////
 }
 
 

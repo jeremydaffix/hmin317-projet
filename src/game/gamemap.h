@@ -12,11 +12,12 @@
 
 #include <iostream>
 #include <string>
+#include <iterator>
+#include <algorithm>
 
 #include "3rd/pathfinders.h"
 
 #include "engine/sprite.h"
-#include"engine/model3d.h"
 
 
 class GameMap : public Model3D
@@ -28,7 +29,11 @@ public:
 
     std::list<QVector2D> calcPath(QVector2D start, QVector2D target);
     QVector2D posToCase(QVector2D pos);
-    QVector2D CaseToPos(QVector2D cas);
+    QVector2D caseToPos(QVector2D cas);
+    Sprite *getSprite(QVector2D pos);
+
+    int getWidth() const;
+    int getHeight() const;
 
 protected:
     Sprite* addSprite(std::string name, int caseX, int caseY, int rot = 0, float z = 0.00);

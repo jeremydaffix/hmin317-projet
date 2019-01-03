@@ -125,7 +125,7 @@ std::list<QVector2D> GameMap::calcPath(QVector2D start, QVector2D target)
                     walkableMap, width, height,
                     pOutBuffer, 42);
 
-    qDebug() << "size path " << size;
+    //qDebug() << "size path " << size;
 
     for(int k = 0 ; k < size ; ++k)
     {
@@ -143,8 +143,8 @@ std::list<QVector2D> GameMap::calcPath(QVector2D start, QVector2D target)
         //qDebug() << pos;
     }
 
-    qDebug() << "path btw " << start << target;
-    qDebug() << ret;
+    //qDebug() << "path btw " << start << target;
+    //qDebug() << ret;
 
     return ret;
 }
@@ -158,9 +158,17 @@ QVector2D GameMap::posToCase(QVector2D pos)
     return QVector2D((int)xorigin, (int)yorigin);
 }
 
-QVector2D GameMap::CaseToPos(QVector2D cas)
+QVector2D GameMap::caseToPos(QVector2D cas)
 {
     return QVector2D((-width / 2.) + cas.x() + 0.5, (-height / 2.) + cas.y() + 0.5);
+}
+
+
+Sprite *GameMap::getSprite(QVector2D pos)
+{
+    int index = (int)pos.x() * height + (int)pos.y();
+    return (Sprite*)*std::next(getChildren().begin(), index);
+    //return (Sprite*)*getChildren().begin();
 }
 
 
@@ -171,6 +179,16 @@ Sprite *GameMap::addSprite(std::string name, int caseX, int caseY, int rot, floa
     addChild(s);
 
     return s;
+}
+
+int GameMap::getHeight() const
+{
+    return height;
+}
+
+int GameMap::getWidth() const
+{
+    return width;
 }
 
 void GameMap::initWalkableMap()

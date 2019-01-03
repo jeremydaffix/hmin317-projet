@@ -5,7 +5,7 @@
 #include "gamemap.h"
 
 #include <engine/gameobject.h>
-
+#include <game/soldier.h>
 
 
 class WalkPathfindingComponent : public Component
@@ -16,15 +16,15 @@ public:
     void update();
     void fixedUpdate();
 
-    QVector2D getTargetCase() const;
-    void setTargetCase(const QVector2D &value);
+    QVector2D getTargetPos() const;
+    void setTargetPos(const QVector2D &value);
 
 protected:
 
     //QVector2D direction;
     std::list<QVector2D> path;
     GameMap *gameMap;
-    QVector2D targetCase;
+    QVector2D targetPos;
 };
 
 

@@ -4,7 +4,7 @@ WalkPathfindingComponent::WalkPathfindingComponent(GameMap *gm)
 {
     gameMap = gm;
 
-    targetCase = QVector2D(10,6);
+    targetPos = QVector2D(0,0);
 }
 
 void WalkPathfindingComponent::update()
@@ -24,37 +24,41 @@ void WalkPathfindingComponent::fixedUpdate()
         //QVector2D targetCase = QVector2D(5,4);
 
 
-        if(path.size() == 0)
+        if(path.size() == 0) // calcul d'un nouveau chemin
         {
-            path = gameMap->calcPath(cas, targetCase);
+            path = gameMap->calcPath(cas, gameMap->posToCase(targetPos));
 
         }
 
 
-        if(path.size() > 0)
+        if(path.size() > 0) // chemin trouvé
         {
             QVector2D next = path.front();
 
-            //qDebug() << "GO FROM " << cas << " TO " << next;
+            QVector2D dir = (gameMap->caseToPos(next) - pos2).normalized(); // direction vers la prochaine position du chemin
 
-            //QVector2D dir = (next - cas).normalized();
-            QVector2D dir = (gameMap->CaseToPos(next) - pos2).normalized();
+            getContainer()->setLocalPosition(pos + dir / 150.); // on avance dans cette direction
+            ((Soldier*)getContainer())->selectAnimWalk(dir);
 
-            //qDebug() << "DIST1 " << getContainer()->getLocalPosition().distanceToPoint(gameMap->CaseToPos(next));
-
-            getContainer()->setLocalPosition(pos + dir / 150.);
-
-            //qDebug() << "DIST2 " << getContainer()->getLocalPosition().distanceToPoint(gameMap->CaseToPos(next));
-
-            if((path.size() > 1 && next == cas) || (getContainer()->getLocalPosition().distanceToPoint(gameMap->CaseToPos(next)) < 0.10))
-            //if(next == cas)
+            if((path.size() > 1 && next == cas) || // arrivé dans la case du point suivant
+               (getContainer()->getLocalPosition().distanceToPoint(gameMap->caseToPos(next)) < 0.10)) // ou assez proche de ce point
             {
-                qDebug() << "NEXT";
-                path.pop_back();
+                //qDebug() << "NEXT";
+                path.pop_back(); // on passe à la position suivante
             }
 
-
         }
+
+
+
+        // pathfinding terminé : on finit en se rapprochant en ligne droite de la position précise de la target
+        /*if(path.size() == 0 && getContainer()->getLocalPosition().distanceToPoint(targetPos) > 0.05)
+        {
+            QVector2D dirpos = (targetPos - QVector2D(getContainer()->getLocalPosition().x(), getContainer()->getLocalPosition().y())).normalized();
+
+            getContainer()->setLocalPosition(getContainer()->getLocalPosition() + dirpos / 150.);
+            ((Soldier*)getContainer())->selectAnimWalk(dirPos);
+        }*/
     }
 
 
@@ -62,14 +66,14 @@ void WalkPathfindingComponent::fixedUpdate()
 
 
 
-QVector2D WalkPathfindingComponent::getTargetCase() const
+QVector2D WalkPathfindingComponent::getTargetPos() const
 {
-    return targetCase;
+    return targetPos;
 }
 
-void WalkPathfindingComponent::setTargetCase(const QVector2D &value)
+void WalkPathfindingComponent::setTargetPos(const QVector2D &value)
 {
-    targetCase = value;
+    targetPos = value;
 
     path.clear();
 }

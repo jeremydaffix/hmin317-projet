@@ -18,30 +18,22 @@ void ImaginaWars::startGame()
     //gm->calcPath(QVector2D(1, 1), QVector2D(9, 9));
 
 
-    /*Sprite */spr = new Sprite(NULL,
+    spr = new Soldier(Soldier::TYPE_KNIGHT, gm, NULL,
                              QVector2D(0, 0),
                              0,
                              QVector2D(0.08, 0.08),
                              ResourcesManager::getInstance()->getGameShader("texturetoon"));
 
-    //spr->addComponent(new MovingBallComponent());
-
-    pathfinding = new WalkPathfindingComponent(gm);
-
-    spr->addComponent(pathfinding);
-
-     //spr->setLocalPosition(gm->CaseToPos(QVector2D(5,0)));
 
 
-
-    SpriteAnimationComponent *anim = new SpriteAnimationComponent(12);
+    /*SpriteAnimationComponent *anim = new SpriteAnimationComponent(12);
 
     for(int i = 0 ; i < 12 ; ++i)
     {
         anim->addTexture(ResourcesManager::getInstance()->getGameTexture("knight_w_sw_" + std::to_string(i)));
     }
 
-    spr->addComponent(anim);
+    spr->addComponent(anim);*/
 
 
 
@@ -178,13 +170,31 @@ void ImaginaWars::mouseReleaseEvent(QMouseEvent *e)
     ray_wor = ray_wor.normalized();
 
 
-   //qDebug() << "CLICK WORLD " << ray_wor.x() << ";" << ray_wor.y() << ";" << ray_wor.z();
+   qDebug() << "CLICK WORLD " << ray_wor.x() << ";" << ray_wor.y() << ";" << ray_wor.z();
+
+   // x = +/- 0.55
+   // y = +/- 0.33
 
 
-    QVector2D cas = gm->posToCase(QVector2D(ray_wor.x() * 20, ray_wor.y() * 20));
+    //QVector2D cas = gm->posToCase(QVector2D(ray_wor.x() * 20, ray_wor.y() * 20));
+
+   int caseX = (ray_wor.x() + 0.55) / 1.10 * gm->getWidth();
+   int caseY =(ray_wor.y() + 0.33) / 0.66 * gm->getHeight();
+   if(caseX > gm->getWidth()) caseX = gm->getWidth();
+   if(caseX < 0) caseX = 0;
+   if(caseY > gm->getHeight()) caseY = gm->getHeight();
+   if(caseY < 0) caseY = 0;
+
+   QVector2D cas = QVector2D(caseX, caseY);
+
 
     qDebug() << "CLICKED CASE " << cas;
 
-    pathfinding->setTargetCase(cas);
+    //pathfinding->setTargetPos(cas);
+
+
+    spr->getPathfinding()->setTargetPos(QVector2D(ray_wor.x() * 20, ray_wor.y() * 12));
+
+    gm->getSprite(cas)->addComponent(new EffectSpriteComponent(EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 1));
 
 }

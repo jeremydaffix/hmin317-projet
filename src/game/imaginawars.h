@@ -4,6 +4,8 @@
 #include "engine/game.h"
 #include "game/gamemap.h"
 #include "game/walkpathfindingcomponent.h"
+#include "game/effectspritecomponent.h"
+#include "game/soldier.h"
 
 #include <sstream>
 #include <iomanip>
@@ -26,8 +28,7 @@ protected:
 
 
     GameMap *gm;
-    Sprite *spr;
-    WalkPathfindingComponent *pathfinding;
+    Soldier *spr;
 };
 
 #endif // IMAGINAWARS_H
