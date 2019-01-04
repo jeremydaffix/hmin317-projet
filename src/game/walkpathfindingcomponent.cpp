@@ -31,14 +31,17 @@ void WalkPathfindingComponent::fixedUpdate()
         }
 
 
+        QVector2D dir;
+
+
         if(path.size() > 0) // chemin trouvé
         {
             QVector2D next = path.front();
 
-            QVector2D dir = (gameMap->caseToPos(next) - pos2).normalized(); // direction vers la prochaine position du chemin
+            /*QVector2D*/ dir = (gameMap->caseToPos(next) - pos2).normalized(); // direction vers la prochaine position du chemin
 
             getContainer()->setLocalPosition(pos + dir / 150.); // on avance dans cette direction
-            ((Soldier*)getContainer())->selectAnimWalk(dir);
+            ((Soldier*)getContainer())->selectStateWalk(dir);
 
             if((path.size() > 1 && next == cas) || // arrivé dans la case du point suivant
                (getContainer()->getLocalPosition().distanceToPoint(gameMap->caseToPos(next)) < 0.10)) // ou assez proche de ce point
@@ -52,13 +55,21 @@ void WalkPathfindingComponent::fixedUpdate()
 
 
         // pathfinding terminé : on finit en se rapprochant en ligne droite de la position précise de la target
-        /*if(path.size() == 0 && getContainer()->getLocalPosition().distanceToPoint(targetPos) > 0.05)
+        if(path.size() == 0 && getContainer()->getLocalPosition().distanceToPoint(targetPos) > 0.05)
         {
-            QVector2D dirpos = (targetPos - QVector2D(getContainer()->getLocalPosition().x(), getContainer()->getLocalPosition().y())).normalized();
+            dir = (targetPos - QVector2D(getContainer()->getLocalPosition().x(), getContainer()->getLocalPosition().y())).normalized();
 
-            getContainer()->setLocalPosition(getContainer()->getLocalPosition() + dirpos / 150.);
-            ((Soldier*)getContainer())->selectAnimWalk(dirPos);
-        }*/
+            getContainer()->setLocalPosition(getContainer()->getLocalPosition() + dir / 150.);
+            ((Soldier*)getContainer())->selectStateWalk(dir);
+        }
+
+
+
+
+        if(path.size() == 0 && getContainer()->getLocalPosition().distanceToPoint(targetPos) <= 0.05)
+        {
+            ((Soldier*)getContainer())->selectStateLooking(dir);
+        }
     }
 
 

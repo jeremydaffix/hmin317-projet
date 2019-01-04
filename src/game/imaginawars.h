@@ -27,6 +27,10 @@ protected:
     void mouseReleaseEvent(QMouseEvent *e) override;
 
 
+    void loadUnitTextures(std::string name);
+    void loadAnimTextures(std::string unitName, std::string animName, std::string animPrefix);
+
+
     GameMap *gm;
     Soldier *spr;
 };

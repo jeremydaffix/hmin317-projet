@@ -3,10 +3,12 @@
 #include <game/walkpathfindingcomponent.h>
 
 
-Soldier::Soldier(int t, GameMap *gm, QOpenGLTexture *tex, QVector3D pos, float rot, QVector2D sc, QOpenGLShaderProgram *sh) : Sprite(tex, pos, rot, sc, sh)
+Soldier::Soldier(TYPE_SOLDIER t, GameMap *gm, QOpenGLTexture *tex, QVector3D pos, float rot, QVector2D sc, QOpenGLShaderProgram *sh) : Sprite(tex, pos, rot, sc, sh)
 {
     type = t;
     string name = "";
+
+
 
     if(type == TYPE_KNIGHT) name = "knight";
 
@@ -19,17 +21,13 @@ Soldier::Soldier(int t, GameMap *gm, QOpenGLTexture *tex, QVector3D pos, float r
 
     // création components d'animation
 
-    walkN = createAnim(name + "_w_n_");
-    walkNE = createAnim(name + "_w_ne_");
-    walkE = createAnim(name + "_w_e_");
-    walkSE = createAnim(name + "_w_se_");
-    walkS = createAnim(name + "_w_s_");
-    walkSW = createAnim(name + "_w_sw_");
-    walkW = createAnim(name + "_w_w_");
-    walkNW = createAnim(name + "_w_nw_");
+    CREATE_ANIM_GEN(walk, w, 15)
+    CREATE_ANIM_GEN(looking, l, 10)
 
 
-    walkS->setEnabled(true);
+    currentState = STATE_LOOKING_S;
+
+    selectAnim();
 }
 
 WalkPathfindingComponent *Soldier::getPathfinding() const
@@ -37,14 +35,14 @@ WalkPathfindingComponent *Soldier::getPathfinding() const
     return pathfinding;
 }
 
-int Soldier::getType() const
+Soldier::TYPE_SOLDIER Soldier::getType() const
 {
     return type;
 }
 
-SpriteAnimationComponent *Soldier::createAnim(string name)
+SpriteAnimationComponent *Soldier::createAnim(string name, int speed)
 {
-    int speed = 15;
+    //int speed = 15;
 
     SpriteAnimationComponent * anim = new SpriteAnimationComponent(speed);
 
@@ -60,30 +58,59 @@ SpriteAnimationComponent *Soldier::createAnim(string name)
     return anim;
 }
 
-void Soldier::selectAnimWalk(QVector2D dir)
+void Soldier::selectStateWalk(QVector2D dir)
 {
-    walkN->setEnabled(false);
-    walkNE->setEnabled(false);
-    walkE->setEnabled(false);
-    walkSE->setEnabled(false);
-    walkS->setEnabled(false);
-    walkSW->setEnabled(false);
-    walkW->setEnabled(false);
-    walkNW->setEnabled(false);
-
-
     double rad = std::atan2(dir.x(), dir.y());
     double deg = (rad / M_PI) * 180.0;
 
-    qDebug() << "angle " << deg;
+    //qDebug() << "angle " << deg;
 
-    if(deg >=-22.5 && deg < 22.5) walkN->setEnabled(true);
-    else if(deg >= 22.5 && deg < 67.5) walkNE->setEnabled(true);
-    else if(deg >= 67.5 && deg < 112.5) walkE->setEnabled(true);
-    else if(deg >= 112.5 && deg < 158.0) walkSE->setEnabled(true);
+    if(deg >=-22.5 && deg < 22.5) currentState = STATE_WALK_N;
+    else if(deg >= 22.5 && deg < 67.5) currentState = STATE_WALK_NE;
+    else if(deg >= 67.5 && deg < 112.5) currentState = STATE_WALK_E;
+    else if(deg >= 112.5 && deg < 158.0) currentState = STATE_WALK_SE;
 
-    else if(deg >= -67.5 && deg < -22.5) walkNW->setEnabled(true);
-    else if(deg >= -112.5 && deg < -67.5) walkW->setEnabled(true);
-    else if(deg >= -158.0 && deg < -112.5) walkSW->setEnabled(true);
-    else walkS->setEnabled(true);
+    else if(deg >= -67.5 && deg < -22.5) currentState = STATE_WALK_NW;
+    else if(deg >= -112.5 && deg < -67.5) currentState = STATE_WALK_W;
+    else if(deg >= -158.0 && deg < -112.5) currentState = STATE_WALK_SW;
+    else currentState = STATE_WALK_S;
+
+
+    selectAnim();
 }
+
+
+void Soldier::selectStateLooking(QVector2D dir)
+{
+    double rad = std::atan2(dir.x(), dir.y());
+    double deg = (rad / M_PI) * 180.0;
+
+    //qDebug() << "angle " << deg;
+
+    if(deg >=-22.5 && deg < 22.5) currentState = STATE_LOOKING_N;
+    else if(deg >= 22.5 && deg < 67.5) currentState = STATE_LOOKING_NE;
+    else if(deg >= 67.5 && deg < 112.5) currentState = STATE_LOOKING_E;
+    else if(deg >= 112.5 && deg < 158.0) currentState = STATE_LOOKING_SE;
+
+    else if(deg >= -67.5 && deg < -22.5) currentState = STATE_LOOKING_NW;
+    else if(deg >= -112.5 && deg < -67.5) currentState = STATE_LOOKING_W;
+    else if(deg >= -158.0 && deg < -112.5) currentState = STATE_LOOKING_SW;
+    else currentState = STATE_LOOKING_S;
+
+
+    selectAnim();
+}
+
+// générer ???
+
+
+
+void Soldier::selectAnim()
+{
+    DISABLE_ANIM_GEN(walk)
+    DISABLE_ANIM_GEN(looking)
+
+    SELECT_ANIM_GEN(WALK, walk)
+    SELECT_ANIM_GEN(LOOKING, looking)
+}
+
