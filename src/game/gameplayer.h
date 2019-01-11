@@ -4,6 +4,16 @@
 
 #include <string>
 
+#include <qstring.h>
+#include <qvector2d.h>
+
+#include <game/effectspritecomponent.h>
+//#<include <game/buildingcomponent.h>
+//#include <game/gamemap.h>
+
+
+class BuildingComponent;
+class GameMap;
 
 class GamePlayer
 {
@@ -21,10 +31,22 @@ public:
 
     std::string getName();
 
+    BuildingComponent *getBuilding(int i) const;
+    void setBuilding(int i, BuildingComponent *value);
+
+    QVector2D getPosTarget(int i) const;
+    void setPosTarget(int i, const QVector2D &value);
+
+    QVector2D tryMoveTarget(int i, int x, int y, GameMap *gm);
+
 protected:
 
     int numPlayer;
     TYPE_PLAYER type;
+
+    QVector2D posTarget[2];
+    BuildingComponent *building[2];
+
 };
 
 #endif // GAMEPLAYER_H

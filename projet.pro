@@ -30,7 +30,8 @@ SOURCES += \
     src/game/effectspritecomponent.cpp \
     src/game/soldier.cpp \
     src/game/buildingcomponent.cpp \
-    src/game/gameplayer.cpp
+    src/game/gameplayer.cpp \
+    src/game/humanplayercomponent.cpp
 
 SOURCES +=
 
@@ -56,7 +57,8 @@ HEADERS += \
     src/game/effectspritecomponent.h \
     src/game/soldier.h \
     src/game/buildingcomponent.h \
-    src/game/gameplayer.h
+    src/game/gameplayer.h \
+    src/game/humanplayercomponent.h
 
 RESOURCES += \
     textures.qrc \

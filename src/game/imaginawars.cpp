@@ -5,7 +5,7 @@
 
   TODO
 
-  controles changement buildings
+  cibles
   controles bouger cibles
   generation soldats
   collisions entre soldats (ou du moins les eviter, check si prochain mvt empiète sur qq1)
@@ -25,6 +25,7 @@
     si cible < distance : aller a la plus proche
     si cible < distance attaque : attaquer (ou capture si neutral?)
     sinon continuer vers target initiale
+    si arrivés target = s'évaporent
 
   gestion life (building et soldier)
   couleur life pour reconnaitre joueur
@@ -34,7 +35,19 @@
   sons
   musique
 
-  mode p2p (ultérieurement)
+  integrer manette
+
+  mode pvp (ultérieurement)
+
+
+  ***
+
+  ressources utilisées :
+
+  http://www.reinerstilesets.de/graphics/2d-grafiken/2d-humans/ (public domain)
+  https://kenney.nl/assets/medieval-rts (CC0 1.0 Universal)
+
+  https://github.com/quantumelixir/pathfinding
 
  */
 
@@ -54,16 +67,16 @@ void ImaginaWars::startGame()
 {
     qDebug() << "IMAGINA WARS";
 
-    /*GameMap */gm = new GameMap(":/resources/game/maps/test.json");
-    gm->setLocalPosition(QVector3D(0.5,0.5,0));
-    gm->setShader(ResourcesManager::getInstance()->getGameShader("texturedark"));
-    gm->BuildMap();
-    GameScene::getInstance()->addChild(gm);
+    /*GameMap */gameMap = new GameMap(":/resources/game/maps/test.json");
+    gameMap->setLocalPosition(QVector3D(0.5,0.5,0));
+    gameMap->setShader(ResourcesManager::getInstance()->getGameShader("texturedark"));
+    gameMap->BuildMap();
+    GameScene::getInstance()->addChild(gameMap);
 
     //gm->calcPath(QVector2D(1, 1), QVector2D(9, 9));
 
 
-    spr = new Soldier(Soldier::TYPE_KNIGHT, gm, NULL,
+    spr = new Soldier(Soldier::TYPE_KNIGHT, gameMap, NULL,
                              QVector2D(0, 0),
                              0,
                              QVector2D(0.08, 0.08),
@@ -71,23 +84,18 @@ void ImaginaWars::startGame()
 
 
 
-    /*SpriteAnimationComponent *anim = new SpriteAnimationComponent(12);
-
-    for(int i = 0 ; i < 12 ; ++i)
-    {
-        anim->addTexture(ResourcesManager::getInstance()->getGameTexture("knight_w_sw_" + std::to_string(i)));
-    }
-
-    spr->addComponent(anim);*/
-
-
-
     GameScene::getInstance()->addChild(spr);
 
 
+    player1->setPosTarget(0, QVector2D(7,9));
+    player1->setPosTarget(1, QVector2D(7,5));
+
+    target1 = new Sprite("targetred1", QVector3D(gameMap->caseToPos(player1->getPosTarget(0))), 0, QVector2D(0.1,0.1));
+    target2 = new Sprite("targetred2", QVector3D(gameMap->caseToPos(player1->getPosTarget(1))), 0, QVector2D(0.1,0.1));
 
 
-
+    GameScene::getInstance()->addChild(target1);
+    GameScene::getInstance()->addChild(target2);
 
 
 
@@ -110,6 +118,9 @@ void ImaginaWars::initShaders()
 
     QOpenGLShaderProgram * shaderTextureDark = ResourcesManager::getInstance()->loadShader(":/resources/shaders/vshader.glsl", ":/resources/shaders/fshader_dark.glsl");
     ResourcesManager::getInstance()->addGameShader("texturedark", shaderTextureDark);
+
+    QOpenGLShaderProgram * shaderTextureLight = ResourcesManager::getInstance()->loadShader(":/resources/shaders/vshader.glsl", ":/resources/shaders/fshader_light.glsl");
+    ResourcesManager::getInstance()->addGameShader("texturelight", shaderTextureLight);
 
     GameScene::getInstance()->setDefaultShader(shaderTexture);
     //GameScene::getInstance()->setDefaultShader(shaderTextureToon);
@@ -137,6 +148,17 @@ void ImaginaWars::initTextures()
                                                         ResourcesManager::getInstance()->loadTexture(":/resources/textures/medievalrtspack/Tile/medievalTile_" + qs + ".png"));
     }
 
+    // environnement
+
+    int nbrEnv = 21;
+    for(int i = 1 ; i <= nbrEnv ; ++i)
+    {
+        QString qs = ((i < 10 ? "0" : "") + std::to_string(i)).c_str();
+
+        ResourcesManager::getInstance()->addGameTexture("medieval_env_" + std::to_string(i),
+                                                        ResourcesManager::getInstance()->loadTexture(":/resources/textures/medievalrtspack/Environment/medievalEnvironment_" + qs + ".png"));
+    }
+
 
     // batiments
 
@@ -147,7 +169,7 @@ void ImaginaWars::initTextures()
                                                     ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_21.png")));
 
     ResourcesManager::getInstance()->addGameTexture("building_archer",
-                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_17.png")));
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_19.png")));
 
     ResourcesManager::getInstance()->addGameTexture("building_techno",
                                                     ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_20.png")));
@@ -158,6 +180,15 @@ void ImaginaWars::initTextures()
 
     GameScene::getInstance()->setDefaultTexture(textureDice);
 
+
+
+    // custom
+
+    ResourcesManager::getInstance()->addGameTexture("targetred1",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/custom/targetred1.png")));
+
+    ResourcesManager::getInstance()->addGameTexture("targetred2",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/custom/targetred2.png")));
 
 
     // fonts
@@ -207,15 +238,172 @@ void ImaginaWars::loadAnimTextures(std::string unitName, std::string animName, s
     }
 }
 
+GameMap *ImaginaWars::getGameMap() const
+{
+    return gameMap;
+}
+
 GamePlayer *ImaginaWars::getPlayer2()
 {
     return player2;
 }
 
+
+
 GamePlayer *ImaginaWars::getPlayer1()
 {
     return player1;
 }
+
+
+
+void ImaginaWars::keyPressEvent(QKeyEvent *e)
+{
+
+}
+
+void ImaginaWars::keyReleaseEvent(QKeyEvent *e)
+{
+    QVector3D newPos;
+
+
+    // batiments
+    switch(e->key())
+    {
+        case Qt::Key_1:
+            player1->getBuilding(0)->NextBuilding();
+        break;
+
+        case Qt::Key_2:
+            player1->getBuilding(1)->NextBuilding();
+        break;
+
+        default:
+        break;
+    }
+
+
+    // target 1
+
+    bool fxlight1 = false;
+    bool fxdark1 = false;
+
+    switch(e->key())
+    {
+        case Qt::Key_Up:
+            newPos = player1->tryMoveTarget(0, 0, 1, gameMap);
+
+            if(newPos != target1->getLocalPosition()) fxlight1 = true;
+            else fxdark1 = true;
+
+            target1->setLocalPosition(newPos);
+
+        break;
+
+        case Qt::Key_Down:
+            newPos = player1->tryMoveTarget(0, 0, -1, gameMap);
+
+            if(newPos != target1->getLocalPosition()) fxlight1 = true;
+            else fxdark1 = true;
+
+            target1->setLocalPosition(newPos);
+        break;
+
+        case Qt::Key_Left:
+            newPos = player1->tryMoveTarget(0, -1, 0, gameMap);
+
+            if(newPos != target1->getLocalPosition()) fxlight1 = true;
+            else fxdark1 = true;
+
+            target1->setLocalPosition(newPos);
+        break;
+
+        case Qt::Key_Right:
+            newPos = player1->tryMoveTarget(0, 1, 0, gameMap);
+
+            if(newPos != target1->getLocalPosition()) fxlight1 = true;
+            else fxdark1 = true;
+
+            target1->setLocalPosition(newPos);
+        break;
+
+
+        default:
+        break;
+    }
+
+    if(fxlight1) target1->addComponent(new EffectSpriteComponent(
+                                       EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.25,
+                                       ResourcesManager::getInstance()->getGameShader("texture"),
+                                       ResourcesManager::getInstance()->getGameShader("texturelight")));
+
+    else if (fxdark1) target1->addComponent(new EffectSpriteComponent(
+                          EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.25,
+                          ResourcesManager::getInstance()->getGameShader("texture"),
+                          ResourcesManager::getInstance()->getGameShader("texturedark")));
+
+
+    // target 2
+
+    bool fxlight2 = false;
+    bool fxdark2 = false;
+
+    switch(e->key())
+    {
+        case Qt::Key_Z:
+            newPos = player1->tryMoveTarget(1, 0, 1, gameMap);
+
+            if(newPos != target2->getLocalPosition()) fxlight2 = true;
+            else fxdark2 = true;
+
+            target2->setLocalPosition(newPos);
+
+        break;
+
+        case Qt::Key_S:
+            newPos = player1->tryMoveTarget(1, 0, -1, gameMap);
+
+            if(newPos != target2->getLocalPosition()) fxlight2 = true;
+            else fxdark2 = true;
+
+            target2->setLocalPosition(newPos);
+        break;
+
+        case Qt::Key_Q:
+            newPos = player1->tryMoveTarget(1, -1, 0, gameMap);
+
+            if(newPos != target2->getLocalPosition()) fxlight2 = true;
+            else fxdark2 = true;
+
+            target2->setLocalPosition(newPos);
+        break;
+
+        case Qt::Key_D:
+            newPos = player1->tryMoveTarget(1, 1, 0, gameMap);
+
+            if(newPos != target2->getLocalPosition()) fxlight2 = true;
+            else fxdark2 = true;
+
+            target2->setLocalPosition(newPos);
+        break;
+
+
+        default:
+        break;
+    }
+
+    if(fxlight2) target2->addComponent(new EffectSpriteComponent(
+                                       EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.25,
+                                       ResourcesManager::getInstance()->getGameShader("texture"),
+                                       ResourcesManager::getInstance()->getGameShader("texturelight")));
+
+    else if (fxdark2) target2->addComponent(new EffectSpriteComponent(
+                          EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.25,
+                          ResourcesManager::getInstance()->getGameShader("texture"),
+                          ResourcesManager::getInstance()->getGameShader("texturedark")));
+}
+
+
 
 
 void ImaginaWars::mouseReleaseEvent(QMouseEvent *e)
@@ -265,11 +453,11 @@ void ImaginaWars::mouseReleaseEvent(QMouseEvent *e)
 
     //QVector2D cas = gm->posToCase(QVector2D(ray_wor.x() * 20, ray_wor.y() * 20));
 
-   int caseX = (ray_wor.x() + 0.55) / 1.10 * gm->getWidth();
-   int caseY =(ray_wor.y() + 0.33) / 0.66 * gm->getHeight();
-   if(caseX > gm->getWidth()) caseX = gm->getWidth();
+   int caseX = (ray_wor.x() + 0.55) / 1.10 * gameMap->getWidth();
+   int caseY =(ray_wor.y() + 0.33) / 0.66 * gameMap->getHeight();
+   if(caseX > gameMap->getWidth()) caseX = gameMap->getWidth();
    if(caseX < 0) caseX = 0;
-   if(caseY > gm->getHeight()) caseY = gm->getHeight();
+   if(caseY > gameMap->getHeight()) caseY = gameMap->getHeight();
    if(caseY < 0) caseY = 0;
 
    QVector2D cas = QVector2D(caseX, caseY);
@@ -282,7 +470,8 @@ void ImaginaWars::mouseReleaseEvent(QMouseEvent *e)
 
     spr->getPathfinding()->setTargetPos(QVector2D(ray_wor.x() * 20, ray_wor.y() * 12));
 
-    gm->getSprite(cas)->addComponent(new EffectSpriteComponent(EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 1));
+    //gameMap->getSprite(cas)->addComponent(new EffectSpriteComponent(EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 1));
+    gameMap->HighlightTile(cas.x(), cas.y());
 
 }
 

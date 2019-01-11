@@ -37,6 +37,10 @@ public:
     int getWidth() const;
     int getHeight() const;
 
+    bool isWalkable(int x, int y);
+
+    void HighlightTile(int, int x);
+
 protected:
     Sprite* addSprite(std::string name, int caseX, int caseY, int rot = 0, float z = 0.00);
     int width, height;

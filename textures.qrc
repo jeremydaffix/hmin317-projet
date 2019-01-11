@@ -1220,5 +1220,8 @@
         <file>resources/textures/medievalrtspack/Tile/medievalTile_64.png</file>
         <file>resources/textures/medievalrtspack/Tile/medievalTile_65.png</file>
         <file>resources/textures/medievalrtspack/Tile/medievalTile_66.png</file>
+        <file>resources/textures/custom/imaginawars.svg</file>
+        <file>resources/textures/custom/targetred1.png</file>
+        <file>resources/textures/custom/targetred2.png</file>
     </qresource>
 </RCC>

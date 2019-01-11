@@ -16,7 +16,8 @@ public:
         TYPE_HORSE,
         TYPE_ARCHER,
         TYPE_TECHNO,
-        TYPE_TOWER
+        TYPE_TOWER,
+        TYPE_BUILDING_LENGTH
     };
 
     BuildingComponent(TYPE_BUILDING t, GamePlayer *p);
@@ -25,7 +26,12 @@ public:
     void update();
     void fixedUpdate();
 
+    void NextBuilding();
+
 protected:
+
+    void refreshTexture();
+
 
     Sprite *sprite = NULL;
     TYPE_BUILDING type;

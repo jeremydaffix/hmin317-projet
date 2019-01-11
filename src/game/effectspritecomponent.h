@@ -12,7 +12,7 @@ public:
     static const int TYPE_HIGHLIGHT = 0;
     static const int TYPE_BLINK = 1;
 
-    EffectSpriteComponent(int t, int fr);
+    EffectSpriteComponent(int t, int fr, QOpenGLShaderProgram* is, QOpenGLShaderProgram* es);
 
     void update();
     void fixedUpdate();
@@ -25,6 +25,7 @@ protected:
     int cptFrames = 0;
 
     QOpenGLShaderProgram* initialShader = NULL;
+    QOpenGLShaderProgram* effectShader = NULL;
 };
 
 #endif // EFFECTSPRITECOMPONENT_H

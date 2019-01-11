@@ -6,5 +6,6 @@
         <file>resources/shaders/vshader_color.glsl</file>
         <file>resources/shaders/fshader_toon.glsl</file>
         <file>resources/shaders/fshader_dark.glsl</file>
+        <file>resources/shaders/fshader_light.glsl</file>
     </qresource>
 </RCC>

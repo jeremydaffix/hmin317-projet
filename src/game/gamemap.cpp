@@ -122,6 +122,8 @@ void GameMap::BuildMap()
     {
             QJsonArray buildingsp1 = json["buildingsp1"].toArray();
 
+            GamePlayer *player1 = ((ImaginaWars*)ImaginaWars::getInstance())->getPlayer1();
+
             for (int i = 0; i < buildingsp1.size(); ++i) // pour chaque bâtiment
             {
                 QJsonArray coords = buildingsp1[i].toArray();
@@ -130,7 +132,10 @@ void GameMap::BuildMap()
                 int y = coords[1].toInt();
 
                 Sprite *b = addSprite("building_knight", x, y, 0);
-                b->addComponent(new BuildingComponent(BuildingComponent::TYPE_KNIGHT, ((ImaginaWars*)ImaginaWars::getInstance())->getPlayer1()));
+                BuildingComponent *bc = new BuildingComponent(BuildingComponent::TYPE_KNIGHT, player1);
+                b->addComponent(bc);
+
+                player1->setBuilding(i, bc);
 
                 walkableMap[width * y + x] = 0;
             }
@@ -141,6 +146,8 @@ void GameMap::BuildMap()
     {
             QJsonArray buildingsp2 = json["buildingsp2"].toArray();
 
+            GamePlayer *player2 = ((ImaginaWars*)ImaginaWars::getInstance())->getPlayer2();
+
             for (int i = 0; i < buildingsp2.size(); ++i) // pour chaque bâtiment
             {
                 QJsonArray coords = buildingsp2[i].toArray();
@@ -149,7 +156,10 @@ void GameMap::BuildMap()
                 int y = coords[1].toInt();
 
                 Sprite *b = addSprite("building_knight", x, y, 0);
-                b->addComponent(new BuildingComponent(BuildingComponent::TYPE_KNIGHT, ((ImaginaWars*)ImaginaWars::getInstance())->getPlayer2()));
+                BuildingComponent *bc = new BuildingComponent(BuildingComponent::TYPE_KNIGHT, player2);
+                b->addComponent(bc);
+
+                player2->setBuilding(i, bc);
 
                 walkableMap[width * y + x] = 0;
             }
@@ -226,6 +236,21 @@ Sprite *GameMap::addSprite(std::string name, int caseX, int caseY, int rot, floa
 int GameMap::getHeight() const
 {
     return height;
+}
+
+bool GameMap::isWalkable(int x, int y)
+{
+    return (walkableMap[width * y + x] == 1);
+}
+
+void GameMap::HighlightTile(int x, int y)
+{
+    //getSprite(QVector2D(x, y))->addComponent(new EffectSpriteComponent(EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 1));
+
+    getSprite(QVector2D(x, y))->addComponent(new EffectSpriteComponent(
+                              EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 1,
+                              ResourcesManager::getInstance()->getGameShader("texturedark"),
+                              ResourcesManager::getInstance()->getGameShader("texture")));
 }
 
 int GameMap::getWidth() const

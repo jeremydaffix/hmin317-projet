@@ -24,6 +24,11 @@ public:
     GamePlayer *getPlayer1();
     GamePlayer *getPlayer2();
 
+    void keyPressEvent(QKeyEvent* e) override;
+    void keyReleaseEvent(QKeyEvent* e) override;
+
+    GameMap *getGameMap() const;
+
 protected:
 
     void initShaders() override;
@@ -36,10 +41,12 @@ protected:
     void loadAnimTextures(std::string unitName, std::string animName, std::string animPrefix);
 
 
-    GameMap *gm;
+    GameMap *gameMap;
     Soldier *spr;
 
     GamePlayer *player1 = new GamePlayer(GamePlayer::TYPE_HUMAN, 0), *player2 = new GamePlayer(GamePlayer::TYPE_AI, 1);
+
+    Sprite *target1, *target2;
 };
 
 #endif // IMAGINAWARS_H
