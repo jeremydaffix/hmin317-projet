@@ -15,6 +15,7 @@ ResourcesManager::~ResourcesManager()
     //  images
     //  sons
     //  shaders
+    // fonts
 
     // les objets du moteur (gameobject, components,...) sont libérés par le destructeur de la scène (puis de chaque objet de la hiérarchie)
 
@@ -34,6 +35,14 @@ ResourcesManager::~ResourcesManager()
 
         delete t.second;
     }
+
+
+    /*for( const auto& t : gameFonts )
+    {
+        //std::cout << "freeing font " << t.first << std::endl;
+
+        delete t.second;
+    }*/
 }
 
 void ResourcesManager::addGameShader(std::string name, QOpenGLShaderProgram *sh)
@@ -46,6 +55,11 @@ void ResourcesManager::addGameTexture(std::string name, QOpenGLTexture *tex)
     gameTextures[name] = tex;
 }
 
+/*void ResourcesManager::addGameFont(std::string name, FT_Face *font)
+{
+    gameFonts[name] = font;
+}*/
+
 QOpenGLShaderProgram *ResourcesManager::getGameShader(std::string name)
 {
     return gameShaders[name];
@@ -56,10 +70,16 @@ QOpenGLTexture *ResourcesManager::getGameTexture(std::string name)
     return gameTextures[name];
 }
 
+/*FT_Face *ResourcesManager::getGameFont(std::string name)
+{
+    return gameFonts[name];
+}*/
+
 
 ResourcesManager::ResourcesManager()
 {
-
+    /*if (FT_Init_FreeType(&ft))
+        std::cout << "ERROR::FREETYPE: Could not init FreeType Library" << std::endl;*/
 }
 
 
@@ -110,3 +130,18 @@ QOpenGLShaderProgram *ResourcesManager::loadShader(QString vpath, QString fpath)
 
      return texture;
  }
+
+ /*FT_Face *ResourcesManager::loadFont(std::string path)
+ {
+     FT_Face *face = new FT_Face();
+
+     if (FT_New_Face(ft, path.c_str(), gameFonts.size(), face))
+         std::cout << "ERROR::FREETYPE: Failed to load font" << std::endl;
+
+     return face;
+ }*/
+
+ /*QOpenGLTexture *ResourcesManager::createTextureFromText(std::string txt, int size, FT_Face *font)
+ {
+     // 1 sprite par caractère :'(
+ }*/

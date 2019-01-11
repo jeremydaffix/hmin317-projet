@@ -18,6 +18,8 @@
 #include "3rd/pathfinders.h"
 
 #include "engine/sprite.h"
+#include "game/buildingcomponent.h"
+//#include <game/imaginawars.h>
 
 
 class GameMap : public Model3D

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/fonts/arial.ttf</file>
+        <file>resources/fonts/Game-Over.ttf</file>
+    </qresource>
+</RCC>

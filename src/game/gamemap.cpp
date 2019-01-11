@@ -1,5 +1,8 @@
 #include "gamemap.h"
 
+#include <game/imaginawars.h>
+
+
 
 
 GameMap::GameMap(QString _path) : Model3D ()
@@ -112,6 +115,45 @@ void GameMap::BuildMap()
 
             }
     }
+
+
+    // buildings player 1
+    if (json.contains("buildingsp1") && json["buildingsp1"].isArray())
+    {
+            QJsonArray buildingsp1 = json["buildingsp1"].toArray();
+
+            for (int i = 0; i < buildingsp1.size(); ++i) // pour chaque bâtiment
+            {
+                QJsonArray coords = buildingsp1[i].toArray();
+
+                int x = coords[0].toInt();
+                int y = coords[1].toInt();
+
+                Sprite *b = addSprite("building_knight", x, y, 0);
+                b->addComponent(new BuildingComponent(BuildingComponent::TYPE_KNIGHT, ((ImaginaWars*)ImaginaWars::getInstance())->getPlayer1()));
+
+                walkableMap[width * y + x] = 0;
+            }
+    }
+
+    // buildings player 2
+    if (json.contains("buildingsp2") && json["buildingsp2"].isArray())
+    {
+            QJsonArray buildingsp2 = json["buildingsp2"].toArray();
+
+            for (int i = 0; i < buildingsp2.size(); ++i) // pour chaque bâtiment
+            {
+                QJsonArray coords = buildingsp2[i].toArray();
+
+                int x = coords[0].toInt();
+                int y = coords[1].toInt();
+
+                Sprite *b = addSprite("building_knight", x, y, 0);
+                b->addComponent(new BuildingComponent(BuildingComponent::TYPE_KNIGHT, ((ImaginaWars*)ImaginaWars::getInstance())->getPlayer2()));
+
+                walkableMap[width * y + x] = 0;
+            }
+    }
 }
 
 std::list<QVector2D> GameMap::calcPath(QVector2D start, QVector2D target)
@@ -201,15 +243,6 @@ void GameMap::initWalkableMap()
     {
         for (int j = 0; j < height; j++)
         {
-          //char c;
-          //cin >> c;
-
-          //walkableMap[width * j + i] = (count(passable.begin(), passable.end(), c) > 0);
-
-          //if (count(passable.begin(), passable.end(), c) > 0)
-          //      traversable.push_back(width*j + i);
-
-
             walkableMap[width * j + i] = 1;
         }
     }

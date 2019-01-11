@@ -55,7 +55,11 @@ public:
 
     virtual void startGame();
 
+    static Game *getInstance();
+
 protected:
+
+    static Game *instance; // pas vraiment un singleton puisque le constructeur est public et on doit créer un objet game explicitement dans l'app (main.cpp)
 
     int glWidth = 0, glHeight = 0;
 

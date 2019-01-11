@@ -5,6 +5,7 @@ TEMPLATE = app
 
 INCLUDEPATH += src/
 INCLUDEPATH += /usr/include/boost/
+INCLUDEPATH += /usr/include/freetype2/
 
 SOURCES += \
     src/engine/component.cpp \
@@ -27,7 +28,9 @@ SOURCES += \
     src/3rd/pathfinders.cpp \
     src/game/walkpathfindingcomponent.cpp \
     src/game/effectspritecomponent.cpp \
-    src/game/soldier.cpp
+    src/game/soldier.cpp \
+    src/game/buildingcomponent.cpp \
+    src/game/gameplayer.cpp
 
 SOURCES +=
 
@@ -51,12 +54,15 @@ HEADERS += \
     src/3rd/pathfinders.h \
     src/game/walkpathfindingcomponent.h \
     src/game/effectspritecomponent.h \
-    src/game/soldier.h
+    src/game/soldier.h \
+    src/game/buildingcomponent.h \
+    src/game/gameplayer.h
 
 RESOURCES += \
     textures.qrc \
     shaders.qrc \
-    game.qrc
+    game.qrc \
+    fonts.qrc
 
 LIBS += -lboost_system -lboost_random
 

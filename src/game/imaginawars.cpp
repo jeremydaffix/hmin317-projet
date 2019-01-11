@@ -1,9 +1,54 @@
 #include "imaginawars.h"
 
+
+/*
+
+  TODO
+
+  controles changement buildings
+  controles bouger cibles
+  generation soldats
+  collisions entre soldats (ou du moins les eviter, check si prochain mvt empiète sur qq1)
+
+  classe Building
+
+  ameliorer pathfinding : zigzag, precision arrivee, orientation idle
+
+  classe Player
+  component ennemyai
+  component humancontroller
+
+  IA ennemi
+
+  IA soldats (component soldierai)
+    aller en direction target
+    si cible < distance : aller a la plus proche
+    si cible < distance attaque : attaquer (ou capture si neutral?)
+    sinon continuer vers target initiale
+
+  gestion life (building et soldier)
+  couleur life pour reconnaitre joueur
+
+  bonus?
+
+  sons
+  musique
+
+  mode p2p (ultérieurement)
+
+ */
+
 ImaginaWars::ImaginaWars(int _fps) : Game(_fps)
 {
 
 }
+
+ImaginaWars::~ImaginaWars()
+{
+    delete player1;
+    delete player2;
+}
+
 
 void ImaginaWars::startGame()
 {
@@ -93,7 +138,32 @@ void ImaginaWars::initTextures()
     }
 
 
+    // batiments
+
+    ResourcesManager::getInstance()->addGameTexture("building_knight",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_17.png")));
+
+    ResourcesManager::getInstance()->addGameTexture("building_horse",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_21.png")));
+
+    ResourcesManager::getInstance()->addGameTexture("building_archer",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_17.png")));
+
+    ResourcesManager::getInstance()->addGameTexture("building_techno",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_20.png")));
+
+    ResourcesManager::getInstance()->addGameTexture("building_tower",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_22.png")));
+
+
     GameScene::getInstance()->setDefaultTexture(textureDice);
+
+
+
+    // fonts
+
+   //ResourcesManager::getInstance()->addGameFont("arial", ResourcesManager::getInstance()->loadFont(":/resources/fonts/arial.ttf"));
+   //ResourcesManager::getInstance()->addGameFont("gameover", ResourcesManager::getInstance()->loadFont(":/resources/fonts/Game-Over.ttf"));
 }
 
 
@@ -135,6 +205,16 @@ void ImaginaWars::loadAnimTextures(std::string unitName, std::string animName, s
         ResourcesManager::getInstance()->addGameTexture(unitName + "_" + animPrefix + "_nw_" + std::to_string(i),
                                                         ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/city/" + animName + " nw00" + qs + ".png")));
     }
+}
+
+GamePlayer *ImaginaWars::getPlayer2()
+{
+    return player2;
+}
+
+GamePlayer *ImaginaWars::getPlayer1()
+{
+    return player1;
 }
 
 

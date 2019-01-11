@@ -2,11 +2,16 @@
 
 
 
+Game* Game::instance = NULL;
+
+
 Game::Game(int _fps, QWidget *parent) :
     QOpenGLWidget(parent)
 {
 
     fps = _fps;
+
+    instance = this;
 }
 
 Game::~Game()
@@ -117,6 +122,11 @@ void Game::setFps(int value)
 void Game::startGame()
 {
     qDebug() << "Override startGame() for your own game!";
+}
+
+Game *Game::getInstance()
+{
+    return instance;
 }
 
 

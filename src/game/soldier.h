@@ -3,10 +3,6 @@
 
 #include <qdebug.h>
 #include <qstring.h>
-#include <qfile.h>
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QJsonArray>
 #include <QRandomGenerator>
 
 #include <iostream>
