@@ -3,14 +3,17 @@
 #include <game/walkpathfindingcomponent.h>
 
 
-Soldier::Soldier(TYPE_SOLDIER t, GameMap *gm, QOpenGLTexture *tex, QVector3D pos, float rot, QVector2D sc, QOpenGLShaderProgram *sh) : Sprite(tex, pos, rot, sc, sh)
+Soldier::Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QOpenGLTexture *tex, QVector3D pos, float rot, QVector2D sc, QOpenGLShaderProgram *sh) : Sprite(tex, pos, rot, sc, sh)
 {
     type = t;
+    player = p;
     string name = "";
 
 
 
     if(type == TYPE_KNIGHT) name = "knight";
+    else if(type == TYPE_FAIRY) name = "fairy";
+    else if(type == TYPE_ARCHER) name = "archer";
 
 
     // création component pour le pathfinding
@@ -28,6 +31,8 @@ Soldier::Soldier(TYPE_SOLDIER t, GameMap *gm, QOpenGLTexture *tex, QVector3D pos
     currentState = STATE_LOOKING_S;
 
     selectAnim();
+
+    createGeometry();
 }
 
 WalkPathfindingComponent *Soldier::getPathfinding() const
@@ -44,11 +49,29 @@ SpriteAnimationComponent *Soldier::createAnim(string name, int speed)
 {
     //int speed = 15;
 
+    int nbrImgPerAnim = 0;
+    if(type == TYPE_KNIGHT)
+    {
+        nbrImgPerAnim = 12;
+    }
+
+    else if(type == TYPE_FAIRY)
+    {
+        nbrImgPerAnim = 8;
+        speed = (int)(speed * 0.75); // 8 images à la place de 12 #graphistes
+    }
+
+    else if(type == TYPE_ARCHER)
+    {
+        nbrImgPerAnim = 8;
+        speed = (int)(speed * 0.75); // 8 images à la place de 12 #graphistes
+    }
+
     SpriteAnimationComponent * anim = new SpriteAnimationComponent(speed);
 
     anim->setEnabled(false);
 
-    for(int i = 0 ; i < 12 ; ++i)
+    for(int i = 0 ; i < nbrImgPerAnim ; ++i)
     {
         anim->addTexture(ResourcesManager::getInstance()->getGameTexture(name + std::to_string(i)));
     }

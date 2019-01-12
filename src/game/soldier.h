@@ -76,7 +76,7 @@ public:
     enum TYPE_SOLDIER {
 
         TYPE_KNIGHT,
-        TYPE_HORSE,
+        TYPE_FAIRY,
         TYPE_ARCHER
     };
 
@@ -87,7 +87,7 @@ public:
     };
 
 
-    Soldier(TYPE_SOLDIER t, GameMap *gm, QOpenGLTexture *tex, QVector3D pos = QVector3D(), float rot = 0, QVector2D sc = QVector2D(1, 1), QOpenGLShaderProgram* sh = NULL);
+    Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QOpenGLTexture *tex, QVector3D pos = QVector3D(), float rot = 0, QVector2D sc = QVector2D(1, 1), QOpenGLShaderProgram* sh = NULL);
 
     WalkPathfindingComponent *getPathfinding() const;
 
@@ -110,6 +110,10 @@ protected:
     SpriteAnimationComponent *createAnim(string name, int speed);
 
     STATE_ANIM currentState;
+
+    GamePlayer *player;
+
+    int life = 100;
 };
 
 #endif // SOLDIER_H

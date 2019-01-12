@@ -4,1087 +4,6 @@
         <file>resources/textures/cube2.png</file>
         <file>resources/textures/island_heightmap.png</file>
         <file>resources/textures/testalpha.png</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting e0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting n0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting ne0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting nw0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting s0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting se0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting sw0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/greeting w0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking e0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking n0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking ne0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking nw0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking s0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking se0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking sw0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/looking w0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/stopped0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/stopped0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/stopped0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/stopped0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/stopped0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/stopped0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/stopped0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/stopped0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking e0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking n0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking ne0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking nw0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking s0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking se0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking sw0011.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0000.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0001.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0002.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0003.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0004.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0005.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0006.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0007.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0008.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0009.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0010.bmp</file>
-        <file>resources/textures/units/knight/battlefield/walking w0011.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0000.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0001.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0002.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0003.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0004.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0005.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0006.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0007.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0008.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0009.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0010.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0011.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0000.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0001.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0002.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0003.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0004.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0005.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0006.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0007.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0008.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0009.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0010.bmp</file>
-        <file>resources/textures/units/knight/city/looking n0011.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0000.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0001.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0002.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0003.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0004.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0005.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0006.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0007.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0008.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0009.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0010.bmp</file>
-        <file>resources/textures/units/knight/city/looking ne0011.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0000.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0001.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0002.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0003.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0004.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0005.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0006.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0007.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0008.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0009.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0010.bmp</file>
-        <file>resources/textures/units/knight/city/looking nw0011.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0000.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0001.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0002.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0003.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0004.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0005.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0006.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0007.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0008.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0009.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0010.bmp</file>
-        <file>resources/textures/units/knight/city/looking s0011.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0000.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0001.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0002.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0003.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0004.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0005.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0006.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0007.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0008.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0009.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0010.bmp</file>
-        <file>resources/textures/units/knight/city/looking se0011.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0000.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0001.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0002.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0003.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0004.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0005.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0006.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0007.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0008.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0009.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0010.bmp</file>
-        <file>resources/textures/units/knight/city/looking sw0011.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0000.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0001.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0002.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0003.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0004.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0005.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0006.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0007.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0008.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0009.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0010.bmp</file>
-        <file>resources/textures/units/knight/city/looking w0011.bmp</file>
-        <file>resources/textures/units/knight/city/running e0000.bmp</file>
-        <file>resources/textures/units/knight/city/running e0001.bmp</file>
-        <file>resources/textures/units/knight/city/running e0002.bmp</file>
-        <file>resources/textures/units/knight/city/running e0003.bmp</file>
-        <file>resources/textures/units/knight/city/running e0004.bmp</file>
-        <file>resources/textures/units/knight/city/running e0005.bmp</file>
-        <file>resources/textures/units/knight/city/running e0006.bmp</file>
-        <file>resources/textures/units/knight/city/running e0007.bmp</file>
-        <file>resources/textures/units/knight/city/running e0008.bmp</file>
-        <file>resources/textures/units/knight/city/running e0009.bmp</file>
-        <file>resources/textures/units/knight/city/running e0010.bmp</file>
-        <file>resources/textures/units/knight/city/running e0011.bmp</file>
-        <file>resources/textures/units/knight/city/running n0000.bmp</file>
-        <file>resources/textures/units/knight/city/running n0001.bmp</file>
-        <file>resources/textures/units/knight/city/running n0002.bmp</file>
-        <file>resources/textures/units/knight/city/running n0003.bmp</file>
-        <file>resources/textures/units/knight/city/running n0004.bmp</file>
-        <file>resources/textures/units/knight/city/running n0005.bmp</file>
-        <file>resources/textures/units/knight/city/running n0006.bmp</file>
-        <file>resources/textures/units/knight/city/running n0007.bmp</file>
-        <file>resources/textures/units/knight/city/running n0008.bmp</file>
-        <file>resources/textures/units/knight/city/running n0009.bmp</file>
-        <file>resources/textures/units/knight/city/running n0010.bmp</file>
-        <file>resources/textures/units/knight/city/running n0011.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0000.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0001.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0002.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0003.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0004.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0005.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0006.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0007.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0008.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0009.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0010.bmp</file>
-        <file>resources/textures/units/knight/city/running ne0011.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0000.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0001.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0002.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0003.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0004.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0005.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0006.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0007.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0008.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0009.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0010.bmp</file>
-        <file>resources/textures/units/knight/city/running nw0011.bmp</file>
-        <file>resources/textures/units/knight/city/running s0000.bmp</file>
-        <file>resources/textures/units/knight/city/running s0001.bmp</file>
-        <file>resources/textures/units/knight/city/running s0002.bmp</file>
-        <file>resources/textures/units/knight/city/running s0003.bmp</file>
-        <file>resources/textures/units/knight/city/running s0004.bmp</file>
-        <file>resources/textures/units/knight/city/running s0005.bmp</file>
-        <file>resources/textures/units/knight/city/running s0006.bmp</file>
-        <file>resources/textures/units/knight/city/running s0007.bmp</file>
-        <file>resources/textures/units/knight/city/running s0008.bmp</file>
-        <file>resources/textures/units/knight/city/running s0009.bmp</file>
-        <file>resources/textures/units/knight/city/running s0010.bmp</file>
-        <file>resources/textures/units/knight/city/running s0011.bmp</file>
-        <file>resources/textures/units/knight/city/running se0000.bmp</file>
-        <file>resources/textures/units/knight/city/running se0001.bmp</file>
-        <file>resources/textures/units/knight/city/running se0002.bmp</file>
-        <file>resources/textures/units/knight/city/running se0003.bmp</file>
-        <file>resources/textures/units/knight/city/running se0004.bmp</file>
-        <file>resources/textures/units/knight/city/running se0005.bmp</file>
-        <file>resources/textures/units/knight/city/running se0006.bmp</file>
-        <file>resources/textures/units/knight/city/running se0007.bmp</file>
-        <file>resources/textures/units/knight/city/running se0008.bmp</file>
-        <file>resources/textures/units/knight/city/running se0009.bmp</file>
-        <file>resources/textures/units/knight/city/running se0010.bmp</file>
-        <file>resources/textures/units/knight/city/running se0011.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0000.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0001.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0002.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0003.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0004.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0005.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0006.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0007.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0008.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0009.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0010.bmp</file>
-        <file>resources/textures/units/knight/city/running sw0011.bmp</file>
-        <file>resources/textures/units/knight/city/running w0000.bmp</file>
-        <file>resources/textures/units/knight/city/running w0001.bmp</file>
-        <file>resources/textures/units/knight/city/running w0002.bmp</file>
-        <file>resources/textures/units/knight/city/running w0003.bmp</file>
-        <file>resources/textures/units/knight/city/running w0004.bmp</file>
-        <file>resources/textures/units/knight/city/running w0005.bmp</file>
-        <file>resources/textures/units/knight/city/running w0006.bmp</file>
-        <file>resources/textures/units/knight/city/running w0007.bmp</file>
-        <file>resources/textures/units/knight/city/running w0008.bmp</file>
-        <file>resources/textures/units/knight/city/running w0009.bmp</file>
-        <file>resources/textures/units/knight/city/running w0010.bmp</file>
-        <file>resources/textures/units/knight/city/running w0011.bmp</file>
-        <file>resources/textures/units/knight/city/stopped0000.bmp</file>
-        <file>resources/textures/units/knight/city/stopped0001.bmp</file>
-        <file>resources/textures/units/knight/city/stopped0002.bmp</file>
-        <file>resources/textures/units/knight/city/stopped0003.bmp</file>
-        <file>resources/textures/units/knight/city/stopped0004.bmp</file>
-        <file>resources/textures/units/knight/city/stopped0005.bmp</file>
-        <file>resources/textures/units/knight/city/stopped0006.bmp</file>
-        <file>resources/textures/units/knight/city/stopped0007.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0000.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0001.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0002.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0003.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0004.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0005.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0006.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0007.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0008.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0009.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0010.bmp</file>
-        <file>resources/textures/units/knight/city/talking e0011.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0000.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0001.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0002.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0003.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0004.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0005.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0006.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0007.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0008.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0009.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0010.bmp</file>
-        <file>resources/textures/units/knight/city/talking n0011.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0000.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0001.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0002.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0003.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0004.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0005.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0006.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0007.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0008.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0009.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0010.bmp</file>
-        <file>resources/textures/units/knight/city/talking ne0011.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0000.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0001.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0002.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0003.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0004.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0005.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0006.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0007.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0008.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0009.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0010.bmp</file>
-        <file>resources/textures/units/knight/city/talking nw0011.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0000.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0001.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0002.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0003.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0004.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0005.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0006.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0007.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0008.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0009.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0010.bmp</file>
-        <file>resources/textures/units/knight/city/talking s0011.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0000.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0001.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0002.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0003.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0004.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0005.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0006.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0007.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0008.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0009.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0010.bmp</file>
-        <file>resources/textures/units/knight/city/talking se0011.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0000.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0001.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0002.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0003.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0004.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0005.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0006.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0007.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0008.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0009.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0010.bmp</file>
-        <file>resources/textures/units/knight/city/talking sw0011.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0000.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0001.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0002.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0003.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0004.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0005.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0006.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0007.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0008.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0009.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0010.bmp</file>
-        <file>resources/textures/units/knight/city/talking w0011.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0000.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0001.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0002.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0003.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0004.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0005.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0006.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0007.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0008.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0009.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0010.bmp</file>
-        <file>resources/textures/units/knight/city/walking e0011.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0000.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0001.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0002.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0003.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0004.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0005.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0006.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0007.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0008.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0009.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0010.bmp</file>
-        <file>resources/textures/units/knight/city/walking n0011.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0000.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0001.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0002.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0003.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0004.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0005.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0006.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0007.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0008.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0009.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0010.bmp</file>
-        <file>resources/textures/units/knight/city/walking ne0011.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0000.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0001.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0002.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0003.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0004.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0005.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0006.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0007.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0008.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0009.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0010.bmp</file>
-        <file>resources/textures/units/knight/city/walking nw0011.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0000.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0001.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0002.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0003.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0004.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0005.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0006.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0007.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0008.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0009.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0010.bmp</file>
-        <file>resources/textures/units/knight/city/walking s0011.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0000.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0001.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0002.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0003.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0004.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0005.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0006.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0007.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0008.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0009.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0010.bmp</file>
-        <file>resources/textures/units/knight/city/walking se0011.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0000.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0001.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0002.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0003.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0004.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0005.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0006.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0007.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0008.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0009.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0010.bmp</file>
-        <file>resources/textures/units/knight/city/walking sw0011.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0000.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0001.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0002.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0003.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0004.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0005.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0006.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0007.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0008.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0009.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0010.bmp</file>
-        <file>resources/textures/units/knight/city/walking w0011.bmp</file>
-        <file>resources/textures/units/knight/city/looking e0000.png</file>
-        <file>resources/textures/units/knight/city/looking e0001.png</file>
-        <file>resources/textures/units/knight/city/looking e0002.png</file>
-        <file>resources/textures/units/knight/city/looking e0003.png</file>
-        <file>resources/textures/units/knight/city/looking e0004.png</file>
-        <file>resources/textures/units/knight/city/looking e0005.png</file>
-        <file>resources/textures/units/knight/city/looking e0006.png</file>
-        <file>resources/textures/units/knight/city/looking e0007.png</file>
-        <file>resources/textures/units/knight/city/looking e0008.png</file>
-        <file>resources/textures/units/knight/city/looking e0009.png</file>
-        <file>resources/textures/units/knight/city/looking e0010.png</file>
-        <file>resources/textures/units/knight/city/looking e0011.png</file>
-        <file>resources/textures/units/knight/city/looking n0000.png</file>
-        <file>resources/textures/units/knight/city/looking n0001.png</file>
-        <file>resources/textures/units/knight/city/looking n0002.png</file>
-        <file>resources/textures/units/knight/city/looking n0003.png</file>
-        <file>resources/textures/units/knight/city/looking n0004.png</file>
-        <file>resources/textures/units/knight/city/looking n0005.png</file>
-        <file>resources/textures/units/knight/city/looking n0006.png</file>
-        <file>resources/textures/units/knight/city/looking n0007.png</file>
-        <file>resources/textures/units/knight/city/looking n0008.png</file>
-        <file>resources/textures/units/knight/city/looking n0009.png</file>
-        <file>resources/textures/units/knight/city/looking n0010.png</file>
-        <file>resources/textures/units/knight/city/looking n0011.png</file>
-        <file>resources/textures/units/knight/city/looking ne0000.png</file>
-        <file>resources/textures/units/knight/city/looking ne0001.png</file>
-        <file>resources/textures/units/knight/city/looking ne0002.png</file>
-        <file>resources/textures/units/knight/city/looking ne0003.png</file>
-        <file>resources/textures/units/knight/city/looking ne0004.png</file>
-        <file>resources/textures/units/knight/city/looking ne0005.png</file>
-        <file>resources/textures/units/knight/city/looking ne0006.png</file>
-        <file>resources/textures/units/knight/city/looking ne0007.png</file>
-        <file>resources/textures/units/knight/city/looking ne0008.png</file>
-        <file>resources/textures/units/knight/city/looking ne0009.png</file>
-        <file>resources/textures/units/knight/city/looking ne0010.png</file>
-        <file>resources/textures/units/knight/city/looking ne0011.png</file>
-        <file>resources/textures/units/knight/city/looking nw0000.png</file>
-        <file>resources/textures/units/knight/city/looking nw0001.png</file>
-        <file>resources/textures/units/knight/city/looking nw0002.png</file>
-        <file>resources/textures/units/knight/city/looking nw0003.png</file>
-        <file>resources/textures/units/knight/city/looking nw0004.png</file>
-        <file>resources/textures/units/knight/city/looking nw0005.png</file>
-        <file>resources/textures/units/knight/city/looking nw0006.png</file>
-        <file>resources/textures/units/knight/city/looking nw0007.png</file>
-        <file>resources/textures/units/knight/city/looking nw0008.png</file>
-        <file>resources/textures/units/knight/city/looking nw0009.png</file>
-        <file>resources/textures/units/knight/city/looking nw0010.png</file>
-        <file>resources/textures/units/knight/city/looking nw0011.png</file>
-        <file>resources/textures/units/knight/city/looking s0000.png</file>
-        <file>resources/textures/units/knight/city/looking s0001.png</file>
-        <file>resources/textures/units/knight/city/looking s0002.png</file>
-        <file>resources/textures/units/knight/city/looking s0003.png</file>
-        <file>resources/textures/units/knight/city/looking s0004.png</file>
-        <file>resources/textures/units/knight/city/looking s0005.png</file>
-        <file>resources/textures/units/knight/city/looking s0006.png</file>
-        <file>resources/textures/units/knight/city/looking s0007.png</file>
-        <file>resources/textures/units/knight/city/looking s0008.png</file>
-        <file>resources/textures/units/knight/city/looking s0009.png</file>
-        <file>resources/textures/units/knight/city/looking s0010.png</file>
-        <file>resources/textures/units/knight/city/looking s0011.png</file>
-        <file>resources/textures/units/knight/city/looking se0000.png</file>
-        <file>resources/textures/units/knight/city/looking se0001.png</file>
-        <file>resources/textures/units/knight/city/looking se0002.png</file>
-        <file>resources/textures/units/knight/city/looking se0003.png</file>
-        <file>resources/textures/units/knight/city/looking se0004.png</file>
-        <file>resources/textures/units/knight/city/looking se0005.png</file>
-        <file>resources/textures/units/knight/city/looking se0006.png</file>
-        <file>resources/textures/units/knight/city/looking se0007.png</file>
-        <file>resources/textures/units/knight/city/looking se0008.png</file>
-        <file>resources/textures/units/knight/city/looking se0009.png</file>
-        <file>resources/textures/units/knight/city/looking se0010.png</file>
-        <file>resources/textures/units/knight/city/looking se0011.png</file>
-        <file>resources/textures/units/knight/city/looking sw0000.png</file>
-        <file>resources/textures/units/knight/city/looking sw0001.png</file>
-        <file>resources/textures/units/knight/city/looking sw0002.png</file>
-        <file>resources/textures/units/knight/city/looking sw0003.png</file>
-        <file>resources/textures/units/knight/city/looking sw0004.png</file>
-        <file>resources/textures/units/knight/city/looking sw0005.png</file>
-        <file>resources/textures/units/knight/city/looking sw0006.png</file>
-        <file>resources/textures/units/knight/city/looking sw0007.png</file>
-        <file>resources/textures/units/knight/city/looking sw0008.png</file>
-        <file>resources/textures/units/knight/city/looking sw0009.png</file>
-        <file>resources/textures/units/knight/city/looking sw0010.png</file>
-        <file>resources/textures/units/knight/city/looking sw0011.png</file>
-        <file>resources/textures/units/knight/city/looking w0000.png</file>
-        <file>resources/textures/units/knight/city/looking w0001.png</file>
-        <file>resources/textures/units/knight/city/looking w0002.png</file>
-        <file>resources/textures/units/knight/city/looking w0003.png</file>
-        <file>resources/textures/units/knight/city/looking w0004.png</file>
-        <file>resources/textures/units/knight/city/looking w0005.png</file>
-        <file>resources/textures/units/knight/city/looking w0006.png</file>
-        <file>resources/textures/units/knight/city/looking w0007.png</file>
-        <file>resources/textures/units/knight/city/looking w0008.png</file>
-        <file>resources/textures/units/knight/city/looking w0009.png</file>
-        <file>resources/textures/units/knight/city/looking w0010.png</file>
-        <file>resources/textures/units/knight/city/looking w0011.png</file>
-        <file>resources/textures/units/knight/city/running e0000.png</file>
-        <file>resources/textures/units/knight/city/running e0001.png</file>
-        <file>resources/textures/units/knight/city/running e0002.png</file>
-        <file>resources/textures/units/knight/city/running e0003.png</file>
-        <file>resources/textures/units/knight/city/running e0004.png</file>
-        <file>resources/textures/units/knight/city/running e0005.png</file>
-        <file>resources/textures/units/knight/city/running e0006.png</file>
-        <file>resources/textures/units/knight/city/running e0007.png</file>
-        <file>resources/textures/units/knight/city/running e0008.png</file>
-        <file>resources/textures/units/knight/city/running e0009.png</file>
-        <file>resources/textures/units/knight/city/running e0010.png</file>
-        <file>resources/textures/units/knight/city/running e0011.png</file>
-        <file>resources/textures/units/knight/city/running n0000.png</file>
-        <file>resources/textures/units/knight/city/running n0001.png</file>
-        <file>resources/textures/units/knight/city/running n0002.png</file>
-        <file>resources/textures/units/knight/city/running n0003.png</file>
-        <file>resources/textures/units/knight/city/running n0004.png</file>
-        <file>resources/textures/units/knight/city/running n0005.png</file>
-        <file>resources/textures/units/knight/city/running n0006.png</file>
-        <file>resources/textures/units/knight/city/running n0007.png</file>
-        <file>resources/textures/units/knight/city/running n0008.png</file>
-        <file>resources/textures/units/knight/city/running n0009.png</file>
-        <file>resources/textures/units/knight/city/running n0010.png</file>
-        <file>resources/textures/units/knight/city/running n0011.png</file>
-        <file>resources/textures/units/knight/city/running ne0000.png</file>
-        <file>resources/textures/units/knight/city/running ne0001.png</file>
-        <file>resources/textures/units/knight/city/running ne0002.png</file>
-        <file>resources/textures/units/knight/city/running ne0003.png</file>
-        <file>resources/textures/units/knight/city/running ne0004.png</file>
-        <file>resources/textures/units/knight/city/running ne0005.png</file>
-        <file>resources/textures/units/knight/city/running ne0006.png</file>
-        <file>resources/textures/units/knight/city/running ne0007.png</file>
-        <file>resources/textures/units/knight/city/running ne0008.png</file>
-        <file>resources/textures/units/knight/city/running ne0009.png</file>
-        <file>resources/textures/units/knight/city/running ne0010.png</file>
-        <file>resources/textures/units/knight/city/running ne0011.png</file>
-        <file>resources/textures/units/knight/city/running nw0000.png</file>
-        <file>resources/textures/units/knight/city/running nw0001.png</file>
-        <file>resources/textures/units/knight/city/running nw0002.png</file>
-        <file>resources/textures/units/knight/city/running nw0003.png</file>
-        <file>resources/textures/units/knight/city/running nw0004.png</file>
-        <file>resources/textures/units/knight/city/running nw0005.png</file>
-        <file>resources/textures/units/knight/city/running nw0006.png</file>
-        <file>resources/textures/units/knight/city/running nw0007.png</file>
-        <file>resources/textures/units/knight/city/running nw0008.png</file>
-        <file>resources/textures/units/knight/city/running nw0009.png</file>
-        <file>resources/textures/units/knight/city/running nw0010.png</file>
-        <file>resources/textures/units/knight/city/running nw0011.png</file>
-        <file>resources/textures/units/knight/city/running s0000.png</file>
-        <file>resources/textures/units/knight/city/running s0001.png</file>
-        <file>resources/textures/units/knight/city/running s0002.png</file>
-        <file>resources/textures/units/knight/city/running s0003.png</file>
-        <file>resources/textures/units/knight/city/running s0004.png</file>
-        <file>resources/textures/units/knight/city/running s0005.png</file>
-        <file>resources/textures/units/knight/city/running s0006.png</file>
-        <file>resources/textures/units/knight/city/running s0007.png</file>
-        <file>resources/textures/units/knight/city/running s0008.png</file>
-        <file>resources/textures/units/knight/city/running s0009.png</file>
-        <file>resources/textures/units/knight/city/running s0010.png</file>
-        <file>resources/textures/units/knight/city/running s0011.png</file>
-        <file>resources/textures/units/knight/city/running se0000.png</file>
-        <file>resources/textures/units/knight/city/running se0001.png</file>
-        <file>resources/textures/units/knight/city/running se0002.png</file>
-        <file>resources/textures/units/knight/city/running se0003.png</file>
-        <file>resources/textures/units/knight/city/running se0004.png</file>
-        <file>resources/textures/units/knight/city/running se0005.png</file>
-        <file>resources/textures/units/knight/city/running se0006.png</file>
-        <file>resources/textures/units/knight/city/running se0007.png</file>
-        <file>resources/textures/units/knight/city/running se0008.png</file>
-        <file>resources/textures/units/knight/city/running se0009.png</file>
-        <file>resources/textures/units/knight/city/running se0010.png</file>
-        <file>resources/textures/units/knight/city/running se0011.png</file>
-        <file>resources/textures/units/knight/city/running sw0000.png</file>
-        <file>resources/textures/units/knight/city/running sw0001.png</file>
-        <file>resources/textures/units/knight/city/running sw0002.png</file>
-        <file>resources/textures/units/knight/city/running sw0003.png</file>
-        <file>resources/textures/units/knight/city/running sw0004.png</file>
-        <file>resources/textures/units/knight/city/running sw0005.png</file>
-        <file>resources/textures/units/knight/city/running sw0006.png</file>
-        <file>resources/textures/units/knight/city/running sw0007.png</file>
-        <file>resources/textures/units/knight/city/running sw0008.png</file>
-        <file>resources/textures/units/knight/city/running sw0009.png</file>
-        <file>resources/textures/units/knight/city/running sw0010.png</file>
-        <file>resources/textures/units/knight/city/running sw0011.png</file>
-        <file>resources/textures/units/knight/city/running w0000.png</file>
-        <file>resources/textures/units/knight/city/running w0001.png</file>
-        <file>resources/textures/units/knight/city/running w0002.png</file>
-        <file>resources/textures/units/knight/city/running w0003.png</file>
-        <file>resources/textures/units/knight/city/running w0004.png</file>
-        <file>resources/textures/units/knight/city/running w0005.png</file>
-        <file>resources/textures/units/knight/city/running w0006.png</file>
-        <file>resources/textures/units/knight/city/running w0007.png</file>
-        <file>resources/textures/units/knight/city/running w0008.png</file>
-        <file>resources/textures/units/knight/city/running w0009.png</file>
-        <file>resources/textures/units/knight/city/running w0010.png</file>
-        <file>resources/textures/units/knight/city/running w0011.png</file>
-        <file>resources/textures/units/knight/city/scriptconvert.sh</file>
-        <file>resources/textures/units/knight/city/stopped0000.png</file>
-        <file>resources/textures/units/knight/city/stopped0001.png</file>
-        <file>resources/textures/units/knight/city/stopped0002.png</file>
-        <file>resources/textures/units/knight/city/stopped0003.png</file>
-        <file>resources/textures/units/knight/city/stopped0004.png</file>
-        <file>resources/textures/units/knight/city/stopped0005.png</file>
-        <file>resources/textures/units/knight/city/stopped0006.png</file>
-        <file>resources/textures/units/knight/city/stopped0007.png</file>
-        <file>resources/textures/units/knight/city/talking e0000.png</file>
-        <file>resources/textures/units/knight/city/talking e0001.png</file>
-        <file>resources/textures/units/knight/city/talking e0002.png</file>
-        <file>resources/textures/units/knight/city/talking e0003.png</file>
-        <file>resources/textures/units/knight/city/talking e0004.png</file>
-        <file>resources/textures/units/knight/city/talking e0005.png</file>
-        <file>resources/textures/units/knight/city/talking e0006.png</file>
-        <file>resources/textures/units/knight/city/talking e0007.png</file>
-        <file>resources/textures/units/knight/city/talking e0008.png</file>
-        <file>resources/textures/units/knight/city/talking e0009.png</file>
-        <file>resources/textures/units/knight/city/talking e0010.png</file>
-        <file>resources/textures/units/knight/city/talking e0011.png</file>
-        <file>resources/textures/units/knight/city/talking n0000.png</file>
-        <file>resources/textures/units/knight/city/talking n0001.png</file>
-        <file>resources/textures/units/knight/city/talking n0002.png</file>
-        <file>resources/textures/units/knight/city/talking n0003.png</file>
-        <file>resources/textures/units/knight/city/talking n0004.png</file>
-        <file>resources/textures/units/knight/city/talking n0005.png</file>
-        <file>resources/textures/units/knight/city/talking n0006.png</file>
-        <file>resources/textures/units/knight/city/talking n0007.png</file>
-        <file>resources/textures/units/knight/city/talking n0008.png</file>
-        <file>resources/textures/units/knight/city/talking n0009.png</file>
-        <file>resources/textures/units/knight/city/talking n0010.png</file>
-        <file>resources/textures/units/knight/city/talking n0011.png</file>
-        <file>resources/textures/units/knight/city/talking ne0000.png</file>
-        <file>resources/textures/units/knight/city/talking ne0001.png</file>
-        <file>resources/textures/units/knight/city/talking ne0002.png</file>
-        <file>resources/textures/units/knight/city/talking ne0003.png</file>
-        <file>resources/textures/units/knight/city/talking ne0004.png</file>
-        <file>resources/textures/units/knight/city/talking ne0005.png</file>
-        <file>resources/textures/units/knight/city/talking ne0006.png</file>
-        <file>resources/textures/units/knight/city/talking ne0007.png</file>
-        <file>resources/textures/units/knight/city/talking ne0008.png</file>
-        <file>resources/textures/units/knight/city/talking ne0009.png</file>
-        <file>resources/textures/units/knight/city/talking ne0010.png</file>
-        <file>resources/textures/units/knight/city/talking ne0011.png</file>
-        <file>resources/textures/units/knight/city/talking nw0000.png</file>
-        <file>resources/textures/units/knight/city/talking nw0001.png</file>
-        <file>resources/textures/units/knight/city/talking nw0002.png</file>
-        <file>resources/textures/units/knight/city/talking nw0003.png</file>
-        <file>resources/textures/units/knight/city/talking nw0004.png</file>
-        <file>resources/textures/units/knight/city/talking nw0005.png</file>
-        <file>resources/textures/units/knight/city/talking nw0006.png</file>
-        <file>resources/textures/units/knight/city/talking nw0007.png</file>
-        <file>resources/textures/units/knight/city/talking nw0008.png</file>
-        <file>resources/textures/units/knight/city/talking nw0009.png</file>
-        <file>resources/textures/units/knight/city/talking nw0010.png</file>
-        <file>resources/textures/units/knight/city/talking nw0011.png</file>
-        <file>resources/textures/units/knight/city/talking s0000.png</file>
-        <file>resources/textures/units/knight/city/talking s0001.png</file>
-        <file>resources/textures/units/knight/city/talking s0002.png</file>
-        <file>resources/textures/units/knight/city/talking s0003.png</file>
-        <file>resources/textures/units/knight/city/talking s0004.png</file>
-        <file>resources/textures/units/knight/city/talking s0005.png</file>
-        <file>resources/textures/units/knight/city/talking s0006.png</file>
-        <file>resources/textures/units/knight/city/talking s0007.png</file>
-        <file>resources/textures/units/knight/city/talking s0008.png</file>
-        <file>resources/textures/units/knight/city/talking s0009.png</file>
-        <file>resources/textures/units/knight/city/talking s0010.png</file>
-        <file>resources/textures/units/knight/city/talking s0011.png</file>
-        <file>resources/textures/units/knight/city/talking se0000.png</file>
-        <file>resources/textures/units/knight/city/talking se0001.png</file>
-        <file>resources/textures/units/knight/city/talking se0002.png</file>
-        <file>resources/textures/units/knight/city/talking se0003.png</file>
-        <file>resources/textures/units/knight/city/talking se0004.png</file>
-        <file>resources/textures/units/knight/city/talking se0005.png</file>
-        <file>resources/textures/units/knight/city/talking se0006.png</file>
-        <file>resources/textures/units/knight/city/talking se0007.png</file>
-        <file>resources/textures/units/knight/city/talking se0008.png</file>
-        <file>resources/textures/units/knight/city/talking se0009.png</file>
-        <file>resources/textures/units/knight/city/talking se0010.png</file>
-        <file>resources/textures/units/knight/city/talking se0011.png</file>
-        <file>resources/textures/units/knight/city/talking sw0000.png</file>
-        <file>resources/textures/units/knight/city/talking sw0001.png</file>
-        <file>resources/textures/units/knight/city/talking sw0002.png</file>
-        <file>resources/textures/units/knight/city/talking sw0003.png</file>
-        <file>resources/textures/units/knight/city/talking sw0004.png</file>
-        <file>resources/textures/units/knight/city/talking sw0005.png</file>
-        <file>resources/textures/units/knight/city/talking sw0006.png</file>
-        <file>resources/textures/units/knight/city/talking sw0007.png</file>
-        <file>resources/textures/units/knight/city/talking sw0008.png</file>
-        <file>resources/textures/units/knight/city/talking sw0009.png</file>
-        <file>resources/textures/units/knight/city/talking sw0010.png</file>
-        <file>resources/textures/units/knight/city/talking sw0011.png</file>
-        <file>resources/textures/units/knight/city/talking w0000.png</file>
-        <file>resources/textures/units/knight/city/talking w0001.png</file>
-        <file>resources/textures/units/knight/city/talking w0002.png</file>
-        <file>resources/textures/units/knight/city/talking w0003.png</file>
-        <file>resources/textures/units/knight/city/talking w0004.png</file>
-        <file>resources/textures/units/knight/city/talking w0005.png</file>
-        <file>resources/textures/units/knight/city/talking w0006.png</file>
-        <file>resources/textures/units/knight/city/talking w0007.png</file>
-        <file>resources/textures/units/knight/city/talking w0008.png</file>
-        <file>resources/textures/units/knight/city/talking w0009.png</file>
-        <file>resources/textures/units/knight/city/talking w0010.png</file>
-        <file>resources/textures/units/knight/city/talking w0011.png</file>
-        <file>resources/textures/units/knight/city/walking e0000.png</file>
-        <file>resources/textures/units/knight/city/walking e0001.png</file>
-        <file>resources/textures/units/knight/city/walking e0002.png</file>
-        <file>resources/textures/units/knight/city/walking e0003.png</file>
-        <file>resources/textures/units/knight/city/walking e0004.png</file>
-        <file>resources/textures/units/knight/city/walking e0005.png</file>
-        <file>resources/textures/units/knight/city/walking e0006.png</file>
-        <file>resources/textures/units/knight/city/walking e0007.png</file>
-        <file>resources/textures/units/knight/city/walking e0008.png</file>
-        <file>resources/textures/units/knight/city/walking e0009.png</file>
-        <file>resources/textures/units/knight/city/walking e0010.png</file>
-        <file>resources/textures/units/knight/city/walking e0011.png</file>
-        <file>resources/textures/units/knight/city/walking n0000.png</file>
-        <file>resources/textures/units/knight/city/walking n0001.png</file>
-        <file>resources/textures/units/knight/city/walking n0002.png</file>
-        <file>resources/textures/units/knight/city/walking n0003.png</file>
-        <file>resources/textures/units/knight/city/walking n0004.png</file>
-        <file>resources/textures/units/knight/city/walking n0005.png</file>
-        <file>resources/textures/units/knight/city/walking n0006.png</file>
-        <file>resources/textures/units/knight/city/walking n0007.png</file>
-        <file>resources/textures/units/knight/city/walking n0008.png</file>
-        <file>resources/textures/units/knight/city/walking n0009.png</file>
-        <file>resources/textures/units/knight/city/walking n0010.png</file>
-        <file>resources/textures/units/knight/city/walking n0011.png</file>
-        <file>resources/textures/units/knight/city/walking ne0000.png</file>
-        <file>resources/textures/units/knight/city/walking ne0001.png</file>
-        <file>resources/textures/units/knight/city/walking ne0002.png</file>
-        <file>resources/textures/units/knight/city/walking ne0003.png</file>
-        <file>resources/textures/units/knight/city/walking ne0004.png</file>
-        <file>resources/textures/units/knight/city/walking ne0005.png</file>
-        <file>resources/textures/units/knight/city/walking ne0006.png</file>
-        <file>resources/textures/units/knight/city/walking ne0007.png</file>
-        <file>resources/textures/units/knight/city/walking ne0008.png</file>
-        <file>resources/textures/units/knight/city/walking ne0009.png</file>
-        <file>resources/textures/units/knight/city/walking ne0010.png</file>
-        <file>resources/textures/units/knight/city/walking ne0011.png</file>
-        <file>resources/textures/units/knight/city/walking nw0000.png</file>
-        <file>resources/textures/units/knight/city/walking nw0001.png</file>
-        <file>resources/textures/units/knight/city/walking nw0002.png</file>
-        <file>resources/textures/units/knight/city/walking nw0003.png</file>
-        <file>resources/textures/units/knight/city/walking nw0004.png</file>
-        <file>resources/textures/units/knight/city/walking nw0005.png</file>
-        <file>resources/textures/units/knight/city/walking nw0006.png</file>
-        <file>resources/textures/units/knight/city/walking nw0007.png</file>
-        <file>resources/textures/units/knight/city/walking nw0008.png</file>
-        <file>resources/textures/units/knight/city/walking nw0009.png</file>
-        <file>resources/textures/units/knight/city/walking nw0010.png</file>
-        <file>resources/textures/units/knight/city/walking nw0011.png</file>
-        <file>resources/textures/units/knight/city/walking s0000.png</file>
-        <file>resources/textures/units/knight/city/walking s0001.png</file>
-        <file>resources/textures/units/knight/city/walking s0002.png</file>
-        <file>resources/textures/units/knight/city/walking s0003.png</file>
-        <file>resources/textures/units/knight/city/walking s0004.png</file>
-        <file>resources/textures/units/knight/city/walking s0005.png</file>
-        <file>resources/textures/units/knight/city/walking s0006.png</file>
-        <file>resources/textures/units/knight/city/walking s0007.png</file>
-        <file>resources/textures/units/knight/city/walking s0008.png</file>
-        <file>resources/textures/units/knight/city/walking s0009.png</file>
-        <file>resources/textures/units/knight/city/walking s0010.png</file>
-        <file>resources/textures/units/knight/city/walking s0011.png</file>
-        <file>resources/textures/units/knight/city/walking se0000.png</file>
-        <file>resources/textures/units/knight/city/walking se0001.png</file>
-        <file>resources/textures/units/knight/city/walking se0002.png</file>
-        <file>resources/textures/units/knight/city/walking se0003.png</file>
-        <file>resources/textures/units/knight/city/walking se0004.png</file>
-        <file>resources/textures/units/knight/city/walking se0005.png</file>
-        <file>resources/textures/units/knight/city/walking se0006.png</file>
-        <file>resources/textures/units/knight/city/walking se0007.png</file>
-        <file>resources/textures/units/knight/city/walking se0008.png</file>
-        <file>resources/textures/units/knight/city/walking se0009.png</file>
-        <file>resources/textures/units/knight/city/walking se0010.png</file>
-        <file>resources/textures/units/knight/city/walking se0011.png</file>
-        <file>resources/textures/units/knight/city/walking sw0000.png</file>
-        <file>resources/textures/units/knight/city/walking sw0001.png</file>
-        <file>resources/textures/units/knight/city/walking sw0002.png</file>
-        <file>resources/textures/units/knight/city/walking sw0003.png</file>
-        <file>resources/textures/units/knight/city/walking sw0004.png</file>
-        <file>resources/textures/units/knight/city/walking sw0005.png</file>
-        <file>resources/textures/units/knight/city/walking sw0006.png</file>
-        <file>resources/textures/units/knight/city/walking sw0007.png</file>
-        <file>resources/textures/units/knight/city/walking sw0008.png</file>
-        <file>resources/textures/units/knight/city/walking sw0009.png</file>
-        <file>resources/textures/units/knight/city/walking sw0010.png</file>
-        <file>resources/textures/units/knight/city/walking sw0011.png</file>
-        <file>resources/textures/units/knight/city/walking w0000.png</file>
-        <file>resources/textures/units/knight/city/walking w0001.png</file>
-        <file>resources/textures/units/knight/city/walking w0002.png</file>
-        <file>resources/textures/units/knight/city/walking w0003.png</file>
-        <file>resources/textures/units/knight/city/walking w0004.png</file>
-        <file>resources/textures/units/knight/city/walking w0005.png</file>
-        <file>resources/textures/units/knight/city/walking w0006.png</file>
-        <file>resources/textures/units/knight/city/walking w0007.png</file>
-        <file>resources/textures/units/knight/city/walking w0008.png</file>
-        <file>resources/textures/units/knight/city/walking w0009.png</file>
-        <file>resources/textures/units/knight/city/walking w0010.png</file>
-        <file>resources/textures/units/knight/city/walking w0011.png</file>
         <file>resources/textures/medievalrtspack/Environment/medievalEnvironment_01.png</file>
         <file>resources/textures/medievalrtspack/Environment/medievalEnvironment_02.png</file>
         <file>resources/textures/medievalrtspack/Environment/medievalEnvironment_03.png</file>
@@ -1223,5 +142,1297 @@
         <file>resources/textures/custom/imaginawars.svg</file>
         <file>resources/textures/custom/targetred1.png</file>
         <file>resources/textures/custom/targetred2.png</file>
+        <file>resources/textures/units/knight/attack e0000.png</file>
+        <file>resources/textures/units/knight/attack e0001.png</file>
+        <file>resources/textures/units/knight/attack e0002.png</file>
+        <file>resources/textures/units/knight/attack e0003.png</file>
+        <file>resources/textures/units/knight/attack e0004.png</file>
+        <file>resources/textures/units/knight/attack e0005.png</file>
+        <file>resources/textures/units/knight/attack e0006.png</file>
+        <file>resources/textures/units/knight/attack e0007.png</file>
+        <file>resources/textures/units/knight/attack e0008.png</file>
+        <file>resources/textures/units/knight/attack e0009.png</file>
+        <file>resources/textures/units/knight/attack e0010.png</file>
+        <file>resources/textures/units/knight/attack e0011.png</file>
+        <file>resources/textures/units/knight/attack n0000.png</file>
+        <file>resources/textures/units/knight/attack n0001.png</file>
+        <file>resources/textures/units/knight/attack n0002.png</file>
+        <file>resources/textures/units/knight/attack n0003.png</file>
+        <file>resources/textures/units/knight/attack n0004.png</file>
+        <file>resources/textures/units/knight/attack n0005.png</file>
+        <file>resources/textures/units/knight/attack n0006.png</file>
+        <file>resources/textures/units/knight/attack n0007.png</file>
+        <file>resources/textures/units/knight/attack n0008.png</file>
+        <file>resources/textures/units/knight/attack n0009.png</file>
+        <file>resources/textures/units/knight/attack n0010.png</file>
+        <file>resources/textures/units/knight/attack n0011.png</file>
+        <file>resources/textures/units/knight/attack ne0000.png</file>
+        <file>resources/textures/units/knight/attack ne0001.png</file>
+        <file>resources/textures/units/knight/attack ne0002.png</file>
+        <file>resources/textures/units/knight/attack ne0003.png</file>
+        <file>resources/textures/units/knight/attack ne0004.png</file>
+        <file>resources/textures/units/knight/attack ne0005.png</file>
+        <file>resources/textures/units/knight/attack ne0006.png</file>
+        <file>resources/textures/units/knight/attack ne0007.png</file>
+        <file>resources/textures/units/knight/attack ne0008.png</file>
+        <file>resources/textures/units/knight/attack ne0009.png</file>
+        <file>resources/textures/units/knight/attack ne0010.png</file>
+        <file>resources/textures/units/knight/attack ne0011.png</file>
+        <file>resources/textures/units/knight/attack nw0000.png</file>
+        <file>resources/textures/units/knight/attack nw0001.png</file>
+        <file>resources/textures/units/knight/attack nw0002.png</file>
+        <file>resources/textures/units/knight/attack nw0003.png</file>
+        <file>resources/textures/units/knight/attack nw0004.png</file>
+        <file>resources/textures/units/knight/attack nw0005.png</file>
+        <file>resources/textures/units/knight/attack nw0006.png</file>
+        <file>resources/textures/units/knight/attack nw0007.png</file>
+        <file>resources/textures/units/knight/attack nw0008.png</file>
+        <file>resources/textures/units/knight/attack nw0009.png</file>
+        <file>resources/textures/units/knight/attack nw0010.png</file>
+        <file>resources/textures/units/knight/attack nw0011.png</file>
+        <file>resources/textures/units/knight/attack s0000.png</file>
+        <file>resources/textures/units/knight/attack s0001.png</file>
+        <file>resources/textures/units/knight/attack s0002.png</file>
+        <file>resources/textures/units/knight/attack s0003.png</file>
+        <file>resources/textures/units/knight/attack s0004.png</file>
+        <file>resources/textures/units/knight/attack s0005.png</file>
+        <file>resources/textures/units/knight/attack s0006.png</file>
+        <file>resources/textures/units/knight/attack s0007.png</file>
+        <file>resources/textures/units/knight/attack s0008.png</file>
+        <file>resources/textures/units/knight/attack s0009.png</file>
+        <file>resources/textures/units/knight/attack s0010.png</file>
+        <file>resources/textures/units/knight/attack s0011.png</file>
+        <file>resources/textures/units/knight/attack se0000.png</file>
+        <file>resources/textures/units/knight/attack se0001.png</file>
+        <file>resources/textures/units/knight/attack se0002.png</file>
+        <file>resources/textures/units/knight/attack se0003.png</file>
+        <file>resources/textures/units/knight/attack se0004.png</file>
+        <file>resources/textures/units/knight/attack se0005.png</file>
+        <file>resources/textures/units/knight/attack se0006.png</file>
+        <file>resources/textures/units/knight/attack se0007.png</file>
+        <file>resources/textures/units/knight/attack se0008.png</file>
+        <file>resources/textures/units/knight/attack se0009.png</file>
+        <file>resources/textures/units/knight/attack se0010.png</file>
+        <file>resources/textures/units/knight/attack se0011.png</file>
+        <file>resources/textures/units/knight/attack sw0000.png</file>
+        <file>resources/textures/units/knight/attack sw0001.png</file>
+        <file>resources/textures/units/knight/attack sw0002.png</file>
+        <file>resources/textures/units/knight/attack sw0003.png</file>
+        <file>resources/textures/units/knight/attack sw0004.png</file>
+        <file>resources/textures/units/knight/attack sw0005.png</file>
+        <file>resources/textures/units/knight/attack sw0006.png</file>
+        <file>resources/textures/units/knight/attack sw0007.png</file>
+        <file>resources/textures/units/knight/attack sw0008.png</file>
+        <file>resources/textures/units/knight/attack sw0009.png</file>
+        <file>resources/textures/units/knight/attack sw0010.png</file>
+        <file>resources/textures/units/knight/attack sw0011.png</file>
+        <file>resources/textures/units/knight/attack w0000.png</file>
+        <file>resources/textures/units/knight/attack w0001.png</file>
+        <file>resources/textures/units/knight/attack w0002.png</file>
+        <file>resources/textures/units/knight/attack w0003.png</file>
+        <file>resources/textures/units/knight/attack w0004.png</file>
+        <file>resources/textures/units/knight/attack w0005.png</file>
+        <file>resources/textures/units/knight/attack w0006.png</file>
+        <file>resources/textures/units/knight/attack w0007.png</file>
+        <file>resources/textures/units/knight/attack w0008.png</file>
+        <file>resources/textures/units/knight/attack w0009.png</file>
+        <file>resources/textures/units/knight/attack w0010.png</file>
+        <file>resources/textures/units/knight/attack w0011.png</file>
+        <file>resources/textures/units/knight/been hit e0000.png</file>
+        <file>resources/textures/units/knight/been hit e0001.png</file>
+        <file>resources/textures/units/knight/been hit e0002.png</file>
+        <file>resources/textures/units/knight/been hit e0003.png</file>
+        <file>resources/textures/units/knight/been hit e0004.png</file>
+        <file>resources/textures/units/knight/been hit e0005.png</file>
+        <file>resources/textures/units/knight/been hit e0006.png</file>
+        <file>resources/textures/units/knight/been hit e0007.png</file>
+        <file>resources/textures/units/knight/been hit e0008.png</file>
+        <file>resources/textures/units/knight/been hit e0009.png</file>
+        <file>resources/textures/units/knight/been hit e0010.png</file>
+        <file>resources/textures/units/knight/been hit e0011.png</file>
+        <file>resources/textures/units/knight/been hit n0000.png</file>
+        <file>resources/textures/units/knight/been hit n0001.png</file>
+        <file>resources/textures/units/knight/been hit n0002.png</file>
+        <file>resources/textures/units/knight/been hit n0003.png</file>
+        <file>resources/textures/units/knight/been hit n0004.png</file>
+        <file>resources/textures/units/knight/been hit n0005.png</file>
+        <file>resources/textures/units/knight/been hit n0006.png</file>
+        <file>resources/textures/units/knight/been hit n0007.png</file>
+        <file>resources/textures/units/knight/been hit n0008.png</file>
+        <file>resources/textures/units/knight/been hit n0009.png</file>
+        <file>resources/textures/units/knight/been hit n0010.png</file>
+        <file>resources/textures/units/knight/been hit n0011.png</file>
+        <file>resources/textures/units/knight/been hit ne0000.png</file>
+        <file>resources/textures/units/knight/been hit ne0001.png</file>
+        <file>resources/textures/units/knight/been hit ne0002.png</file>
+        <file>resources/textures/units/knight/been hit ne0003.png</file>
+        <file>resources/textures/units/knight/been hit ne0004.png</file>
+        <file>resources/textures/units/knight/been hit ne0005.png</file>
+        <file>resources/textures/units/knight/been hit ne0006.png</file>
+        <file>resources/textures/units/knight/been hit ne0007.png</file>
+        <file>resources/textures/units/knight/been hit ne0008.png</file>
+        <file>resources/textures/units/knight/been hit ne0009.png</file>
+        <file>resources/textures/units/knight/been hit ne0010.png</file>
+        <file>resources/textures/units/knight/been hit ne0011.png</file>
+        <file>resources/textures/units/knight/been hit nw0000.png</file>
+        <file>resources/textures/units/knight/been hit nw0001.png</file>
+        <file>resources/textures/units/knight/been hit nw0002.png</file>
+        <file>resources/textures/units/knight/been hit nw0003.png</file>
+        <file>resources/textures/units/knight/been hit nw0004.png</file>
+        <file>resources/textures/units/knight/been hit nw0005.png</file>
+        <file>resources/textures/units/knight/been hit nw0006.png</file>
+        <file>resources/textures/units/knight/been hit nw0007.png</file>
+        <file>resources/textures/units/knight/been hit nw0008.png</file>
+        <file>resources/textures/units/knight/been hit nw0009.png</file>
+        <file>resources/textures/units/knight/been hit nw0010.png</file>
+        <file>resources/textures/units/knight/been hit nw0011.png</file>
+        <file>resources/textures/units/knight/been hit s0000.png</file>
+        <file>resources/textures/units/knight/been hit s0001.png</file>
+        <file>resources/textures/units/knight/been hit s0002.png</file>
+        <file>resources/textures/units/knight/been hit s0003.png</file>
+        <file>resources/textures/units/knight/been hit s0004.png</file>
+        <file>resources/textures/units/knight/been hit s0005.png</file>
+        <file>resources/textures/units/knight/been hit s0006.png</file>
+        <file>resources/textures/units/knight/been hit s0007.png</file>
+        <file>resources/textures/units/knight/been hit s0008.png</file>
+        <file>resources/textures/units/knight/been hit s0009.png</file>
+        <file>resources/textures/units/knight/been hit s0010.png</file>
+        <file>resources/textures/units/knight/been hit s0011.png</file>
+        <file>resources/textures/units/knight/been hit se0000.png</file>
+        <file>resources/textures/units/knight/been hit se0001.png</file>
+        <file>resources/textures/units/knight/been hit se0002.png</file>
+        <file>resources/textures/units/knight/been hit se0003.png</file>
+        <file>resources/textures/units/knight/been hit se0004.png</file>
+        <file>resources/textures/units/knight/been hit se0005.png</file>
+        <file>resources/textures/units/knight/been hit se0006.png</file>
+        <file>resources/textures/units/knight/been hit se0007.png</file>
+        <file>resources/textures/units/knight/been hit se0008.png</file>
+        <file>resources/textures/units/knight/been hit se0009.png</file>
+        <file>resources/textures/units/knight/been hit se0010.png</file>
+        <file>resources/textures/units/knight/been hit se0011.png</file>
+        <file>resources/textures/units/knight/been hit sw0000.png</file>
+        <file>resources/textures/units/knight/been hit sw0001.png</file>
+        <file>resources/textures/units/knight/been hit sw0002.png</file>
+        <file>resources/textures/units/knight/been hit sw0003.png</file>
+        <file>resources/textures/units/knight/been hit sw0004.png</file>
+        <file>resources/textures/units/knight/been hit sw0005.png</file>
+        <file>resources/textures/units/knight/been hit sw0006.png</file>
+        <file>resources/textures/units/knight/been hit sw0007.png</file>
+        <file>resources/textures/units/knight/been hit sw0008.png</file>
+        <file>resources/textures/units/knight/been hit sw0009.png</file>
+        <file>resources/textures/units/knight/been hit sw0010.png</file>
+        <file>resources/textures/units/knight/been hit sw0011.png</file>
+        <file>resources/textures/units/knight/been hit w0000.png</file>
+        <file>resources/textures/units/knight/been hit w0001.png</file>
+        <file>resources/textures/units/knight/been hit w0002.png</file>
+        <file>resources/textures/units/knight/been hit w0003.png</file>
+        <file>resources/textures/units/knight/been hit w0004.png</file>
+        <file>resources/textures/units/knight/been hit w0005.png</file>
+        <file>resources/textures/units/knight/been hit w0006.png</file>
+        <file>resources/textures/units/knight/been hit w0007.png</file>
+        <file>resources/textures/units/knight/been hit w0008.png</file>
+        <file>resources/textures/units/knight/been hit w0009.png</file>
+        <file>resources/textures/units/knight/been hit w0010.png</file>
+        <file>resources/textures/units/knight/been hit w0011.png</file>
+        <file>resources/textures/units/knight/looking e0000.png</file>
+        <file>resources/textures/units/knight/looking e0001.png</file>
+        <file>resources/textures/units/knight/looking e0002.png</file>
+        <file>resources/textures/units/knight/looking e0003.png</file>
+        <file>resources/textures/units/knight/looking e0004.png</file>
+        <file>resources/textures/units/knight/looking e0005.png</file>
+        <file>resources/textures/units/knight/looking e0006.png</file>
+        <file>resources/textures/units/knight/looking e0007.png</file>
+        <file>resources/textures/units/knight/looking e0008.png</file>
+        <file>resources/textures/units/knight/looking e0009.png</file>
+        <file>resources/textures/units/knight/looking e0010.png</file>
+        <file>resources/textures/units/knight/looking e0011.png</file>
+        <file>resources/textures/units/knight/looking n0000.png</file>
+        <file>resources/textures/units/knight/looking n0001.png</file>
+        <file>resources/textures/units/knight/looking n0002.png</file>
+        <file>resources/textures/units/knight/looking n0003.png</file>
+        <file>resources/textures/units/knight/looking n0004.png</file>
+        <file>resources/textures/units/knight/looking n0005.png</file>
+        <file>resources/textures/units/knight/looking n0006.png</file>
+        <file>resources/textures/units/knight/looking n0007.png</file>
+        <file>resources/textures/units/knight/looking n0008.png</file>
+        <file>resources/textures/units/knight/looking n0009.png</file>
+        <file>resources/textures/units/knight/looking n0010.png</file>
+        <file>resources/textures/units/knight/looking n0011.png</file>
+        <file>resources/textures/units/knight/looking ne0000.png</file>
+        <file>resources/textures/units/knight/looking ne0001.png</file>
+        <file>resources/textures/units/knight/looking ne0002.png</file>
+        <file>resources/textures/units/knight/looking ne0003.png</file>
+        <file>resources/textures/units/knight/looking ne0004.png</file>
+        <file>resources/textures/units/knight/looking ne0005.png</file>
+        <file>resources/textures/units/knight/looking ne0006.png</file>
+        <file>resources/textures/units/knight/looking ne0007.png</file>
+        <file>resources/textures/units/knight/looking ne0008.png</file>
+        <file>resources/textures/units/knight/looking ne0009.png</file>
+        <file>resources/textures/units/knight/looking ne0010.png</file>
+        <file>resources/textures/units/knight/looking ne0011.png</file>
+        <file>resources/textures/units/knight/looking nw0000.png</file>
+        <file>resources/textures/units/knight/looking nw0001.png</file>
+        <file>resources/textures/units/knight/looking nw0002.png</file>
+        <file>resources/textures/units/knight/looking nw0003.png</file>
+        <file>resources/textures/units/knight/looking nw0004.png</file>
+        <file>resources/textures/units/knight/looking nw0005.png</file>
+        <file>resources/textures/units/knight/looking nw0006.png</file>
+        <file>resources/textures/units/knight/looking nw0007.png</file>
+        <file>resources/textures/units/knight/looking nw0008.png</file>
+        <file>resources/textures/units/knight/looking nw0009.png</file>
+        <file>resources/textures/units/knight/looking nw0010.png</file>
+        <file>resources/textures/units/knight/looking nw0011.png</file>
+        <file>resources/textures/units/knight/looking s0000.png</file>
+        <file>resources/textures/units/knight/looking s0001.png</file>
+        <file>resources/textures/units/knight/looking s0002.png</file>
+        <file>resources/textures/units/knight/looking s0003.png</file>
+        <file>resources/textures/units/knight/looking s0004.png</file>
+        <file>resources/textures/units/knight/looking s0005.png</file>
+        <file>resources/textures/units/knight/looking s0006.png</file>
+        <file>resources/textures/units/knight/looking s0007.png</file>
+        <file>resources/textures/units/knight/looking s0008.png</file>
+        <file>resources/textures/units/knight/looking s0009.png</file>
+        <file>resources/textures/units/knight/looking s0010.png</file>
+        <file>resources/textures/units/knight/looking s0011.png</file>
+        <file>resources/textures/units/knight/looking se0000.png</file>
+        <file>resources/textures/units/knight/looking se0001.png</file>
+        <file>resources/textures/units/knight/looking se0002.png</file>
+        <file>resources/textures/units/knight/looking se0003.png</file>
+        <file>resources/textures/units/knight/looking se0004.png</file>
+        <file>resources/textures/units/knight/looking se0005.png</file>
+        <file>resources/textures/units/knight/looking se0006.png</file>
+        <file>resources/textures/units/knight/looking se0007.png</file>
+        <file>resources/textures/units/knight/looking se0008.png</file>
+        <file>resources/textures/units/knight/looking se0009.png</file>
+        <file>resources/textures/units/knight/looking se0010.png</file>
+        <file>resources/textures/units/knight/looking se0011.png</file>
+        <file>resources/textures/units/knight/looking sw0000.png</file>
+        <file>resources/textures/units/knight/looking sw0001.png</file>
+        <file>resources/textures/units/knight/looking sw0002.png</file>
+        <file>resources/textures/units/knight/looking sw0003.png</file>
+        <file>resources/textures/units/knight/looking sw0004.png</file>
+        <file>resources/textures/units/knight/looking sw0005.png</file>
+        <file>resources/textures/units/knight/looking sw0006.png</file>
+        <file>resources/textures/units/knight/looking sw0007.png</file>
+        <file>resources/textures/units/knight/looking sw0008.png</file>
+        <file>resources/textures/units/knight/looking sw0009.png</file>
+        <file>resources/textures/units/knight/looking sw0010.png</file>
+        <file>resources/textures/units/knight/looking sw0011.png</file>
+        <file>resources/textures/units/knight/looking w0000.png</file>
+        <file>resources/textures/units/knight/looking w0001.png</file>
+        <file>resources/textures/units/knight/looking w0002.png</file>
+        <file>resources/textures/units/knight/looking w0003.png</file>
+        <file>resources/textures/units/knight/looking w0004.png</file>
+        <file>resources/textures/units/knight/looking w0005.png</file>
+        <file>resources/textures/units/knight/looking w0006.png</file>
+        <file>resources/textures/units/knight/looking w0007.png</file>
+        <file>resources/textures/units/knight/looking w0008.png</file>
+        <file>resources/textures/units/knight/looking w0009.png</file>
+        <file>resources/textures/units/knight/looking w0010.png</file>
+        <file>resources/textures/units/knight/looking w0011.png</file>
+        <file>resources/textures/units/knight/running e0000.png</file>
+        <file>resources/textures/units/knight/running e0001.png</file>
+        <file>resources/textures/units/knight/running e0002.png</file>
+        <file>resources/textures/units/knight/running e0003.png</file>
+        <file>resources/textures/units/knight/running e0004.png</file>
+        <file>resources/textures/units/knight/running e0005.png</file>
+        <file>resources/textures/units/knight/running e0006.png</file>
+        <file>resources/textures/units/knight/running e0007.png</file>
+        <file>resources/textures/units/knight/running e0008.png</file>
+        <file>resources/textures/units/knight/running e0009.png</file>
+        <file>resources/textures/units/knight/running e0010.png</file>
+        <file>resources/textures/units/knight/running e0011.png</file>
+        <file>resources/textures/units/knight/running n0000.png</file>
+        <file>resources/textures/units/knight/running n0001.png</file>
+        <file>resources/textures/units/knight/running n0002.png</file>
+        <file>resources/textures/units/knight/running n0003.png</file>
+        <file>resources/textures/units/knight/running n0004.png</file>
+        <file>resources/textures/units/knight/running n0005.png</file>
+        <file>resources/textures/units/knight/running n0006.png</file>
+        <file>resources/textures/units/knight/running n0007.png</file>
+        <file>resources/textures/units/knight/running n0008.png</file>
+        <file>resources/textures/units/knight/running n0009.png</file>
+        <file>resources/textures/units/knight/running n0010.png</file>
+        <file>resources/textures/units/knight/running n0011.png</file>
+        <file>resources/textures/units/knight/running ne0000.png</file>
+        <file>resources/textures/units/knight/running ne0001.png</file>
+        <file>resources/textures/units/knight/running ne0002.png</file>
+        <file>resources/textures/units/knight/running ne0003.png</file>
+        <file>resources/textures/units/knight/running ne0004.png</file>
+        <file>resources/textures/units/knight/running ne0005.png</file>
+        <file>resources/textures/units/knight/running ne0006.png</file>
+        <file>resources/textures/units/knight/running ne0007.png</file>
+        <file>resources/textures/units/knight/running ne0008.png</file>
+        <file>resources/textures/units/knight/running ne0009.png</file>
+        <file>resources/textures/units/knight/running ne0010.png</file>
+        <file>resources/textures/units/knight/running ne0011.png</file>
+        <file>resources/textures/units/knight/running nw0000.png</file>
+        <file>resources/textures/units/knight/running nw0001.png</file>
+        <file>resources/textures/units/knight/running nw0002.png</file>
+        <file>resources/textures/units/knight/running nw0003.png</file>
+        <file>resources/textures/units/knight/running nw0004.png</file>
+        <file>resources/textures/units/knight/running nw0005.png</file>
+        <file>resources/textures/units/knight/running nw0006.png</file>
+        <file>resources/textures/units/knight/running nw0007.png</file>
+        <file>resources/textures/units/knight/running nw0008.png</file>
+        <file>resources/textures/units/knight/running nw0009.png</file>
+        <file>resources/textures/units/knight/running nw0010.png</file>
+        <file>resources/textures/units/knight/running nw0011.png</file>
+        <file>resources/textures/units/knight/running s0000.png</file>
+        <file>resources/textures/units/knight/running s0001.png</file>
+        <file>resources/textures/units/knight/running s0002.png</file>
+        <file>resources/textures/units/knight/running s0003.png</file>
+        <file>resources/textures/units/knight/running s0004.png</file>
+        <file>resources/textures/units/knight/running s0005.png</file>
+        <file>resources/textures/units/knight/running s0006.png</file>
+        <file>resources/textures/units/knight/running s0007.png</file>
+        <file>resources/textures/units/knight/running s0008.png</file>
+        <file>resources/textures/units/knight/running s0009.png</file>
+        <file>resources/textures/units/knight/running s0010.png</file>
+        <file>resources/textures/units/knight/running s0011.png</file>
+        <file>resources/textures/units/knight/running se0000.png</file>
+        <file>resources/textures/units/knight/running se0001.png</file>
+        <file>resources/textures/units/knight/running se0002.png</file>
+        <file>resources/textures/units/knight/running se0003.png</file>
+        <file>resources/textures/units/knight/running se0004.png</file>
+        <file>resources/textures/units/knight/running se0005.png</file>
+        <file>resources/textures/units/knight/running se0006.png</file>
+        <file>resources/textures/units/knight/running se0007.png</file>
+        <file>resources/textures/units/knight/running se0008.png</file>
+        <file>resources/textures/units/knight/running se0009.png</file>
+        <file>resources/textures/units/knight/running se0010.png</file>
+        <file>resources/textures/units/knight/running se0011.png</file>
+        <file>resources/textures/units/knight/running sw0000.png</file>
+        <file>resources/textures/units/knight/running sw0001.png</file>
+        <file>resources/textures/units/knight/running sw0002.png</file>
+        <file>resources/textures/units/knight/running sw0003.png</file>
+        <file>resources/textures/units/knight/running sw0004.png</file>
+        <file>resources/textures/units/knight/running sw0005.png</file>
+        <file>resources/textures/units/knight/running sw0006.png</file>
+        <file>resources/textures/units/knight/running sw0007.png</file>
+        <file>resources/textures/units/knight/running sw0008.png</file>
+        <file>resources/textures/units/knight/running sw0009.png</file>
+        <file>resources/textures/units/knight/running sw0010.png</file>
+        <file>resources/textures/units/knight/running sw0011.png</file>
+        <file>resources/textures/units/knight/running w0000.png</file>
+        <file>resources/textures/units/knight/running w0001.png</file>
+        <file>resources/textures/units/knight/running w0002.png</file>
+        <file>resources/textures/units/knight/running w0003.png</file>
+        <file>resources/textures/units/knight/running w0004.png</file>
+        <file>resources/textures/units/knight/running w0005.png</file>
+        <file>resources/textures/units/knight/running w0006.png</file>
+        <file>resources/textures/units/knight/running w0007.png</file>
+        <file>resources/textures/units/knight/running w0008.png</file>
+        <file>resources/textures/units/knight/running w0009.png</file>
+        <file>resources/textures/units/knight/running w0010.png</file>
+        <file>resources/textures/units/knight/running w0011.png</file>
+        <file>resources/textures/units/knight/stopped0000.png</file>
+        <file>resources/textures/units/knight/stopped0001.png</file>
+        <file>resources/textures/units/knight/stopped0002.png</file>
+        <file>resources/textures/units/knight/stopped0003.png</file>
+        <file>resources/textures/units/knight/stopped0004.png</file>
+        <file>resources/textures/units/knight/stopped0005.png</file>
+        <file>resources/textures/units/knight/stopped0006.png</file>
+        <file>resources/textures/units/knight/stopped0007.png</file>
+        <file>resources/textures/units/knight/talking e0000.png</file>
+        <file>resources/textures/units/knight/talking e0001.png</file>
+        <file>resources/textures/units/knight/talking e0002.png</file>
+        <file>resources/textures/units/knight/talking e0003.png</file>
+        <file>resources/textures/units/knight/talking e0004.png</file>
+        <file>resources/textures/units/knight/talking e0005.png</file>
+        <file>resources/textures/units/knight/talking e0006.png</file>
+        <file>resources/textures/units/knight/talking e0007.png</file>
+        <file>resources/textures/units/knight/talking e0008.png</file>
+        <file>resources/textures/units/knight/talking e0009.png</file>
+        <file>resources/textures/units/knight/talking e0010.png</file>
+        <file>resources/textures/units/knight/talking e0011.png</file>
+        <file>resources/textures/units/knight/talking n0000.png</file>
+        <file>resources/textures/units/knight/talking n0001.png</file>
+        <file>resources/textures/units/knight/talking n0002.png</file>
+        <file>resources/textures/units/knight/talking n0003.png</file>
+        <file>resources/textures/units/knight/talking n0004.png</file>
+        <file>resources/textures/units/knight/talking n0005.png</file>
+        <file>resources/textures/units/knight/talking n0006.png</file>
+        <file>resources/textures/units/knight/talking n0007.png</file>
+        <file>resources/textures/units/knight/talking n0008.png</file>
+        <file>resources/textures/units/knight/talking n0009.png</file>
+        <file>resources/textures/units/knight/talking n0010.png</file>
+        <file>resources/textures/units/knight/talking n0011.png</file>
+        <file>resources/textures/units/knight/talking ne0000.png</file>
+        <file>resources/textures/units/knight/talking ne0001.png</file>
+        <file>resources/textures/units/knight/talking ne0002.png</file>
+        <file>resources/textures/units/knight/talking ne0003.png</file>
+        <file>resources/textures/units/knight/talking ne0004.png</file>
+        <file>resources/textures/units/knight/talking ne0005.png</file>
+        <file>resources/textures/units/knight/talking ne0006.png</file>
+        <file>resources/textures/units/knight/talking ne0007.png</file>
+        <file>resources/textures/units/knight/talking ne0008.png</file>
+        <file>resources/textures/units/knight/talking ne0009.png</file>
+        <file>resources/textures/units/knight/talking ne0010.png</file>
+        <file>resources/textures/units/knight/talking ne0011.png</file>
+        <file>resources/textures/units/knight/talking nw0000.png</file>
+        <file>resources/textures/units/knight/talking nw0001.png</file>
+        <file>resources/textures/units/knight/talking nw0002.png</file>
+        <file>resources/textures/units/knight/talking nw0003.png</file>
+        <file>resources/textures/units/knight/talking nw0004.png</file>
+        <file>resources/textures/units/knight/talking nw0005.png</file>
+        <file>resources/textures/units/knight/talking nw0006.png</file>
+        <file>resources/textures/units/knight/talking nw0007.png</file>
+        <file>resources/textures/units/knight/talking nw0008.png</file>
+        <file>resources/textures/units/knight/talking nw0009.png</file>
+        <file>resources/textures/units/knight/talking nw0010.png</file>
+        <file>resources/textures/units/knight/talking nw0011.png</file>
+        <file>resources/textures/units/knight/talking s0000.png</file>
+        <file>resources/textures/units/knight/talking s0001.png</file>
+        <file>resources/textures/units/knight/talking s0002.png</file>
+        <file>resources/textures/units/knight/talking s0003.png</file>
+        <file>resources/textures/units/knight/talking s0004.png</file>
+        <file>resources/textures/units/knight/talking s0005.png</file>
+        <file>resources/textures/units/knight/talking s0006.png</file>
+        <file>resources/textures/units/knight/talking s0007.png</file>
+        <file>resources/textures/units/knight/talking s0008.png</file>
+        <file>resources/textures/units/knight/talking s0009.png</file>
+        <file>resources/textures/units/knight/talking s0010.png</file>
+        <file>resources/textures/units/knight/talking s0011.png</file>
+        <file>resources/textures/units/knight/talking se0000.png</file>
+        <file>resources/textures/units/knight/talking se0001.png</file>
+        <file>resources/textures/units/knight/talking se0002.png</file>
+        <file>resources/textures/units/knight/talking se0003.png</file>
+        <file>resources/textures/units/knight/talking se0004.png</file>
+        <file>resources/textures/units/knight/talking se0005.png</file>
+        <file>resources/textures/units/knight/talking se0006.png</file>
+        <file>resources/textures/units/knight/talking se0007.png</file>
+        <file>resources/textures/units/knight/talking se0008.png</file>
+        <file>resources/textures/units/knight/talking se0009.png</file>
+        <file>resources/textures/units/knight/talking se0010.png</file>
+        <file>resources/textures/units/knight/talking se0011.png</file>
+        <file>resources/textures/units/knight/talking sw0000.png</file>
+        <file>resources/textures/units/knight/talking sw0001.png</file>
+        <file>resources/textures/units/knight/talking sw0002.png</file>
+        <file>resources/textures/units/knight/talking sw0003.png</file>
+        <file>resources/textures/units/knight/talking sw0004.png</file>
+        <file>resources/textures/units/knight/talking sw0005.png</file>
+        <file>resources/textures/units/knight/talking sw0006.png</file>
+        <file>resources/textures/units/knight/talking sw0007.png</file>
+        <file>resources/textures/units/knight/talking sw0008.png</file>
+        <file>resources/textures/units/knight/talking sw0009.png</file>
+        <file>resources/textures/units/knight/talking sw0010.png</file>
+        <file>resources/textures/units/knight/talking sw0011.png</file>
+        <file>resources/textures/units/knight/talking w0000.png</file>
+        <file>resources/textures/units/knight/talking w0001.png</file>
+        <file>resources/textures/units/knight/talking w0002.png</file>
+        <file>resources/textures/units/knight/talking w0003.png</file>
+        <file>resources/textures/units/knight/talking w0004.png</file>
+        <file>resources/textures/units/knight/talking w0005.png</file>
+        <file>resources/textures/units/knight/talking w0006.png</file>
+        <file>resources/textures/units/knight/talking w0007.png</file>
+        <file>resources/textures/units/knight/talking w0008.png</file>
+        <file>resources/textures/units/knight/talking w0009.png</file>
+        <file>resources/textures/units/knight/talking w0010.png</file>
+        <file>resources/textures/units/knight/talking w0011.png</file>
+        <file>resources/textures/units/knight/tipping over e0000.png</file>
+        <file>resources/textures/units/knight/tipping over e0001.png</file>
+        <file>resources/textures/units/knight/tipping over e0002.png</file>
+        <file>resources/textures/units/knight/tipping over e0003.png</file>
+        <file>resources/textures/units/knight/tipping over e0004.png</file>
+        <file>resources/textures/units/knight/tipping over e0005.png</file>
+        <file>resources/textures/units/knight/tipping over e0006.png</file>
+        <file>resources/textures/units/knight/tipping over e0007.png</file>
+        <file>resources/textures/units/knight/tipping over e0008.png</file>
+        <file>resources/textures/units/knight/tipping over e0009.png</file>
+        <file>resources/textures/units/knight/tipping over e0010.png</file>
+        <file>resources/textures/units/knight/tipping over e0011.png</file>
+        <file>resources/textures/units/knight/tipping over e0012.png</file>
+        <file>resources/textures/units/knight/tipping over n0000.png</file>
+        <file>resources/textures/units/knight/tipping over n0001.png</file>
+        <file>resources/textures/units/knight/tipping over n0002.png</file>
+        <file>resources/textures/units/knight/tipping over n0003.png</file>
+        <file>resources/textures/units/knight/tipping over n0004.png</file>
+        <file>resources/textures/units/knight/tipping over n0005.png</file>
+        <file>resources/textures/units/knight/tipping over n0006.png</file>
+        <file>resources/textures/units/knight/tipping over n0007.png</file>
+        <file>resources/textures/units/knight/tipping over n0008.png</file>
+        <file>resources/textures/units/knight/tipping over n0009.png</file>
+        <file>resources/textures/units/knight/tipping over n0010.png</file>
+        <file>resources/textures/units/knight/tipping over n0011.png</file>
+        <file>resources/textures/units/knight/tipping over n0012.png</file>
+        <file>resources/textures/units/knight/tipping over ne0000.png</file>
+        <file>resources/textures/units/knight/tipping over ne0001.png</file>
+        <file>resources/textures/units/knight/tipping over ne0002.png</file>
+        <file>resources/textures/units/knight/tipping over ne0003.png</file>
+        <file>resources/textures/units/knight/tipping over ne0004.png</file>
+        <file>resources/textures/units/knight/tipping over ne0005.png</file>
+        <file>resources/textures/units/knight/tipping over ne0006.png</file>
+        <file>resources/textures/units/knight/tipping over ne0007.png</file>
+        <file>resources/textures/units/knight/tipping over ne0008.png</file>
+        <file>resources/textures/units/knight/tipping over ne0009.png</file>
+        <file>resources/textures/units/knight/tipping over ne0010.png</file>
+        <file>resources/textures/units/knight/tipping over ne0011.png</file>
+        <file>resources/textures/units/knight/tipping over ne0012.png</file>
+        <file>resources/textures/units/knight/tipping over nw0000.png</file>
+        <file>resources/textures/units/knight/tipping over nw0001.png</file>
+        <file>resources/textures/units/knight/tipping over nw0002.png</file>
+        <file>resources/textures/units/knight/tipping over nw0003.png</file>
+        <file>resources/textures/units/knight/tipping over nw0004.png</file>
+        <file>resources/textures/units/knight/tipping over nw0005.png</file>
+        <file>resources/textures/units/knight/tipping over nw0006.png</file>
+        <file>resources/textures/units/knight/tipping over nw0007.png</file>
+        <file>resources/textures/units/knight/tipping over nw0008.png</file>
+        <file>resources/textures/units/knight/tipping over nw0009.png</file>
+        <file>resources/textures/units/knight/tipping over nw0010.png</file>
+        <file>resources/textures/units/knight/tipping over nw0011.png</file>
+        <file>resources/textures/units/knight/tipping over nw0012.png</file>
+        <file>resources/textures/units/knight/tipping over s0000.png</file>
+        <file>resources/textures/units/knight/tipping over s0001.png</file>
+        <file>resources/textures/units/knight/tipping over s0002.png</file>
+        <file>resources/textures/units/knight/tipping over s0003.png</file>
+        <file>resources/textures/units/knight/tipping over s0004.png</file>
+        <file>resources/textures/units/knight/tipping over s0005.png</file>
+        <file>resources/textures/units/knight/tipping over s0006.png</file>
+        <file>resources/textures/units/knight/tipping over s0007.png</file>
+        <file>resources/textures/units/knight/tipping over s0008.png</file>
+        <file>resources/textures/units/knight/tipping over s0009.png</file>
+        <file>resources/textures/units/knight/tipping over s0010.png</file>
+        <file>resources/textures/units/knight/tipping over s0011.png</file>
+        <file>resources/textures/units/knight/tipping over s0012.png</file>
+        <file>resources/textures/units/knight/tipping over se0000.png</file>
+        <file>resources/textures/units/knight/tipping over se0001.png</file>
+        <file>resources/textures/units/knight/tipping over se0002.png</file>
+        <file>resources/textures/units/knight/tipping over se0003.png</file>
+        <file>resources/textures/units/knight/tipping over se0004.png</file>
+        <file>resources/textures/units/knight/tipping over se0005.png</file>
+        <file>resources/textures/units/knight/tipping over se0006.png</file>
+        <file>resources/textures/units/knight/tipping over se0007.png</file>
+        <file>resources/textures/units/knight/tipping over se0008.png</file>
+        <file>resources/textures/units/knight/tipping over se0009.png</file>
+        <file>resources/textures/units/knight/tipping over se0010.png</file>
+        <file>resources/textures/units/knight/tipping over se0011.png</file>
+        <file>resources/textures/units/knight/tipping over se0012.png</file>
+        <file>resources/textures/units/knight/tipping over sw0000.png</file>
+        <file>resources/textures/units/knight/tipping over sw0001.png</file>
+        <file>resources/textures/units/knight/tipping over sw0002.png</file>
+        <file>resources/textures/units/knight/tipping over sw0003.png</file>
+        <file>resources/textures/units/knight/tipping over sw0004.png</file>
+        <file>resources/textures/units/knight/tipping over sw0005.png</file>
+        <file>resources/textures/units/knight/tipping over sw0006.png</file>
+        <file>resources/textures/units/knight/tipping over sw0007.png</file>
+        <file>resources/textures/units/knight/tipping over sw0008.png</file>
+        <file>resources/textures/units/knight/tipping over sw0009.png</file>
+        <file>resources/textures/units/knight/tipping over sw0010.png</file>
+        <file>resources/textures/units/knight/tipping over sw0011.png</file>
+        <file>resources/textures/units/knight/tipping over sw0012.png</file>
+        <file>resources/textures/units/knight/tipping over w0000.png</file>
+        <file>resources/textures/units/knight/tipping over w0001.png</file>
+        <file>resources/textures/units/knight/tipping over w0002.png</file>
+        <file>resources/textures/units/knight/tipping over w0003.png</file>
+        <file>resources/textures/units/knight/tipping over w0004.png</file>
+        <file>resources/textures/units/knight/tipping over w0005.png</file>
+        <file>resources/textures/units/knight/tipping over w0006.png</file>
+        <file>resources/textures/units/knight/tipping over w0007.png</file>
+        <file>resources/textures/units/knight/tipping over w0008.png</file>
+        <file>resources/textures/units/knight/tipping over w0009.png</file>
+        <file>resources/textures/units/knight/tipping over w0010.png</file>
+        <file>resources/textures/units/knight/tipping over w0011.png</file>
+        <file>resources/textures/units/knight/tipping over w0012.png</file>
+        <file>resources/textures/units/knight/walking e0000.png</file>
+        <file>resources/textures/units/knight/walking e0001.png</file>
+        <file>resources/textures/units/knight/walking e0002.png</file>
+        <file>resources/textures/units/knight/walking e0003.png</file>
+        <file>resources/textures/units/knight/walking e0004.png</file>
+        <file>resources/textures/units/knight/walking e0005.png</file>
+        <file>resources/textures/units/knight/walking e0006.png</file>
+        <file>resources/textures/units/knight/walking e0007.png</file>
+        <file>resources/textures/units/knight/walking e0008.png</file>
+        <file>resources/textures/units/knight/walking e0009.png</file>
+        <file>resources/textures/units/knight/walking e0010.png</file>
+        <file>resources/textures/units/knight/walking e0011.png</file>
+        <file>resources/textures/units/knight/walking n0000.png</file>
+        <file>resources/textures/units/knight/walking n0001.png</file>
+        <file>resources/textures/units/knight/walking n0002.png</file>
+        <file>resources/textures/units/knight/walking n0003.png</file>
+        <file>resources/textures/units/knight/walking n0004.png</file>
+        <file>resources/textures/units/knight/walking n0005.png</file>
+        <file>resources/textures/units/knight/walking n0006.png</file>
+        <file>resources/textures/units/knight/walking n0007.png</file>
+        <file>resources/textures/units/knight/walking n0008.png</file>
+        <file>resources/textures/units/knight/walking n0009.png</file>
+        <file>resources/textures/units/knight/walking n0010.png</file>
+        <file>resources/textures/units/knight/walking n0011.png</file>
+        <file>resources/textures/units/knight/walking ne0000.png</file>
+        <file>resources/textures/units/knight/walking ne0001.png</file>
+        <file>resources/textures/units/knight/walking ne0002.png</file>
+        <file>resources/textures/units/knight/walking ne0003.png</file>
+        <file>resources/textures/units/knight/walking ne0004.png</file>
+        <file>resources/textures/units/knight/walking ne0005.png</file>
+        <file>resources/textures/units/knight/walking ne0006.png</file>
+        <file>resources/textures/units/knight/walking ne0007.png</file>
+        <file>resources/textures/units/knight/walking ne0008.png</file>
+        <file>resources/textures/units/knight/walking ne0009.png</file>
+        <file>resources/textures/units/knight/walking ne0010.png</file>
+        <file>resources/textures/units/knight/walking ne0011.png</file>
+        <file>resources/textures/units/knight/walking nw0000.png</file>
+        <file>resources/textures/units/knight/walking nw0001.png</file>
+        <file>resources/textures/units/knight/walking nw0002.png</file>
+        <file>resources/textures/units/knight/walking nw0003.png</file>
+        <file>resources/textures/units/knight/walking nw0004.png</file>
+        <file>resources/textures/units/knight/walking nw0005.png</file>
+        <file>resources/textures/units/knight/walking nw0006.png</file>
+        <file>resources/textures/units/knight/walking nw0007.png</file>
+        <file>resources/textures/units/knight/walking nw0008.png</file>
+        <file>resources/textures/units/knight/walking nw0009.png</file>
+        <file>resources/textures/units/knight/walking nw0010.png</file>
+        <file>resources/textures/units/knight/walking nw0011.png</file>
+        <file>resources/textures/units/knight/walking s0000.png</file>
+        <file>resources/textures/units/knight/walking s0001.png</file>
+        <file>resources/textures/units/knight/walking s0002.png</file>
+        <file>resources/textures/units/knight/walking s0003.png</file>
+        <file>resources/textures/units/knight/walking s0004.png</file>
+        <file>resources/textures/units/knight/walking s0005.png</file>
+        <file>resources/textures/units/knight/walking s0006.png</file>
+        <file>resources/textures/units/knight/walking s0007.png</file>
+        <file>resources/textures/units/knight/walking s0008.png</file>
+        <file>resources/textures/units/knight/walking s0009.png</file>
+        <file>resources/textures/units/knight/walking s0010.png</file>
+        <file>resources/textures/units/knight/walking s0011.png</file>
+        <file>resources/textures/units/knight/walking se0000.png</file>
+        <file>resources/textures/units/knight/walking se0001.png</file>
+        <file>resources/textures/units/knight/walking se0002.png</file>
+        <file>resources/textures/units/knight/walking se0003.png</file>
+        <file>resources/textures/units/knight/walking se0004.png</file>
+        <file>resources/textures/units/knight/walking se0005.png</file>
+        <file>resources/textures/units/knight/walking se0006.png</file>
+        <file>resources/textures/units/knight/walking se0007.png</file>
+        <file>resources/textures/units/knight/walking se0008.png</file>
+        <file>resources/textures/units/knight/walking se0009.png</file>
+        <file>resources/textures/units/knight/walking se0010.png</file>
+        <file>resources/textures/units/knight/walking se0011.png</file>
+        <file>resources/textures/units/knight/walking sw0000.png</file>
+        <file>resources/textures/units/knight/walking sw0001.png</file>
+        <file>resources/textures/units/knight/walking sw0002.png</file>
+        <file>resources/textures/units/knight/walking sw0003.png</file>
+        <file>resources/textures/units/knight/walking sw0004.png</file>
+        <file>resources/textures/units/knight/walking sw0005.png</file>
+        <file>resources/textures/units/knight/walking sw0006.png</file>
+        <file>resources/textures/units/knight/walking sw0007.png</file>
+        <file>resources/textures/units/knight/walking sw0008.png</file>
+        <file>resources/textures/units/knight/walking sw0009.png</file>
+        <file>resources/textures/units/knight/walking sw0010.png</file>
+        <file>resources/textures/units/knight/walking sw0011.png</file>
+        <file>resources/textures/units/knight/walking w0000.png</file>
+        <file>resources/textures/units/knight/walking w0001.png</file>
+        <file>resources/textures/units/knight/walking w0002.png</file>
+        <file>resources/textures/units/knight/walking w0003.png</file>
+        <file>resources/textures/units/knight/walking w0004.png</file>
+        <file>resources/textures/units/knight/walking w0005.png</file>
+        <file>resources/textures/units/knight/walking w0006.png</file>
+        <file>resources/textures/units/knight/walking w0007.png</file>
+        <file>resources/textures/units/knight/walking w0008.png</file>
+        <file>resources/textures/units/knight/walking w0009.png</file>
+        <file>resources/textures/units/knight/walking w0010.png</file>
+        <file>resources/textures/units/knight/walking w0011.png</file>
+        <file>resources/textures/units/archer/arrow0000.png</file>
+        <file>resources/textures/units/archer/arrow0001.png</file>
+        <file>resources/textures/units/archer/arrow0002.png</file>
+        <file>resources/textures/units/archer/arrow0003.png</file>
+        <file>resources/textures/units/archer/arrow0004.png</file>
+        <file>resources/textures/units/archer/arrow0005.png</file>
+        <file>resources/textures/units/archer/arrow0006.png</file>
+        <file>resources/textures/units/archer/arrow0007.png</file>
+        <file>resources/textures/units/archer/arrow0008.png</file>
+        <file>resources/textures/units/archer/arrow0009.png</file>
+        <file>resources/textures/units/archer/arrow0010.png</file>
+        <file>resources/textures/units/archer/arrow0011.png</file>
+        <file>resources/textures/units/archer/arrow0012.png</file>
+        <file>resources/textures/units/archer/arrow0013.png</file>
+        <file>resources/textures/units/archer/arrow0014.png</file>
+        <file>resources/textures/units/archer/arrow0015.png</file>
+        <file>resources/textures/units/archer/arrow0016.png</file>
+        <file>resources/textures/units/archer/arrow0017.png</file>
+        <file>resources/textures/units/archer/arrow0018.png</file>
+        <file>resources/textures/units/archer/arrow0019.png</file>
+        <file>resources/textures/units/archer/arrow0020.png</file>
+        <file>resources/textures/units/archer/arrow0021.png</file>
+        <file>resources/textures/units/archer/arrow0022.png</file>
+        <file>resources/textures/units/archer/arrow0023.png</file>
+        <file>resources/textures/units/archer/arrow0024.png</file>
+        <file>resources/textures/units/archer/arrow0025.png</file>
+        <file>resources/textures/units/archer/arrow0026.png</file>
+        <file>resources/textures/units/archer/arrow0027.png</file>
+        <file>resources/textures/units/archer/arrow0028.png</file>
+        <file>resources/textures/units/archer/arrow0029.png</file>
+        <file>resources/textures/units/archer/arrow0030.png</file>
+        <file>resources/textures/units/archer/arrow0031.png</file>
+        <file>resources/textures/units/archer/arrow0032.png</file>
+        <file>resources/textures/units/archer/scriptconvert.sh</file>
+        <file>resources/textures/units/archer/attack e0000.png</file>
+        <file>resources/textures/units/archer/attack e0001.png</file>
+        <file>resources/textures/units/archer/attack e0002.png</file>
+        <file>resources/textures/units/archer/attack e0003.png</file>
+        <file>resources/textures/units/archer/attack e0004.png</file>
+        <file>resources/textures/units/archer/attack e0005.png</file>
+        <file>resources/textures/units/archer/attack e0006.png</file>
+        <file>resources/textures/units/archer/attack e0007.png</file>
+        <file>resources/textures/units/archer/attack e0008.png</file>
+        <file>resources/textures/units/archer/attack e0009.png</file>
+        <file>resources/textures/units/archer/attack e0010.png</file>
+        <file>resources/textures/units/archer/attack n0000.png</file>
+        <file>resources/textures/units/archer/attack n0001.png</file>
+        <file>resources/textures/units/archer/attack n0002.png</file>
+        <file>resources/textures/units/archer/attack n0003.png</file>
+        <file>resources/textures/units/archer/attack n0004.png</file>
+        <file>resources/textures/units/archer/attack n0005.png</file>
+        <file>resources/textures/units/archer/attack n0006.png</file>
+        <file>resources/textures/units/archer/attack n0007.png</file>
+        <file>resources/textures/units/archer/attack n0008.png</file>
+        <file>resources/textures/units/archer/attack n0009.png</file>
+        <file>resources/textures/units/archer/attack n0010.png</file>
+        <file>resources/textures/units/archer/attack ne0000.png</file>
+        <file>resources/textures/units/archer/attack ne0001.png</file>
+        <file>resources/textures/units/archer/attack ne0002.png</file>
+        <file>resources/textures/units/archer/attack ne0003.png</file>
+        <file>resources/textures/units/archer/attack ne0004.png</file>
+        <file>resources/textures/units/archer/attack ne0005.png</file>
+        <file>resources/textures/units/archer/attack ne0006.png</file>
+        <file>resources/textures/units/archer/attack ne0007.png</file>
+        <file>resources/textures/units/archer/attack ne0008.png</file>
+        <file>resources/textures/units/archer/attack ne0009.png</file>
+        <file>resources/textures/units/archer/attack ne0010.png</file>
+        <file>resources/textures/units/archer/attack nw0000.png</file>
+        <file>resources/textures/units/archer/attack nw0001.png</file>
+        <file>resources/textures/units/archer/attack nw0002.png</file>
+        <file>resources/textures/units/archer/attack nw0003.png</file>
+        <file>resources/textures/units/archer/attack nw0004.png</file>
+        <file>resources/textures/units/archer/attack nw0005.png</file>
+        <file>resources/textures/units/archer/attack nw0006.png</file>
+        <file>resources/textures/units/archer/attack nw0007.png</file>
+        <file>resources/textures/units/archer/attack nw0008.png</file>
+        <file>resources/textures/units/archer/attack nw0009.png</file>
+        <file>resources/textures/units/archer/attack nw0010.png</file>
+        <file>resources/textures/units/archer/attack s0000.png</file>
+        <file>resources/textures/units/archer/attack s0001.png</file>
+        <file>resources/textures/units/archer/attack s0002.png</file>
+        <file>resources/textures/units/archer/attack s0003.png</file>
+        <file>resources/textures/units/archer/attack s0004.png</file>
+        <file>resources/textures/units/archer/attack s0005.png</file>
+        <file>resources/textures/units/archer/attack s0006.png</file>
+        <file>resources/textures/units/archer/attack s0007.png</file>
+        <file>resources/textures/units/archer/attack s0008.png</file>
+        <file>resources/textures/units/archer/attack s0009.png</file>
+        <file>resources/textures/units/archer/attack s0010.png</file>
+        <file>resources/textures/units/archer/attack se0000.png</file>
+        <file>resources/textures/units/archer/attack se0001.png</file>
+        <file>resources/textures/units/archer/attack se0002.png</file>
+        <file>resources/textures/units/archer/attack se0003.png</file>
+        <file>resources/textures/units/archer/attack se0004.png</file>
+        <file>resources/textures/units/archer/attack se0005.png</file>
+        <file>resources/textures/units/archer/attack se0006.png</file>
+        <file>resources/textures/units/archer/attack se0007.png</file>
+        <file>resources/textures/units/archer/attack se0008.png</file>
+        <file>resources/textures/units/archer/attack se0009.png</file>
+        <file>resources/textures/units/archer/attack se0010.png</file>
+        <file>resources/textures/units/archer/attack sw0000.png</file>
+        <file>resources/textures/units/archer/attack sw0001.png</file>
+        <file>resources/textures/units/archer/attack sw0002.png</file>
+        <file>resources/textures/units/archer/attack sw0003.png</file>
+        <file>resources/textures/units/archer/attack sw0004.png</file>
+        <file>resources/textures/units/archer/attack sw0005.png</file>
+        <file>resources/textures/units/archer/attack sw0006.png</file>
+        <file>resources/textures/units/archer/attack sw0007.png</file>
+        <file>resources/textures/units/archer/attack sw0008.png</file>
+        <file>resources/textures/units/archer/attack sw0009.png</file>
+        <file>resources/textures/units/archer/attack sw0010.png</file>
+        <file>resources/textures/units/archer/attack w0000.png</file>
+        <file>resources/textures/units/archer/attack w0001.png</file>
+        <file>resources/textures/units/archer/attack w0002.png</file>
+        <file>resources/textures/units/archer/attack w0003.png</file>
+        <file>resources/textures/units/archer/attack w0004.png</file>
+        <file>resources/textures/units/archer/attack w0005.png</file>
+        <file>resources/textures/units/archer/attack w0006.png</file>
+        <file>resources/textures/units/archer/attack w0007.png</file>
+        <file>resources/textures/units/archer/attack w0008.png</file>
+        <file>resources/textures/units/archer/attack w0009.png</file>
+        <file>resources/textures/units/archer/attack w0010.png</file>
+        <file>resources/textures/units/archer/kippt um e0000.png</file>
+        <file>resources/textures/units/archer/kippt um e0001.png</file>
+        <file>resources/textures/units/archer/kippt um e0002.png</file>
+        <file>resources/textures/units/archer/kippt um e0003.png</file>
+        <file>resources/textures/units/archer/kippt um e0004.png</file>
+        <file>resources/textures/units/archer/kippt um e0005.png</file>
+        <file>resources/textures/units/archer/kippt um e0006.png</file>
+        <file>resources/textures/units/archer/kippt um e0007.png</file>
+        <file>resources/textures/units/archer/kippt um e0008.png</file>
+        <file>resources/textures/units/archer/kippt um n0000.png</file>
+        <file>resources/textures/units/archer/kippt um n0001.png</file>
+        <file>resources/textures/units/archer/kippt um n0002.png</file>
+        <file>resources/textures/units/archer/kippt um n0003.png</file>
+        <file>resources/textures/units/archer/kippt um n0004.png</file>
+        <file>resources/textures/units/archer/kippt um n0005.png</file>
+        <file>resources/textures/units/archer/kippt um n0006.png</file>
+        <file>resources/textures/units/archer/kippt um n0007.png</file>
+        <file>resources/textures/units/archer/kippt um n0008.png</file>
+        <file>resources/textures/units/archer/kippt um ne0000.png</file>
+        <file>resources/textures/units/archer/kippt um ne0001.png</file>
+        <file>resources/textures/units/archer/kippt um ne0002.png</file>
+        <file>resources/textures/units/archer/kippt um ne0003.png</file>
+        <file>resources/textures/units/archer/kippt um ne0004.png</file>
+        <file>resources/textures/units/archer/kippt um ne0005.png</file>
+        <file>resources/textures/units/archer/kippt um ne0006.png</file>
+        <file>resources/textures/units/archer/kippt um ne0007.png</file>
+        <file>resources/textures/units/archer/kippt um ne0008.png</file>
+        <file>resources/textures/units/archer/kippt um nw0000.png</file>
+        <file>resources/textures/units/archer/kippt um nw0001.png</file>
+        <file>resources/textures/units/archer/kippt um nw0002.png</file>
+        <file>resources/textures/units/archer/kippt um nw0003.png</file>
+        <file>resources/textures/units/archer/kippt um nw0004.png</file>
+        <file>resources/textures/units/archer/kippt um nw0005.png</file>
+        <file>resources/textures/units/archer/kippt um nw0006.png</file>
+        <file>resources/textures/units/archer/kippt um nw0007.png</file>
+        <file>resources/textures/units/archer/kippt um nw0008.png</file>
+        <file>resources/textures/units/archer/kippt um s0000.png</file>
+        <file>resources/textures/units/archer/kippt um s0001.png</file>
+        <file>resources/textures/units/archer/kippt um s0002.png</file>
+        <file>resources/textures/units/archer/kippt um s0003.png</file>
+        <file>resources/textures/units/archer/kippt um s0004.png</file>
+        <file>resources/textures/units/archer/kippt um s0005.png</file>
+        <file>resources/textures/units/archer/kippt um s0006.png</file>
+        <file>resources/textures/units/archer/kippt um s0007.png</file>
+        <file>resources/textures/units/archer/kippt um s0008.png</file>
+        <file>resources/textures/units/archer/kippt um se0000.png</file>
+        <file>resources/textures/units/archer/kippt um se0001.png</file>
+        <file>resources/textures/units/archer/kippt um se0002.png</file>
+        <file>resources/textures/units/archer/kippt um se0003.png</file>
+        <file>resources/textures/units/archer/kippt um se0004.png</file>
+        <file>resources/textures/units/archer/kippt um se0005.png</file>
+        <file>resources/textures/units/archer/kippt um se0006.png</file>
+        <file>resources/textures/units/archer/kippt um se0007.png</file>
+        <file>resources/textures/units/archer/kippt um se0008.png</file>
+        <file>resources/textures/units/archer/kippt um sw0000.png</file>
+        <file>resources/textures/units/archer/kippt um sw0001.png</file>
+        <file>resources/textures/units/archer/kippt um sw0002.png</file>
+        <file>resources/textures/units/archer/kippt um sw0003.png</file>
+        <file>resources/textures/units/archer/kippt um sw0004.png</file>
+        <file>resources/textures/units/archer/kippt um sw0005.png</file>
+        <file>resources/textures/units/archer/kippt um sw0006.png</file>
+        <file>resources/textures/units/archer/kippt um sw0007.png</file>
+        <file>resources/textures/units/archer/kippt um sw0008.png</file>
+        <file>resources/textures/units/archer/kippt um w0000.png</file>
+        <file>resources/textures/units/archer/kippt um w0001.png</file>
+        <file>resources/textures/units/archer/kippt um w0002.png</file>
+        <file>resources/textures/units/archer/kippt um w0003.png</file>
+        <file>resources/textures/units/archer/kippt um w0004.png</file>
+        <file>resources/textures/units/archer/kippt um w0005.png</file>
+        <file>resources/textures/units/archer/kippt um w0006.png</file>
+        <file>resources/textures/units/archer/kippt um w0007.png</file>
+        <file>resources/textures/units/archer/kippt um w0008.png</file>
+        <file>resources/textures/units/archer/rennt e0000.png</file>
+        <file>resources/textures/units/archer/rennt e0001.png</file>
+        <file>resources/textures/units/archer/rennt e0002.png</file>
+        <file>resources/textures/units/archer/rennt e0003.png</file>
+        <file>resources/textures/units/archer/rennt e0004.png</file>
+        <file>resources/textures/units/archer/rennt e0005.png</file>
+        <file>resources/textures/units/archer/rennt e0006.png</file>
+        <file>resources/textures/units/archer/rennt e0007.png</file>
+        <file>resources/textures/units/archer/rennt e0008.png</file>
+        <file>resources/textures/units/archer/rennt n0000.png</file>
+        <file>resources/textures/units/archer/rennt n0001.png</file>
+        <file>resources/textures/units/archer/rennt n0002.png</file>
+        <file>resources/textures/units/archer/rennt n0003.png</file>
+        <file>resources/textures/units/archer/rennt n0004.png</file>
+        <file>resources/textures/units/archer/rennt n0005.png</file>
+        <file>resources/textures/units/archer/rennt n0006.png</file>
+        <file>resources/textures/units/archer/rennt n0007.png</file>
+        <file>resources/textures/units/archer/rennt n0008.png</file>
+        <file>resources/textures/units/archer/rennt ne0000.png</file>
+        <file>resources/textures/units/archer/rennt ne0001.png</file>
+        <file>resources/textures/units/archer/rennt ne0002.png</file>
+        <file>resources/textures/units/archer/rennt ne0003.png</file>
+        <file>resources/textures/units/archer/rennt ne0004.png</file>
+        <file>resources/textures/units/archer/rennt ne0005.png</file>
+        <file>resources/textures/units/archer/rennt ne0006.png</file>
+        <file>resources/textures/units/archer/rennt ne0007.png</file>
+        <file>resources/textures/units/archer/rennt ne0008.png</file>
+        <file>resources/textures/units/archer/rennt nw0000.png</file>
+        <file>resources/textures/units/archer/rennt nw0001.png</file>
+        <file>resources/textures/units/archer/rennt nw0002.png</file>
+        <file>resources/textures/units/archer/rennt nw0003.png</file>
+        <file>resources/textures/units/archer/rennt nw0004.png</file>
+        <file>resources/textures/units/archer/rennt nw0005.png</file>
+        <file>resources/textures/units/archer/rennt nw0006.png</file>
+        <file>resources/textures/units/archer/rennt nw0007.png</file>
+        <file>resources/textures/units/archer/rennt nw0008.png</file>
+        <file>resources/textures/units/archer/rennt s0000.png</file>
+        <file>resources/textures/units/archer/rennt s0001.png</file>
+        <file>resources/textures/units/archer/rennt s0002.png</file>
+        <file>resources/textures/units/archer/rennt s0003.png</file>
+        <file>resources/textures/units/archer/rennt s0004.png</file>
+        <file>resources/textures/units/archer/rennt s0005.png</file>
+        <file>resources/textures/units/archer/rennt s0006.png</file>
+        <file>resources/textures/units/archer/rennt s0007.png</file>
+        <file>resources/textures/units/archer/rennt s0008.png</file>
+        <file>resources/textures/units/archer/rennt se0000.png</file>
+        <file>resources/textures/units/archer/rennt se0001.png</file>
+        <file>resources/textures/units/archer/rennt se0002.png</file>
+        <file>resources/textures/units/archer/rennt se0003.png</file>
+        <file>resources/textures/units/archer/rennt se0004.png</file>
+        <file>resources/textures/units/archer/rennt se0005.png</file>
+        <file>resources/textures/units/archer/rennt se0006.png</file>
+        <file>resources/textures/units/archer/rennt se0007.png</file>
+        <file>resources/textures/units/archer/rennt se0008.png</file>
+        <file>resources/textures/units/archer/rennt sw0000.png</file>
+        <file>resources/textures/units/archer/rennt sw0001.png</file>
+        <file>resources/textures/units/archer/rennt sw0002.png</file>
+        <file>resources/textures/units/archer/rennt sw0003.png</file>
+        <file>resources/textures/units/archer/rennt sw0004.png</file>
+        <file>resources/textures/units/archer/rennt sw0005.png</file>
+        <file>resources/textures/units/archer/rennt sw0006.png</file>
+        <file>resources/textures/units/archer/rennt sw0007.png</file>
+        <file>resources/textures/units/archer/rennt sw0008.png</file>
+        <file>resources/textures/units/archer/rennt w0000.png</file>
+        <file>resources/textures/units/archer/rennt w0001.png</file>
+        <file>resources/textures/units/archer/rennt w0002.png</file>
+        <file>resources/textures/units/archer/rennt w0003.png</file>
+        <file>resources/textures/units/archer/rennt w0004.png</file>
+        <file>resources/textures/units/archer/rennt w0005.png</file>
+        <file>resources/textures/units/archer/rennt w0006.png</file>
+        <file>resources/textures/units/archer/rennt w0007.png</file>
+        <file>resources/textures/units/archer/rennt w0008.png</file>
+        <file>resources/textures/units/archer/spricht e0000.png</file>
+        <file>resources/textures/units/archer/spricht e0001.png</file>
+        <file>resources/textures/units/archer/spricht e0002.png</file>
+        <file>resources/textures/units/archer/spricht e0003.png</file>
+        <file>resources/textures/units/archer/spricht e0004.png</file>
+        <file>resources/textures/units/archer/spricht e0005.png</file>
+        <file>resources/textures/units/archer/spricht e0006.png</file>
+        <file>resources/textures/units/archer/spricht n0000.png</file>
+        <file>resources/textures/units/archer/spricht n0001.png</file>
+        <file>resources/textures/units/archer/spricht n0002.png</file>
+        <file>resources/textures/units/archer/spricht n0003.png</file>
+        <file>resources/textures/units/archer/spricht n0004.png</file>
+        <file>resources/textures/units/archer/spricht n0005.png</file>
+        <file>resources/textures/units/archer/spricht n0006.png</file>
+        <file>resources/textures/units/archer/spricht ne0000.png</file>
+        <file>resources/textures/units/archer/spricht ne0001.png</file>
+        <file>resources/textures/units/archer/spricht ne0002.png</file>
+        <file>resources/textures/units/archer/spricht ne0003.png</file>
+        <file>resources/textures/units/archer/spricht ne0004.png</file>
+        <file>resources/textures/units/archer/spricht ne0005.png</file>
+        <file>resources/textures/units/archer/spricht ne0006.png</file>
+        <file>resources/textures/units/archer/spricht nw0000.png</file>
+        <file>resources/textures/units/archer/spricht nw0001.png</file>
+        <file>resources/textures/units/archer/spricht nw0002.png</file>
+        <file>resources/textures/units/archer/spricht nw0003.png</file>
+        <file>resources/textures/units/archer/spricht nw0004.png</file>
+        <file>resources/textures/units/archer/spricht nw0005.png</file>
+        <file>resources/textures/units/archer/spricht nw0006.png</file>
+        <file>resources/textures/units/archer/spricht s0000.png</file>
+        <file>resources/textures/units/archer/spricht s0001.png</file>
+        <file>resources/textures/units/archer/spricht s0002.png</file>
+        <file>resources/textures/units/archer/spricht s0003.png</file>
+        <file>resources/textures/units/archer/spricht s0004.png</file>
+        <file>resources/textures/units/archer/spricht s0005.png</file>
+        <file>resources/textures/units/archer/spricht s0006.png</file>
+        <file>resources/textures/units/archer/spricht se0000.png</file>
+        <file>resources/textures/units/archer/spricht se0001.png</file>
+        <file>resources/textures/units/archer/spricht se0002.png</file>
+        <file>resources/textures/units/archer/spricht se0003.png</file>
+        <file>resources/textures/units/archer/spricht se0004.png</file>
+        <file>resources/textures/units/archer/spricht se0005.png</file>
+        <file>resources/textures/units/archer/spricht se0006.png</file>
+        <file>resources/textures/units/archer/spricht sw0000.png</file>
+        <file>resources/textures/units/archer/spricht sw0001.png</file>
+        <file>resources/textures/units/archer/spricht sw0002.png</file>
+        <file>resources/textures/units/archer/spricht sw0003.png</file>
+        <file>resources/textures/units/archer/spricht sw0004.png</file>
+        <file>resources/textures/units/archer/spricht sw0005.png</file>
+        <file>resources/textures/units/archer/spricht sw0006.png</file>
+        <file>resources/textures/units/archer/spricht w0000.png</file>
+        <file>resources/textures/units/archer/spricht w0001.png</file>
+        <file>resources/textures/units/archer/spricht w0002.png</file>
+        <file>resources/textures/units/archer/spricht w0003.png</file>
+        <file>resources/textures/units/archer/spricht w0004.png</file>
+        <file>resources/textures/units/archer/spricht w0005.png</file>
+        <file>resources/textures/units/archer/spricht w0006.png</file>
+        <file>resources/textures/units/archer/steht0000.png</file>
+        <file>resources/textures/units/archer/steht0001.png</file>
+        <file>resources/textures/units/archer/steht0002.png</file>
+        <file>resources/textures/units/archer/steht0003.png</file>
+        <file>resources/textures/units/archer/steht0004.png</file>
+        <file>resources/textures/units/archer/steht0005.png</file>
+        <file>resources/textures/units/archer/steht0006.png</file>
+        <file>resources/textures/units/archer/steht0007.png</file>
+        <file>resources/textures/units/archer/treffer e0000.png</file>
+        <file>resources/textures/units/archer/treffer e0001.png</file>
+        <file>resources/textures/units/archer/treffer e0002.png</file>
+        <file>resources/textures/units/archer/treffer e0003.png</file>
+        <file>resources/textures/units/archer/treffer e0004.png</file>
+        <file>resources/textures/units/archer/treffer e0005.png</file>
+        <file>resources/textures/units/archer/treffer e0006.png</file>
+        <file>resources/textures/units/archer/treffer n0000.png</file>
+        <file>resources/textures/units/archer/treffer n0001.png</file>
+        <file>resources/textures/units/archer/treffer n0002.png</file>
+        <file>resources/textures/units/archer/treffer n0003.png</file>
+        <file>resources/textures/units/archer/treffer n0004.png</file>
+        <file>resources/textures/units/archer/treffer n0005.png</file>
+        <file>resources/textures/units/archer/treffer n0006.png</file>
+        <file>resources/textures/units/archer/treffer ne0000.png</file>
+        <file>resources/textures/units/archer/treffer ne0001.png</file>
+        <file>resources/textures/units/archer/treffer ne0002.png</file>
+        <file>resources/textures/units/archer/treffer ne0003.png</file>
+        <file>resources/textures/units/archer/treffer ne0004.png</file>
+        <file>resources/textures/units/archer/treffer ne0005.png</file>
+        <file>resources/textures/units/archer/treffer ne0006.png</file>
+        <file>resources/textures/units/archer/treffer nw0000.png</file>
+        <file>resources/textures/units/archer/treffer nw0001.png</file>
+        <file>resources/textures/units/archer/treffer nw0002.png</file>
+        <file>resources/textures/units/archer/treffer nw0003.png</file>
+        <file>resources/textures/units/archer/treffer nw0004.png</file>
+        <file>resources/textures/units/archer/treffer nw0005.png</file>
+        <file>resources/textures/units/archer/treffer nw0006.png</file>
+        <file>resources/textures/units/archer/treffer s0000.png</file>
+        <file>resources/textures/units/archer/treffer s0001.png</file>
+        <file>resources/textures/units/archer/treffer s0002.png</file>
+        <file>resources/textures/units/archer/treffer s0003.png</file>
+        <file>resources/textures/units/archer/treffer s0004.png</file>
+        <file>resources/textures/units/archer/treffer s0005.png</file>
+        <file>resources/textures/units/archer/treffer s0006.png</file>
+        <file>resources/textures/units/archer/treffer se0000.png</file>
+        <file>resources/textures/units/archer/treffer se0001.png</file>
+        <file>resources/textures/units/archer/treffer se0002.png</file>
+        <file>resources/textures/units/archer/treffer se0003.png</file>
+        <file>resources/textures/units/archer/treffer se0004.png</file>
+        <file>resources/textures/units/archer/treffer se0005.png</file>
+        <file>resources/textures/units/archer/treffer se0006.png</file>
+        <file>resources/textures/units/archer/treffer sw0000.png</file>
+        <file>resources/textures/units/archer/treffer sw0001.png</file>
+        <file>resources/textures/units/archer/treffer sw0002.png</file>
+        <file>resources/textures/units/archer/treffer sw0003.png</file>
+        <file>resources/textures/units/archer/treffer sw0004.png</file>
+        <file>resources/textures/units/archer/treffer sw0005.png</file>
+        <file>resources/textures/units/archer/treffer sw0006.png</file>
+        <file>resources/textures/units/archer/treffer w0000.png</file>
+        <file>resources/textures/units/archer/treffer w0001.png</file>
+        <file>resources/textures/units/archer/treffer w0002.png</file>
+        <file>resources/textures/units/archer/treffer w0003.png</file>
+        <file>resources/textures/units/archer/treffer w0004.png</file>
+        <file>resources/textures/units/archer/treffer w0005.png</file>
+        <file>resources/textures/units/archer/treffer w0006.png</file>
+        <file>resources/textures/units/archer/walking e0000.png</file>
+        <file>resources/textures/units/archer/walking e0001.png</file>
+        <file>resources/textures/units/archer/walking e0002.png</file>
+        <file>resources/textures/units/archer/walking e0003.png</file>
+        <file>resources/textures/units/archer/walking e0004.png</file>
+        <file>resources/textures/units/archer/walking e0005.png</file>
+        <file>resources/textures/units/archer/walking e0006.png</file>
+        <file>resources/textures/units/archer/walking e0007.png</file>
+        <file>resources/textures/units/archer/walking e0008.png</file>
+        <file>resources/textures/units/archer/walking n0000.png</file>
+        <file>resources/textures/units/archer/walking n0001.png</file>
+        <file>resources/textures/units/archer/walking n0002.png</file>
+        <file>resources/textures/units/archer/walking n0003.png</file>
+        <file>resources/textures/units/archer/walking n0004.png</file>
+        <file>resources/textures/units/archer/walking n0005.png</file>
+        <file>resources/textures/units/archer/walking n0006.png</file>
+        <file>resources/textures/units/archer/walking n0007.png</file>
+        <file>resources/textures/units/archer/walking n0008.png</file>
+        <file>resources/textures/units/archer/walking ne0000.png</file>
+        <file>resources/textures/units/archer/walking ne0001.png</file>
+        <file>resources/textures/units/archer/walking ne0002.png</file>
+        <file>resources/textures/units/archer/walking ne0003.png</file>
+        <file>resources/textures/units/archer/walking ne0004.png</file>
+        <file>resources/textures/units/archer/walking ne0005.png</file>
+        <file>resources/textures/units/archer/walking ne0006.png</file>
+        <file>resources/textures/units/archer/walking ne0007.png</file>
+        <file>resources/textures/units/archer/walking ne0008.png</file>
+        <file>resources/textures/units/archer/walking nw0000.png</file>
+        <file>resources/textures/units/archer/walking nw0001.png</file>
+        <file>resources/textures/units/archer/walking nw0002.png</file>
+        <file>resources/textures/units/archer/walking nw0003.png</file>
+        <file>resources/textures/units/archer/walking nw0004.png</file>
+        <file>resources/textures/units/archer/walking nw0005.png</file>
+        <file>resources/textures/units/archer/walking nw0006.png</file>
+        <file>resources/textures/units/archer/walking nw0007.png</file>
+        <file>resources/textures/units/archer/walking nw0008.png</file>
+        <file>resources/textures/units/archer/walking s0000.png</file>
+        <file>resources/textures/units/archer/walking s0001.png</file>
+        <file>resources/textures/units/archer/walking s0002.png</file>
+        <file>resources/textures/units/archer/walking s0003.png</file>
+        <file>resources/textures/units/archer/walking s0004.png</file>
+        <file>resources/textures/units/archer/walking s0005.png</file>
+        <file>resources/textures/units/archer/walking s0006.png</file>
+        <file>resources/textures/units/archer/walking s0007.png</file>
+        <file>resources/textures/units/archer/walking s0008.png</file>
+        <file>resources/textures/units/archer/walking se0000.png</file>
+        <file>resources/textures/units/archer/walking se0001.png</file>
+        <file>resources/textures/units/archer/walking se0002.png</file>
+        <file>resources/textures/units/archer/walking se0003.png</file>
+        <file>resources/textures/units/archer/walking se0004.png</file>
+        <file>resources/textures/units/archer/walking se0005.png</file>
+        <file>resources/textures/units/archer/walking se0006.png</file>
+        <file>resources/textures/units/archer/walking se0007.png</file>
+        <file>resources/textures/units/archer/walking se0008.png</file>
+        <file>resources/textures/units/archer/walking sw0000.png</file>
+        <file>resources/textures/units/archer/walking sw0001.png</file>
+        <file>resources/textures/units/archer/walking sw0002.png</file>
+        <file>resources/textures/units/archer/walking sw0003.png</file>
+        <file>resources/textures/units/archer/walking sw0004.png</file>
+        <file>resources/textures/units/archer/walking sw0005.png</file>
+        <file>resources/textures/units/archer/walking sw0006.png</file>
+        <file>resources/textures/units/archer/walking sw0007.png</file>
+        <file>resources/textures/units/archer/walking sw0008.png</file>
+        <file>resources/textures/units/archer/walking w0000.png</file>
+        <file>resources/textures/units/archer/walking w0001.png</file>
+        <file>resources/textures/units/archer/walking w0002.png</file>
+        <file>resources/textures/units/archer/walking w0003.png</file>
+        <file>resources/textures/units/archer/walking w0004.png</file>
+        <file>resources/textures/units/archer/walking w0005.png</file>
+        <file>resources/textures/units/archer/walking w0006.png</file>
+        <file>resources/textures/units/archer/walking w0007.png</file>
+        <file>resources/textures/units/archer/walking w0008.png</file>
+        <file>resources/textures/units/fairy/attack e0000.png</file>
+        <file>resources/textures/units/fairy/attack e0001.png</file>
+        <file>resources/textures/units/fairy/attack e0002.png</file>
+        <file>resources/textures/units/fairy/attack e0003.png</file>
+        <file>resources/textures/units/fairy/attack e0004.png</file>
+        <file>resources/textures/units/fairy/attack e0005.png</file>
+        <file>resources/textures/units/fairy/attack e0006.png</file>
+        <file>resources/textures/units/fairy/attack e0007.png</file>
+        <file>resources/textures/units/fairy/attack e0008.png</file>
+        <file>resources/textures/units/fairy/attack n0000.png</file>
+        <file>resources/textures/units/fairy/attack n0001.png</file>
+        <file>resources/textures/units/fairy/attack n0002.png</file>
+        <file>resources/textures/units/fairy/attack n0003.png</file>
+        <file>resources/textures/units/fairy/attack n0004.png</file>
+        <file>resources/textures/units/fairy/attack n0005.png</file>
+        <file>resources/textures/units/fairy/attack n0006.png</file>
+        <file>resources/textures/units/fairy/attack n0007.png</file>
+        <file>resources/textures/units/fairy/attack n0008.png</file>
+        <file>resources/textures/units/fairy/attack ne0000.png</file>
+        <file>resources/textures/units/fairy/attack ne0001.png</file>
+        <file>resources/textures/units/fairy/attack ne0002.png</file>
+        <file>resources/textures/units/fairy/attack ne0003.png</file>
+        <file>resources/textures/units/fairy/attack ne0004.png</file>
+        <file>resources/textures/units/fairy/attack ne0005.png</file>
+        <file>resources/textures/units/fairy/attack ne0006.png</file>
+        <file>resources/textures/units/fairy/attack ne0007.png</file>
+        <file>resources/textures/units/fairy/attack ne0008.png</file>
+        <file>resources/textures/units/fairy/attack nw0000.png</file>
+        <file>resources/textures/units/fairy/attack nw0001.png</file>
+        <file>resources/textures/units/fairy/attack nw0002.png</file>
+        <file>resources/textures/units/fairy/attack nw0003.png</file>
+        <file>resources/textures/units/fairy/attack nw0004.png</file>
+        <file>resources/textures/units/fairy/attack nw0005.png</file>
+        <file>resources/textures/units/fairy/attack nw0006.png</file>
+        <file>resources/textures/units/fairy/attack nw0007.png</file>
+        <file>resources/textures/units/fairy/attack nw0008.png</file>
+        <file>resources/textures/units/fairy/attack s0000.png</file>
+        <file>resources/textures/units/fairy/attack s0001.png</file>
+        <file>resources/textures/units/fairy/attack s0002.png</file>
+        <file>resources/textures/units/fairy/attack s0003.png</file>
+        <file>resources/textures/units/fairy/attack s0004.png</file>
+        <file>resources/textures/units/fairy/attack s0005.png</file>
+        <file>resources/textures/units/fairy/attack s0006.png</file>
+        <file>resources/textures/units/fairy/attack s0007.png</file>
+        <file>resources/textures/units/fairy/attack s0008.png</file>
+        <file>resources/textures/units/fairy/attack se0000.png</file>
+        <file>resources/textures/units/fairy/attack se0001.png</file>
+        <file>resources/textures/units/fairy/attack se0002.png</file>
+        <file>resources/textures/units/fairy/attack se0003.png</file>
+        <file>resources/textures/units/fairy/attack se0004.png</file>
+        <file>resources/textures/units/fairy/attack se0005.png</file>
+        <file>resources/textures/units/fairy/attack se0006.png</file>
+        <file>resources/textures/units/fairy/attack se0007.png</file>
+        <file>resources/textures/units/fairy/attack se0008.png</file>
+        <file>resources/textures/units/fairy/attack sw0000.png</file>
+        <file>resources/textures/units/fairy/attack sw0001.png</file>
+        <file>resources/textures/units/fairy/attack sw0002.png</file>
+        <file>resources/textures/units/fairy/attack sw0003.png</file>
+        <file>resources/textures/units/fairy/attack sw0004.png</file>
+        <file>resources/textures/units/fairy/attack sw0005.png</file>
+        <file>resources/textures/units/fairy/attack sw0006.png</file>
+        <file>resources/textures/units/fairy/attack sw0007.png</file>
+        <file>resources/textures/units/fairy/attack sw0008.png</file>
+        <file>resources/textures/units/fairy/attack w0000.png</file>
+        <file>resources/textures/units/fairy/attack w0001.png</file>
+        <file>resources/textures/units/fairy/attack w0002.png</file>
+        <file>resources/textures/units/fairy/attack w0003.png</file>
+        <file>resources/textures/units/fairy/attack w0004.png</file>
+        <file>resources/textures/units/fairy/attack w0005.png</file>
+        <file>resources/textures/units/fairy/attack w0006.png</file>
+        <file>resources/textures/units/fairy/attack w0007.png</file>
+        <file>resources/textures/units/fairy/attack w0008.png</file>
+        <file>resources/textures/units/fairy/walking e0000.png</file>
+        <file>resources/textures/units/fairy/walking e0001.png</file>
+        <file>resources/textures/units/fairy/walking e0002.png</file>
+        <file>resources/textures/units/fairy/walking e0003.png</file>
+        <file>resources/textures/units/fairy/walking e0004.png</file>
+        <file>resources/textures/units/fairy/walking e0005.png</file>
+        <file>resources/textures/units/fairy/walking e0006.png</file>
+        <file>resources/textures/units/fairy/walking e0007.png</file>
+        <file>resources/textures/units/fairy/walking e0008.png</file>
+        <file>resources/textures/units/fairy/walking magie n0003.png</file>
+        <file>resources/textures/units/fairy/walking magie se0000.png</file>
+        <file>resources/textures/units/fairy/walking n0000.png</file>
+        <file>resources/textures/units/fairy/walking n0001.png</file>
+        <file>resources/textures/units/fairy/walking n0002.png</file>
+        <file>resources/textures/units/fairy/walking n0003.png</file>
+        <file>resources/textures/units/fairy/walking n0004.png</file>
+        <file>resources/textures/units/fairy/walking n0005.png</file>
+        <file>resources/textures/units/fairy/walking n0006.png</file>
+        <file>resources/textures/units/fairy/walking n0007.png</file>
+        <file>resources/textures/units/fairy/walking n0008.png</file>
+        <file>resources/textures/units/fairy/walking ne0000.png</file>
+        <file>resources/textures/units/fairy/walking ne0001.png</file>
+        <file>resources/textures/units/fairy/walking ne0002.png</file>
+        <file>resources/textures/units/fairy/walking ne0003.png</file>
+        <file>resources/textures/units/fairy/walking ne0004.png</file>
+        <file>resources/textures/units/fairy/walking ne0005.png</file>
+        <file>resources/textures/units/fairy/walking ne0006.png</file>
+        <file>resources/textures/units/fairy/walking ne0007.png</file>
+        <file>resources/textures/units/fairy/walking ne0008.png</file>
+        <file>resources/textures/units/fairy/walking nw0000.png</file>
+        <file>resources/textures/units/fairy/walking nw0001.png</file>
+        <file>resources/textures/units/fairy/walking nw0002.png</file>
+        <file>resources/textures/units/fairy/walking nw0003.png</file>
+        <file>resources/textures/units/fairy/walking nw0004.png</file>
+        <file>resources/textures/units/fairy/walking nw0005.png</file>
+        <file>resources/textures/units/fairy/walking nw0006.png</file>
+        <file>resources/textures/units/fairy/walking nw0007.png</file>
+        <file>resources/textures/units/fairy/walking nw0008.png</file>
+        <file>resources/textures/units/fairy/walking s0000.png</file>
+        <file>resources/textures/units/fairy/walking s0001.png</file>
+        <file>resources/textures/units/fairy/walking s0002.png</file>
+        <file>resources/textures/units/fairy/walking s0003.png</file>
+        <file>resources/textures/units/fairy/walking s0004.png</file>
+        <file>resources/textures/units/fairy/walking s0005.png</file>
+        <file>resources/textures/units/fairy/walking s0006.png</file>
+        <file>resources/textures/units/fairy/walking s0007.png</file>
+        <file>resources/textures/units/fairy/walking s0008.png</file>
+        <file>resources/textures/units/fairy/walking se0000.png</file>
+        <file>resources/textures/units/fairy/walking se0001.png</file>
+        <file>resources/textures/units/fairy/walking se0002.png</file>
+        <file>resources/textures/units/fairy/walking se0003.png</file>
+        <file>resources/textures/units/fairy/walking se0004.png</file>
+        <file>resources/textures/units/fairy/walking se0005.png</file>
+        <file>resources/textures/units/fairy/walking se0006.png</file>
+        <file>resources/textures/units/fairy/walking se0007.png</file>
+        <file>resources/textures/units/fairy/walking se0008.png</file>
+        <file>resources/textures/units/fairy/walking sw0000.png</file>
+        <file>resources/textures/units/fairy/walking sw0001.png</file>
+        <file>resources/textures/units/fairy/walking sw0002.png</file>
+        <file>resources/textures/units/fairy/walking sw0003.png</file>
+        <file>resources/textures/units/fairy/walking sw0004.png</file>
+        <file>resources/textures/units/fairy/walking sw0005.png</file>
+        <file>resources/textures/units/fairy/walking sw0006.png</file>
+        <file>resources/textures/units/fairy/walking sw0007.png</file>
+        <file>resources/textures/units/fairy/walking sw0008.png</file>
+        <file>resources/textures/units/fairy/walking w0000.png</file>
+        <file>resources/textures/units/fairy/walking w0001.png</file>
+        <file>resources/textures/units/fairy/walking w0002.png</file>
+        <file>resources/textures/units/fairy/walking w0003.png</file>
+        <file>resources/textures/units/fairy/walking w0004.png</file>
+        <file>resources/textures/units/fairy/walking w0005.png</file>
+        <file>resources/textures/units/fairy/walking w0006.png</file>
+        <file>resources/textures/units/fairy/walking w0007.png</file>
+        <file>resources/textures/units/fairy/walking w0008.png</file>
     </qresource>
 </RCC>

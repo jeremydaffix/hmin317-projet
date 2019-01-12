@@ -37,8 +37,8 @@ protected:
     void mouseReleaseEvent(QMouseEvent *e) override;
 
 
-    void loadUnitTextures(std::string name);
-    void loadAnimTextures(std::string unitName, std::string animName, std::string animPrefix);
+    //void loadUnitTextures(std::string name);
+    void loadAnimTextures(std::string unitName, std::string animName, std::string animPrefix, int nbrImgPerAnim = 12, std::string zeros = "0");
 
 
     GameMap *gameMap;

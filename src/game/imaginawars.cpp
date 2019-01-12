@@ -5,8 +5,6 @@
 
   TODO
 
-  cibles
-  controles bouger cibles
   generation soldats
   collisions entre soldats (ou du moins les eviter, check si prochain mvt empiète sur qq1)
 
@@ -76,15 +74,13 @@ void ImaginaWars::startGame()
     //gm->calcPath(QVector2D(1, 1), QVector2D(9, 9));
 
 
-    spr = new Soldier(Soldier::TYPE_KNIGHT, gameMap, NULL,
+    /*spr = new Soldier(Soldier::TYPE_KNIGHT, player1, gameMap, NULL,
                              QVector2D(0, 0),
                              0,
-                             QVector2D(0.08, 0.08),
+                             QVector2D(0.055, 0.055),
                              ResourcesManager::getInstance()->getGameShader("texturetoon"));
 
-
-
-    GameScene::getInstance()->addChild(spr);
+    GameScene::getInstance()->addChild(spr);*/
 
 
     player1->setPosTarget(0, QVector2D(7,9));
@@ -134,7 +130,13 @@ void ImaginaWars::initTextures()
 
     // textures units
 
-    loadUnitTextures("knight");
+    loadAnimTextures("knight", "walking", "w");
+    loadAnimTextures("knight", "attack", "a");
+    loadAnimTextures("knight", "looking", "l");
+    loadAnimTextures("archer", "walking", "w", 9);
+    loadAnimTextures("archer", "attack", "a", 9);
+    loadAnimTextures("fairy", "walking", "w", 9);
+    loadAnimTextures("fairy", "attack", "a", 9);
 
 
     // tiles
@@ -165,11 +167,11 @@ void ImaginaWars::initTextures()
     ResourcesManager::getInstance()->addGameTexture("building_knight",
                                                     ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_17.png")));
 
-    ResourcesManager::getInstance()->addGameTexture("building_horse",
-                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_21.png")));
+    ResourcesManager::getInstance()->addGameTexture("building_fairy",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_19.png")));
 
     ResourcesManager::getInstance()->addGameTexture("building_archer",
-                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_19.png")));
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_21.png")));
 
     ResourcesManager::getInstance()->addGameTexture("building_techno",
                                                     ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/medievalrtspack/Structure/medievalStructure_20.png")));
@@ -199,42 +201,42 @@ void ImaginaWars::initTextures()
 
 
 
-void ImaginaWars::loadUnitTextures(std::string name)
+/*void ImaginaWars::loadUnitTextures(std::string name)
 {
     loadAnimTextures(name, "walking", "w");
     loadAnimTextures(name, "looking", "l");
-}
+}*/
 
-void ImaginaWars::loadAnimTextures(std::string unitName, std::string animName, std::string animPrefix)
+void ImaginaWars::loadAnimTextures(std::string unitName, std::string animName, std::string animPrefix, int nbrImgPerAnim, std::string zeros)
 {
-    for(int i = 0 ; i < 12 ; ++i)
+    for(int i = 0 ; i < nbrImgPerAnim ; ++i)
     {
-        std::string qs = ((i < 10 ? "0" : "") + std::to_string(i)).c_str();
+        std::string qs = ((i < 10 ? zeros : "") + std::to_string(i)).c_str();
 
-
+        //qDebug() << (":/resources/textures/units/" + unitName + "/" + animName + " n00" + qs + ".png").c_str();
         ResourcesManager::getInstance()->addGameTexture(unitName + "_" + animPrefix + "_n_" + std::to_string(i),
-                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/city/" + animName + " n00" + qs + ".png")));
+                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/" + animName + " n00" + qs + ".png")));
 
         ResourcesManager::getInstance()->addGameTexture(unitName + "_" + animPrefix + "_ne_" + std::to_string(i),
-                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/city/" + animName + " ne00" + qs + ".png")));
+                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/" + animName + " ne00" + qs + ".png")));
 
         ResourcesManager::getInstance()->addGameTexture(unitName + "_" + animPrefix + "_e_" + std::to_string(i),
-                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/city/" + animName + " e00" + qs + ".png")));
+                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/" + animName + " e00" + qs + ".png")));
 
         ResourcesManager::getInstance()->addGameTexture(unitName + "_" + animPrefix + "_se_" + std::to_string(i),
-                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/city/" + animName + " se00" + qs + ".png")));
+                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/" + animName + " se00" + qs + ".png")));
 
         ResourcesManager::getInstance()->addGameTexture(unitName + "_" + animPrefix + "_s_" + std::to_string(i),
-                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/city/" + animName + " s00" + qs + ".png")));
+                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/" + animName + " s00" + qs + ".png")));
 
         ResourcesManager::getInstance()->addGameTexture(unitName + "_" + animPrefix + "_sw_" + std::to_string(i),
-                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/city/" + animName + " sw00" + qs + ".png")));
+                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/" + animName + " sw00" + qs + ".png")));
 
         ResourcesManager::getInstance()->addGameTexture(unitName + "_" + animPrefix + "_w_" + std::to_string(i),
-                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/city/" + animName + " w00" + qs + ".png")));
+                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/" + animName + " w00" + qs + ".png")));
 
         ResourcesManager::getInstance()->addGameTexture(unitName + "_" + animPrefix + "_nw_" + std::to_string(i),
-                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/city/" + animName + " nw00" + qs + ".png")));
+                                                        ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/units/" + unitName + "/" + animName + " nw00" + qs + ".png")));
     }
 }
 
@@ -407,7 +409,7 @@ void ImaginaWars::keyReleaseEvent(QKeyEvent *e)
 
 
 void ImaginaWars::mouseReleaseEvent(QMouseEvent *e)
-{
+{/*
     //qDebug() << "CLICK " << e->x() << ";" << e->y();
 
 
@@ -472,7 +474,7 @@ void ImaginaWars::mouseReleaseEvent(QMouseEvent *e)
 
     //gameMap->getSprite(cas)->addComponent(new EffectSpriteComponent(EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 1));
     gameMap->HighlightTile(cas.x(), cas.y());
-
+*/
 }
 
 

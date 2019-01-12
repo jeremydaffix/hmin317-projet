@@ -79,4 +79,14 @@ QVector2D GamePlayer::tryMoveTarget(int i, int x, int y, GameMap *gm)
     return gm->caseToPos(currentCase);
 }
 
+int GamePlayer::getNumPlayer() const
+{
+    return numPlayer;
+}
+
+void GamePlayer::setNumPlayer(int value)
+{
+    numPlayer = value;
+}
+
 

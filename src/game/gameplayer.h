@@ -39,6 +39,9 @@ public:
 
     QVector2D tryMoveTarget(int i, int x, int y, GameMap *gm);
 
+    int getNumPlayer() const;
+    void setNumPlayer(int value);
+
 protected:
 
     int numPlayer;
