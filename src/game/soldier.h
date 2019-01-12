@@ -15,6 +15,8 @@
 #include <engine/spriteanimationcomponent.h>
 //#include <game/walkpathfindingcomponent.h>
 #include <game/gamemap.h>
+#include <game/debugcomponent.h>
+#include <game/lifecomponent.h>
 
 class WalkPathfindingComponent;
 
@@ -87,7 +89,9 @@ public:
     };
 
 
-    Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QOpenGLTexture *tex, QVector3D pos = QVector3D(), float rot = 0, QVector2D sc = QVector2D(1, 1), QOpenGLShaderProgram* sh = NULL);
+    Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QVector2D goTo, QOpenGLTexture *tex, QVector3D pos = QVector3D(), float rot = 0, QVector2D sc = QVector2D(1, 1), QOpenGLShaderProgram* sh = NULL);
+    virtual ~Soldier();
+
 
     WalkPathfindingComponent *getPathfinding() const;
 
@@ -97,6 +101,11 @@ public:
     void selectStateLooking(QVector2D dir);
 
     void selectAnim();
+
+    int getLife();
+    void setLife(int l);
+
+    void die(); // rip
 
 
 protected:
@@ -114,6 +123,8 @@ protected:
     GamePlayer *player;
 
     int life = 100;
+
+    Sprite *lifeSprite;
 };
 
 #endif // SOLDIER_H

@@ -31,7 +31,9 @@ SOURCES += \
     src/game/soldier.cpp \
     src/game/buildingcomponent.cpp \
     src/game/gameplayer.cpp \
-    src/game/humanplayercomponent.cpp
+    src/game/humanplayercomponent.cpp \
+    src/game/debugcomponent.cpp \
+    src/game/lifecomponent.cpp
 
 SOURCES +=
 
@@ -58,7 +60,9 @@ HEADERS += \
     src/game/soldier.h \
     src/game/buildingcomponent.h \
     src/game/gameplayer.h \
-    src/game/humanplayercomponent.h
+    src/game/humanplayercomponent.h \
+    src/game/debugcomponent.h \
+    src/game/lifecomponent.h
 
 RESOURCES += \
     textures.qrc \

@@ -132,7 +132,7 @@ void GameMap::BuildMap()
                 int y = coords[1].toInt();
 
                 Sprite *b = addSprite("building_knight", x, y, 0);
-                BuildingComponent *bc = new BuildingComponent(BuildingComponent::TYPE_KNIGHT, player1, this);
+                BuildingComponent *bc = new BuildingComponent(BuildingComponent::TYPE_KNIGHT, i, player1, this);
                 b->addComponent(bc);
 
                 player1->setBuilding(i, bc);
@@ -156,7 +156,7 @@ void GameMap::BuildMap()
                 int y = coords[1].toInt();
 
                 Sprite *b = addSprite("building_knight", x, y, 0);
-                BuildingComponent *bc = new BuildingComponent(BuildingComponent::TYPE_KNIGHT, player2, this);
+                BuildingComponent *bc = new BuildingComponent(BuildingComponent::TYPE_KNIGHT, i, player2, this);
                 b->addComponent(bc);
 
                 player2->setBuilding(i, bc);

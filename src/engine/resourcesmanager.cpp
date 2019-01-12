@@ -23,7 +23,7 @@ ResourcesManager::~ResourcesManager()
 
     for( const auto& s : gameShaders )
     {
-        //std::cout << "freeing shader " << s.first << std::endl;
+        std::cout << "freeing shader " << s.first << std::endl;
 
         delete s.second;
     }

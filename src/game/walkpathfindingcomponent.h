@@ -25,6 +25,7 @@ protected:
     std::list<QVector2D> path;
     GameMap *gameMap;
     QVector2D targetPos;
+    Soldier *soldier = NULL;
 };
 
 

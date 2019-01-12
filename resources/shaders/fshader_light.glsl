@@ -21,10 +21,10 @@ void main()
     float b = newcol[2];
     float a = newcol[3];
 
-    float c = 2.0;
-    r = r * c + 0.5;
-    g = g * c + 0.5;
-    b = b * c + 0.5;
+    float c = 1.5;
+    r = r * c + 0.6;
+    g = g * c + 0.6;
+    b = b * c + 0.4;
 
     newcol = vec4(r,g,b,a);
 

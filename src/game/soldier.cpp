@@ -1,9 +1,10 @@
 #include "soldier.h"
 
 #include <game/walkpathfindingcomponent.h>
+#include <game/imaginawars.h>
 
 
-Soldier::Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QOpenGLTexture *tex, QVector3D pos, float rot, QVector2D sc, QOpenGLShaderProgram *sh) : Sprite(tex, pos, rot, sc, sh)
+Soldier::Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QVector2D goTo, QOpenGLTexture *tex, QVector3D pos, float rot, QVector2D sc, QOpenGLShaderProgram *sh) : Sprite(tex, pos, rot, sc, sh)
 {
     type = t;
     player = p;
@@ -21,6 +22,8 @@ Soldier::Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QOpenGLTexture *tex
     pathfinding = new WalkPathfindingComponent(gm);
     addComponent(pathfinding);
 
+    pathfinding->setTargetPos(goTo);
+
 
     // création components d'animation
 
@@ -32,7 +35,31 @@ Soldier::Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QOpenGLTexture *tex
 
     selectAnim();
 
+
+
+
+
+    if(player->getNumPlayer() == 0) lifeSprite = new Sprite("lifered", QVector3D(0, 0, 0.1), 0, QVector2D(0.04, 0.007), shader);
+    else lifeSprite = new Sprite("lifeorange", QVector3D(0, 0, 0.1), 0, QVector2D(0.04, 0.007), shader);
+
+    lifeSprite->createGeometry();
+    //lifeSprite->addComponent(new DebugComponent());
+    lifeSprite->addComponent(new LifeComponent(this));
+
+    GameScene::getInstance()->addChild(lifeSprite);
+    //addChild(lifeSprite);
+
+
     createGeometry();
+
+    ((ImaginaWars*)ImaginaWars::getInstance())->registerSoldier(this);
+}
+
+Soldier::~Soldier()
+{
+    qDebug() << "DESTROYING SOLDIER";
+
+    ((ImaginaWars*)ImaginaWars::getInstance())->unregisterSoldier(this);
 }
 
 WalkPathfindingComponent *Soldier::getPathfinding() const
@@ -135,5 +162,32 @@ void Soldier::selectAnim()
 
     SELECT_ANIM_GEN(WALK, walk)
     SELECT_ANIM_GEN(LOOKING, looking)
+}
+
+
+int Soldier::getLife()
+{
+    return life;
+}
+
+void Soldier::setLife(int l)
+{
+    if (l <= 0)
+    {
+        life = 0;
+        die();
+    }
+
+    else life = l;
+}
+
+
+void Soldier::die()
+{
+    qDebug("RIP");
+
+    //destroy(); // suppression contenu (components et enfants)
+    //GameScene::getInstance()->removeChild(this); // on enleve de la scene
+    //delete this;
 }
 

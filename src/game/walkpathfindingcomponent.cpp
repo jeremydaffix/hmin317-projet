@@ -33,6 +33,8 @@ void WalkPathfindingComponent::fixedUpdate()
 
         QVector2D dir;
 
+        if(soldier == NULL) soldier = (Soldier*)getContainer();
+
 
         if(path.size() > 0) // chemin trouvé
         {
@@ -41,7 +43,7 @@ void WalkPathfindingComponent::fixedUpdate()
             /*QVector2D*/ dir = (gameMap->caseToPos(next) - pos2).normalized(); // direction vers la prochaine position du chemin
 
             getContainer()->setLocalPosition(pos + dir / 150.); // on avance dans cette direction
-            ((Soldier*)getContainer())->selectStateWalk(dir);
+            soldier->selectStateWalk(dir);
 
             if((path.size() > 1 && next == cas) || // arrivé dans la case du point suivant
                (getContainer()->getLocalPosition().distanceToPoint(gameMap->caseToPos(next)) < 0.10)) // ou assez proche de ce point
@@ -60,7 +62,7 @@ void WalkPathfindingComponent::fixedUpdate()
             dir = (targetPos - QVector2D(getContainer()->getLocalPosition().x(), getContainer()->getLocalPosition().y())).normalized();
 
             getContainer()->setLocalPosition(getContainer()->getLocalPosition() + dir / 150.);
-            ((Soldier*)getContainer())->selectStateWalk(dir);
+             soldier->selectStateWalk(dir);
         }
 
 
@@ -68,7 +70,11 @@ void WalkPathfindingComponent::fixedUpdate()
 
         if(path.size() == 0 && getContainer()->getLocalPosition().distanceToPoint(targetPos) <= 0.05)
         {
-            ((Soldier*)getContainer())->selectStateLooking(dir);
+            //qDebug() << getContainer()->getLocalPosition().distanceToPoint(targetPos);
+             //((Soldier*)getContainer())->selectStateLooking(dir);
+            //qDebug("FINISHED ! :)");
+
+            //soldier->setLife(0);
         }
     }
 
@@ -79,12 +85,12 @@ void WalkPathfindingComponent::fixedUpdate()
 
 QVector2D WalkPathfindingComponent::getTargetPos() const
 {
-    return targetPos;
+    return gameMap->posToCase(targetPos);
 }
 
-void WalkPathfindingComponent::setTargetPos(const QVector2D &value)
+void WalkPathfindingComponent::setTargetPos(const QVector2D &value) // on passe des cases, mais stocké en unités monde
 {
-    targetPos = value;
+    targetPos = gameMap->caseToPos(value);
 
     path.clear();
 }

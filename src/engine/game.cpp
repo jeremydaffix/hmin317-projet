@@ -20,6 +20,8 @@ Game::~Game()
     // and the buffers.
     makeCurrent();
 
+    timer.stop();
+
     GameScene::getInstance()->destroy(); // destruction de toute la hiérarchie et des components
     delete GameScene::getInstance();
 

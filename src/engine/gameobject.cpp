@@ -44,8 +44,14 @@ void GameObject::addChild(GameObject *child)
 
 void GameObject::removeChild(GameObject *child)
 {
-    if(std::find(children.begin(), children.end(), child) != children.end()) children.remove(child);
+    //if(std::find(children.begin(), children.end(), child) != children.end()) children.remove(child);
+    //if(std::find(children.begin(), children.end(), child) != children.end()) children.erase(std::find(children.begin(), children.end(), child));
+
+    auto pos = std::find(children.begin(), children.end(), child);
+    if(pos != children.end()) children.erase(pos);
+
     child->setParent(NULL);
+
     //delete child; // pas à lui de de libérer car on peut très bien juste changer la hiérarchie
 }
 
@@ -69,8 +75,9 @@ void GameObject::addComponent(Component *c)
 
 void GameObject::removeComponent(Component *c)
 {
-    if(std::find(components.begin(), components.end(), c) != components.end()) components.remove(c);
     c->setContainer(NULL);
+    auto pos = std::find(components.begin(), components.end(), c);
+    if(pos != components.end()) components.erase(pos);
     delete c; ////
 }
 
@@ -155,8 +162,11 @@ void GameObject::destroy()
     std::list<Component*>::iterator itComp;
     for (itComp = l.begin() ; itComp != l.end(); ++itComp)
     {
+        (*itComp)->setEnabled(false);
         delete (*itComp);
     }
+
+    components.clear();
 
 
     // libération des gameobjects enfants
@@ -165,8 +175,10 @@ void GameObject::destroy()
     for (it = children.begin(); it != children.end(); ++it)
     {
         (*it)->destroy();
-        delete (*itComp);
+        delete (*it);
     }
+
+    children.clear();
 }
 
 // ***

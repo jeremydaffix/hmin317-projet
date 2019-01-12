@@ -5,12 +5,13 @@
 
   TODO
 
-  generation soldats
+  kill soldier (bug global suppression ou pas)
+
+  petit generateur de code (component et gameobject)
+
   collisions entre soldats (ou du moins les eviter, check si prochain mvt empiète sur qq1)
 
-  classe Building
-
-  ameliorer pathfinding : zigzag, precision arrivee, orientation idle
+  ameliorer pathfinding : zigzag
 
   classe Player
   component ennemyai
@@ -23,10 +24,9 @@
     si cible < distance : aller a la plus proche
     si cible < distance attaque : attaquer (ou capture si neutral?)
     sinon continuer vers target initiale
-    si arrivés target = s'évaporent
+    si arrivés target = s'évaporent (+ perdent 1pv par s, bonus defenseur)
 
   gestion life (building et soldier)
-  couleur life pour reconnaitre joueur
 
   bonus?
 
@@ -192,6 +192,19 @@ void ImaginaWars::initTextures()
     ResourcesManager::getInstance()->addGameTexture("targetred2",
                                                     ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/custom/targetred2.png")));
 
+    ResourcesManager::getInstance()->addGameTexture("lifered",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/custom/lifered.png")));
+
+
+    ResourcesManager::getInstance()->addGameTexture("targetorange1",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/custom/targetorange1.png")));
+
+    ResourcesManager::getInstance()->addGameTexture("targetorange2",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/custom/targetorange2.png")));
+
+    ResourcesManager::getInstance()->addGameTexture("lifeorange",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/custom/lifeorange.png")));
+
 
     // fonts
 
@@ -240,9 +253,53 @@ void ImaginaWars::loadAnimTextures(std::string unitName, std::string animName, s
     }
 }
 
+std::list<BuildingComponent *> ImaginaWars::getBuildings() const
+{
+    return buildings;
+}
+
+void ImaginaWars::setBuildings(const std::list<BuildingComponent *> &value)
+{
+    buildings = value;
+}
+
+std::list<Soldier *> ImaginaWars::getSoldiers() const
+{
+    return soldiers;
+}
+
+void ImaginaWars::setSoldiers(const std::list<Soldier *> &value)
+{
+    soldiers = value;
+}
+
 GameMap *ImaginaWars::getGameMap() const
 {
     return gameMap;
+}
+
+void ImaginaWars::registerSoldier(Soldier *s)
+{
+    soldiers.push_front(s);
+}
+
+void ImaginaWars::registerBuilding(BuildingComponent *b)
+{
+    buildings.push_front(b);
+}
+
+void ImaginaWars::unregisterSoldier(Soldier *s)
+{
+    //soldiers.remove(s);
+    auto pos = std::find(soldiers.begin(), soldiers.end(), s);
+    if(pos != soldiers.end()) soldiers.erase(pos);
+}
+
+void ImaginaWars::unregisterBuilding(BuildingComponent *b)
+{
+    //buildings.remove(b);
+    auto pos = std::find(buildings.begin(), buildings.end(), b);
+    if(pos != buildings.end()) buildings.erase(pos);
 }
 
 GamePlayer *ImaginaWars::getPlayer2()

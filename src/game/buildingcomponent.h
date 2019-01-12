@@ -21,13 +21,17 @@ public:
         TYPE_BUILDING_LENGTH
     };
 
-    BuildingComponent(TYPE_BUILDING t, GamePlayer *p, GameMap *gm);
+    BuildingComponent(TYPE_BUILDING t, int i, GamePlayer *p, GameMap *gm);
+    virtual ~BuildingComponent();
 
 
     void update();
     void fixedUpdate();
 
     void NextBuilding();
+
+    int getLife() const;
+    void setLife(int value);
 
 protected:
 
@@ -39,8 +43,12 @@ protected:
 
     int cptFrames = 0;
 
+    int id;
+
     GamePlayer *player;
     GameMap *gameMap;
+
+    int life = 500;
 
 
     static int turnDuration; // x seconds per turn

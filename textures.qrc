@@ -1434,5 +1434,9 @@
         <file>resources/textures/units/fairy/walking w0006.png</file>
         <file>resources/textures/units/fairy/walking w0007.png</file>
         <file>resources/textures/units/fairy/walking w0008.png</file>
+        <file>resources/textures/custom/lifeorange.png</file>
+        <file>resources/textures/custom/lifered.png</file>
+        <file>resources/textures/custom/targetorange1.png</file>
+        <file>resources/textures/custom/targetorange2.png</file>
     </qresource>
 </RCC>

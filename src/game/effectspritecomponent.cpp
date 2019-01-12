@@ -9,8 +9,6 @@ EffectSpriteComponent::EffectSpriteComponent(int t, int fr, QOpenGLShaderProgram
 
     initialShader = is;
     effectShader = es;
-
-
 }
 
 

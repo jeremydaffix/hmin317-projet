@@ -29,6 +29,18 @@ public:
 
     GameMap *getGameMap() const;
 
+    void registerSoldier(Soldier *s);
+    void registerBuilding(BuildingComponent *b);
+    void unregisterSoldier(Soldier *s);
+    void unregisterBuilding(BuildingComponent *b);
+
+
+    std::list<Soldier *> getSoldiers() const;
+    void setSoldiers(const std::list<Soldier *> &value);
+
+    std::list<BuildingComponent *> getBuildings() const;
+    void setBuildings(const std::list<BuildingComponent *> &value);
+
 protected:
 
     void initShaders() override;
@@ -47,6 +59,9 @@ protected:
     GamePlayer *player1 = new GamePlayer(GamePlayer::TYPE_HUMAN, 0), *player2 = new GamePlayer(GamePlayer::TYPE_AI, 1);
 
     Sprite *target1, *target2;
+
+    std::list<Soldier *> soldiers;
+    std::list<BuildingComponent *> buildings;
 };
 
 #endif // IMAGINAWARS_H
