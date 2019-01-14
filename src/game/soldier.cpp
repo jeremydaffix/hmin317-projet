@@ -25,6 +25,12 @@ Soldier::Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QVector2D goTo, QOp
     pathfinding->setTargetPos(goTo);
 
 
+    // création component ai / combats
+
+    ai = new SoldierAIComponent(this);
+    addComponent(ai);
+
+
     // création components d'animation
 
     CREATE_ANIM_GEN(walk, w, 15)
@@ -44,7 +50,6 @@ Soldier::Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QVector2D goTo, QOp
     else lifeSprite = new Sprite("lifeorange", QVector3D(0, 0, 0.1), 0, QVector2D(0.04, 0.007), shader);
 
     lifeSprite->createGeometry();
-    //lifeSprite->addComponent(new DebugComponent());
     lifeSprite->addComponent(new LifeComponent(this));
 
     GameScene::getInstance()->addChild(lifeSprite);
@@ -209,10 +214,21 @@ void Soldier::setLife(int l)
 
 void Soldier::die()
 {
-    qDebug("RIP");
+    //qDebug("RIP");
 
     //destroy(); // suppression contenu (components et enfants)
     //GameScene::getInstance()->removeChild(this); // on enleve de la scene
     //delete this;
 }
+
+
+ WalkPathfindingComponent *Soldier::getPathfinding()
+ {
+     return pathfinding;
+ }
+
+ GamePlayer *Soldier::getPlayer()
+ {
+     return player;
+ }
 

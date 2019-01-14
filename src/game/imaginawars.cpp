@@ -13,9 +13,7 @@
 
   ameliorer pathfinding : zigzag
 
-  classe Player
   component ennemyai
-  component humancontroller
 
   IA ennemi
 

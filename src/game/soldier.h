@@ -17,6 +17,7 @@
 #include <game/gamemap.h>
 #include <game/debugcomponent.h>
 #include <game/lifecomponent.h>
+#include <game/soldierAIComponent.h>
 
 class WalkPathfindingComponent;
 
@@ -109,6 +110,8 @@ public:
 
     void die(); // rip
 
+    WalkPathfindingComponent *getPathfinding();
+    GamePlayer *getPlayer();
 
 protected:
 
@@ -117,6 +120,8 @@ protected:
     DEF_ANIM_GEN(attack)
 
     WalkPathfindingComponent *pathfinding;
+    SoldierAIComponent *ai;
+
     TYPE_SOLDIER type;
 
     SpriteAnimationComponent *createAnim(string name, int speed);

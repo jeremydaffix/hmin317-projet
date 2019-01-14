@@ -26,6 +26,9 @@ protected:
     GameMap *gameMap;
     QVector2D targetPos;
     Soldier *soldier = NULL;
+
+    bool isPosFree(QVector3D pos);
+    void moveTowards(QVector2D dir);
 };
 
 

@@ -9,6 +9,9 @@ GamePlayer::GamePlayer(GamePlayer::TYPE_PLAYER t, int n)
     type = t;
     numPlayer = n;
 
+    posTarget[0] = QVector2D(12, 4);
+    posTarget[1] = QVector2D(12, 6);
+
 
     if(type == TYPE_HUMAN)
     {
