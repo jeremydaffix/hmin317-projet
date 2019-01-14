@@ -77,7 +77,7 @@ void BuildingComponent::fixedUpdate()
              soldier = new Soldier(Soldier::TYPE_ARCHER, player, gameMap, player->getPosTarget(id), NULL,
                                          QVector2D(sprite->getLocalPosition().x() +  decal, sprite->getLocalPosition().y() + 0.5),
                                          0,
-                                         QVector2D(0.070, 0.070),
+                                         QVector2D(0.060, 0.060),
                                          ResourcesManager::getInstance()->getGameShader("texturetoon"));
 
              GameScene::getInstance()->addChild(soldier);

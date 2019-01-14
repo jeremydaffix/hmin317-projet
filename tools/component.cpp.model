@@ -1,0 +1,22 @@
+#include "game/###FILENAME###.h"
+
+###CLASSNAME###::###CLASSNAME###()
+{
+
+}
+
+void ###CLASSNAME###::update()
+{
+
+}
+
+void ###CLASSNAME###::fixedUpdate()
+{
+    if(getContainer() == NULL) return;
+
+
+ 
+
+    ++cptFrames;
+}
+

@@ -1,0 +1,21 @@
+#ifndef ###CLASSNAMEH###_H
+#define ###CLASSNAMEH###_H
+
+#include <engine/component.h>
+
+
+class ###CLASSNAME### : public Component
+{
+public:
+    ###CLASSNAME###();
+
+    void update();
+    void fixedUpdate();
+
+protected:
+
+    int cptFrames = 0;
+};
+
+#endif // ###CLASSNAMEH###_H
+

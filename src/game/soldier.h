@@ -85,7 +85,8 @@ public:
     enum STATE_ANIM {
 
         STATE_ANIM_GEN(LOOKING),
-        STATE_ANIM_GEN(WALK)
+        STATE_ANIM_GEN(WALK),
+        STATE_ANIM_GEN(ATTACK)
     };
 
 
@@ -99,6 +100,7 @@ public:
 
     void selectStateWalk(QVector2D dir);
     void selectStateLooking(QVector2D dir);
+    void selectStateAttack(QVector2D dir);
 
     void selectAnim();
 
@@ -112,6 +114,7 @@ protected:
 
     DEF_ANIM_GEN(walk)
     DEF_ANIM_GEN(looking)
+    DEF_ANIM_GEN(attack)
 
     WalkPathfindingComponent *pathfinding;
     TYPE_SOLDIER type;

@@ -74,7 +74,7 @@ void WalkPathfindingComponent::fixedUpdate()
              //((Soldier*)getContainer())->selectStateLooking(dir);
             //qDebug("FINISHED ! :)");
 
-            //soldier->setLife(0);
+            soldier->setLife(0);
         }
     }
 

@@ -29,6 +29,7 @@ Soldier::Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QVector2D goTo, QOp
 
     CREATE_ANIM_GEN(walk, w, 15)
     CREATE_ANIM_GEN(looking, l, 10)
+    CREATE_ANIM_GEN(attack, a, 10)
 
 
     currentState = STATE_LOOKING_S;
@@ -91,7 +92,7 @@ SpriteAnimationComponent *Soldier::createAnim(string name, int speed)
     else if(type == TYPE_ARCHER)
     {
         nbrImgPerAnim = 8;
-        speed = (int)(speed * 0.75); // 8 images à la place de 12 #graphistes
+        speed = (int)(speed * 0.70); // 8 images à la place de 12 #graphistes
     }
 
     SpriteAnimationComponent * anim = new SpriteAnimationComponent(speed);
@@ -151,6 +152,28 @@ void Soldier::selectStateLooking(QVector2D dir)
     selectAnim();
 }
 
+
+void Soldier::selectStateAttack(QVector2D dir)
+{
+    double rad = std::atan2(dir.x(), dir.y());
+    double deg = (rad / M_PI) * 180.0;
+
+    //qDebug() << "angle " << deg;
+
+    if(deg >=-22.5 && deg < 22.5) currentState = STATE_ATTACK_N;
+    else if(deg >= 22.5 && deg < 67.5) currentState = STATE_ATTACK_NE;
+    else if(deg >= 67.5 && deg < 112.5) currentState = STATE_ATTACK_E;
+    else if(deg >= 112.5 && deg < 158.0) currentState = STATE_ATTACK_SE;
+
+    else if(deg >= -67.5 && deg < -22.5) currentState = STATE_ATTACK_NW;
+    else if(deg >= -112.5 && deg < -67.5) currentState = STATE_ATTACK_W;
+    else if(deg >= -158.0 && deg < -112.5) currentState = STATE_ATTACK_SW;
+    else currentState = STATE_ATTACK_S;
+
+
+    selectAnim();
+}
+
 // générer ???
 
 
@@ -159,9 +182,11 @@ void Soldier::selectAnim()
 {
     DISABLE_ANIM_GEN(walk)
     DISABLE_ANIM_GEN(looking)
+    DISABLE_ANIM_GEN(attack)
 
     SELECT_ANIM_GEN(WALK, walk)
     SELECT_ANIM_GEN(LOOKING, looking)
+    SELECT_ANIM_GEN(ATTACK, attack)
 }
 
 
