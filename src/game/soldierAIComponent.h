@@ -11,6 +11,10 @@
 class Soldier;
 class ImaginaWars;
 
+
+// classe de composant représentant l'intelligence de combat d'un soldat :
+// attaquer un soldat ennemi proche, lui infliger des dégâts,...
+
 class SoldierAIComponent : public Component
 {
 public:

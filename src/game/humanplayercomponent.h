@@ -8,6 +8,10 @@
 #include <QtCore/QTimer>
 
 
+// cette classe de composant représente un joueur humain
+// non utilisée pour le moment, elle sera utile pour
+// l'utilisation des contrôles manettes
+
 class HumanPlayerComponent : public Component
 {
 public:

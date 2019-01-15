@@ -10,6 +10,17 @@ class GamePlayer;
 class GameMap;
 
 
+// classe contenant l'AI de l'ennemi
+// il sera possible de faire plusieurs classes
+// pour différentes stratégies de jeu
+// principe :
+// toutes les x secondes (fixedUpdate),
+// on va choisir une action à réaliser
+// en fonction du hasard et du contexte
+// et on "simule" l'appui du joueur sur une touche
+// le reste est géré de la même manière que le joueur humain, de façon générique
+
+
 class EnemyAIComponent : public Component
 {
 public:
@@ -25,8 +36,7 @@ protected:
     GamePlayer *player;
     GameMap *gameMap;
 
-    std::mt19937 rnd;
-    //std::uniform_int_distribution<std::mt19937::result_type> dist100(1, 100); // distribution [1, 100]
+    std::mt19937 rnd; // pour nombres aléatoires
 };
 
 #endif // ENEMYAICOMPONENT_H

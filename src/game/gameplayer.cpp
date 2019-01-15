@@ -9,9 +9,6 @@ GamePlayer::GamePlayer(GamePlayer::TYPE_PLAYER t, int n)
     type = t;
     numPlayer = n;
 
-    posTarget[0] = QVector2D(12, 4);
-    posTarget[1] = QVector2D(12, 6);
-
 
     if(type == TYPE_HUMAN)
     {
@@ -66,12 +63,12 @@ QVector2D GamePlayer::tryMoveTarget(int i, int x, int y, GameMap *gm)
     int cx = (int)currentCase.x();
     int cy = (int)currentCase.y();
 
-    if((cx + x) >= 0 && (cx + x) < gm->getWidth())
+    if((cx + x) >= 0 && (cx + x) < gm->getWidth()) // déplacement horizontal si on ne sort pas de la map et pas d'obstacle
     {
         if(gm->isWalkable(cx + x, cy)) cx += x;
     }
 
-    if((cy + y) >= 0 && (cy + y) < gm->getHeight())
+    if((cy + y) >= 0 && (cy + y) < gm->getHeight()) // déplacement vertical
     {
         if(gm->isWalkable(cx, cy + y)) cy += y;
     }

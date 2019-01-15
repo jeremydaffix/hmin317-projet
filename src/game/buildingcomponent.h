@@ -6,18 +6,22 @@
 //#include <game/imaginawars.h>
 //#include <game/soldier.h>
 
+// classe componsant pour les bâtiments
+// en fonction du type de bâtiment (knight, archer, fée) sélectionné,
+// une unité est générée tous les 5s
 
 class BuildingComponent : public Component
 {
 public:
 
+    // types de bâtiments possibles
     enum TYPE_BUILDING {
 
-        TYPE_KNIGHT,
-        TYPE_FAIRY,
-        TYPE_ARCHER,
-        TYPE_TECHNO,
-        TYPE_TOWER,
+        TYPE_KNIGHT, // fantassin, fort contre archers
+        TYPE_FAIRY, // fée (unité volante), forte contre fantassins
+        TYPE_ARCHER, // archer, fort contre fée
+        TYPE_TECHNO, // pas implémenté : bâtiment technologique
+        TYPE_TOWER, // pas implémenté : tour de défense
         TYPE_BUILDING_LENGTH
     };
 
@@ -30,6 +34,8 @@ public:
 
     void NextBuilding();
 
+    // vie du bâtiment à 0 = on le détruit
+    // but = détruire les bâtiments adverses
     int getLife() const;
     void setLife(int value);
 

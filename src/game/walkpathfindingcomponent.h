@@ -8,6 +8,10 @@
 #include <game/soldier.h>
 
 
+// classe de composant contenant le pathfinding et le mouvement d'un soldat
+// utilise la map des cases d'obstacle de la gamemap
+
+
 class WalkPathfindingComponent : public Component
 {
 public:
@@ -28,8 +32,8 @@ protected:
     Soldier *soldier = NULL;
     ImaginaWars *iw = NULL;
 
-    bool isPosFree(QVector3D pos);
-    void moveTowards(QVector2D dir);
+    bool isPosFree(QVector3D pos); // position non prise par un autre gus ?
+    void moveTowards(QVector2D dir); // se déplacer dans une direction
 };
 
 

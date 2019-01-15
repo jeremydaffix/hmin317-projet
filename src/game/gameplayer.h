@@ -16,6 +16,9 @@
 class BuildingComponent;
 class GameMap;
 
+// classe représentant un joueur
+// il peut s'agir d'un joueur humain ou d'une AI
+
 class GamePlayer
 {
 public:
@@ -32,14 +35,19 @@ public:
 
     std::string getName();
 
+    // ses bâtiments
     BuildingComponent *getBuilding(int i) const;
     void setBuilding(int i, BuildingComponent *value);
 
+    // ses cibles
     QVector2D getPosTarget(int i) const;
     void setPosTarget(int i, const QVector2D &value);
 
+    // essayer de bouger une des targets
+    // (prend en compte les obstacles, on ne peut pas mettre la target sur un obstacle ou sortir de la map !)
     QVector2D tryMoveTarget(int i, int x, int y, GameMap *gm);
 
+    // numéro de joueur unique
     int getNumPlayer() const;
     void setNumPlayer(int value);
 
@@ -51,8 +59,8 @@ protected:
     QVector2D posTarget[2];
     BuildingComponent *building[2];
 
-    EnemyAIComponent *enemyAI;
-    GameObject enemyAIGO;
+    EnemyAIComponent *enemyAI; // composant ai ennemi
+    GameObject enemyAIGO; // gameobject auquel attacher ce composant
 
 };
 

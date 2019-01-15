@@ -3,6 +3,7 @@
 
 #include <engine/sprite.h>
 
+// composant de test
 
 class DebugComponent : public Component
 {

@@ -41,14 +41,14 @@ void BuildingComponent::fixedUpdate()
 
     sprite = (Sprite*)getContainer();
 
-    if(cptFrames % turnDuration == (turnDuration - 1))
+    if(cptFrames % turnDuration == (turnDuration - 1)) // seulement toutes les x secondes : on génére une unité
     {
         //qDebug() << "GENERATE UNIT " << type << " - " << QString(player->getName().c_str());
 
-        int decal = player->getNumPlayer() == 0 ? -0.8 : 1.5;
+        int decal = player->getNumPlayer() == 0 ? -0.8 : 1.5; // pour ne pas poper sur le bâtiment
         Soldier *soldier;
 
-        if(type == TYPE_KNIGHT)
+        if(type == TYPE_KNIGHT) // création fantassin
         {
              soldier = new Soldier(Soldier::TYPE_KNIGHT, player, gameMap, player->getPosTarget(id), NULL,
                                          QVector3D(sprite->getLocalPosition().x() + decal, sprite->getLocalPosition().y() + 0.5, 0.02),
@@ -60,7 +60,7 @@ void BuildingComponent::fixedUpdate()
 
         }
 
-        else if(type == TYPE_FAIRY)
+        else if(type == TYPE_FAIRY) // création fée
         {
              soldier = new Soldier(Soldier::TYPE_FAIRY, player, gameMap, player->getPosTarget(id), NULL,
                                          QVector3D(sprite->getLocalPosition().x() +  decal, sprite->getLocalPosition().y() + 0.5, 0.02),
@@ -72,7 +72,7 @@ void BuildingComponent::fixedUpdate()
 
         }
 
-        else if(type == TYPE_ARCHER)
+        else if(type == TYPE_ARCHER) // création archer
         {
              soldier = new Soldier(Soldier::TYPE_ARCHER, player, gameMap, player->getPosTarget(id), NULL,
                                          QVector3D(sprite->getLocalPosition().x() +  decal, sprite->getLocalPosition().y() + 0.5, 0.02),
@@ -84,7 +84,7 @@ void BuildingComponent::fixedUpdate()
 
         }
 
-        else {
+        else { // TODO : gérer ici les autres bâtiments (tours, bâtiments technologiques,...)
 
 
         }
@@ -98,7 +98,7 @@ void BuildingComponent::fixedUpdate()
     ++cptFrames;
 }
 
-void BuildingComponent::NextBuilding()
+void BuildingComponent::NextBuilding() // sélectionner le prochain type de bâtiment
 {
     //type = (TYPE_BUILDING) ((type + 1) % TYPE_BUILDING_LENGTH);
     type = (TYPE_BUILDING) ((type + 1) % 3); // pour le moment on ne gère pas bâtiment technologique et tour de garde
@@ -106,7 +106,7 @@ void BuildingComponent::NextBuilding()
     refreshTexture(); // change la texture en fonction du nouveau type de bâtiment
 }
 
-void BuildingComponent::refreshTexture()
+void BuildingComponent::refreshTexture() // sélectionner et afficher la bonne texture du bâtiment selon son type
 {
     if(sprite != NULL) switch(type)
     {

@@ -86,7 +86,7 @@ void SoldierAIComponent::fixedUpdate()
 
             if(soldier->getType() == Soldier::TYPE_ARCHER)
             {
-                qse.setVolume(0.45);
+                qse.setVolume(0.70);
 
                 if(cptFrames % 50 == 0)
                 {
@@ -122,6 +122,8 @@ void SoldierAIComponent::fixedUpdate()
 
             else if(soldier->getType() == Soldier::TYPE_FAIRY)
             {
+                qse.setVolume(0.55);
+
                 if(cptFrames % 120 == 0)
                 {
                     qse.stop();

@@ -267,6 +267,9 @@ void GameMap::initWalkableMap()
 
     std::vector<int> traversable;
 
+    // on créée le tableau utilisé par la lib de pathfinding
+    // 1 = walkable
+    // 0 = obstacle
     for (int i = 0; i < width; i++)
     {
         for (int j = 0; j < height; j++)

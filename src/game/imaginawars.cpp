@@ -63,16 +63,21 @@ void ImaginaWars::startGame()
 {
     qDebug() << "IMAGINA WARS";
 
-    /*GameMap */gameMap = new GameMap(":/resources/game/maps/test.json");
+    // chargement et affichage de la carte + tableau des obstacles
+    gameMap = new GameMap(":/resources/game/maps/test.json");
     gameMap->setLocalPosition(QVector3D(0.5,0.5,0));
-    gameMap->setShader(ResourcesManager::getInstance()->getGameShader("texturedark"));
+    gameMap->setShader(ResourcesManager::getInstance()->getGameShader("texturedark")); // pour l'intégration graphique
     gameMap->BuildMap();
-    GameScene::getInstance()->addChild(gameMap);
+    GameScene::getInstance()->addChild(gameMap); // on ajoute tout ça au graph de scène
 
 
     player1->setPosTarget(0, QVector2D(7,9));
     player1->setPosTarget(1, QVector2D(7,5));
 
+    player2->setPosTarget(0, QVector2D(12, 4));
+    player2->setPosTarget(1, QVector2D(12, 6));
+
+    // sprites pour les targets du joueur humain
     target1 = new Sprite("targetred1", QVector3D(gameMap->caseToPos(player1->getPosTarget(0))), 0, QVector2D(0.1,0.1));
     target2 = new Sprite("targetred2", QVector3D(gameMap->caseToPos(player1->getPosTarget(1))), 0, QVector2D(0.1,0.1));
 
@@ -91,11 +96,11 @@ void ImaginaWars::startGame()
 
     initSounds();
 
-    ResourcesManager::getInstance()->getGameSound("battlecry")->play();
+    ResourcesManager::getInstance()->getGameSound("battlecry")->play(); // un petit cri de guerre pour mettre dans l'ambiance
 
     // musique de fond
 
-    ResourcesManager::getInstance()->playBackgroundMusic("qrc:/resources/sounds/battleThemeA.mp3");
+    ResourcesManager::getInstance()->playBackgroundMusic("qrc:/resources/sounds/battleThemeA.mp3"); // en boucle
 
 }
 

@@ -32,11 +32,7 @@ void EffectSpriteComponent::fixedUpdate()
         {
             sprite = (Sprite*)getContainer();
 
-            //initialShader = sprite->getShader();
-            //initialShader = ResourcesManager::getInstance()->getGameShader("texturedark");
-
-            //sprite->setShader(ResourcesManager::getInstance()->getGameShader("texture"));
-            sprite->setShader(effectShader);
+            sprite->setShader(effectShader); // shader de highlight
 
             //qDebug() << "EFFECT SHADER" << effectShader;
         }
@@ -49,7 +45,7 @@ void EffectSpriteComponent::fixedUpdate()
     if(cptFrames > frames) // fin de l'animation
     {
         //qDebug() << "ESC OVER";
-        sprite->setShader(initialShader);
+        sprite->setShader(initialShader); // on remet le shader initial
         getContainer()->removeComponent(this); // libéré ensuite par le gameobject
     }
 

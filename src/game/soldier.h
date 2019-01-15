@@ -22,9 +22,19 @@
 class WalkPathfindingComponent;
 
 
+// classe gameobject représentant un soldat
+// il peut être de différents types (fantassin, archer, fée)
+// les différents components lui sont attachés :
+// pathfinding, gestion de l'intelligence de combat, animations,...
+
+
+
+
 // un peu de metaprogrammation pour éviter d'avoir à définir 8 états (pour 8 directions)
 // pour chaque type d'animation :)
+// pour économiser PLEIN de lignes de code à copier / coller !
 
+// pour les états d'une animation (walking north, walking south,...)
 #define STATE_ANIM_GEN(stateName) \
     STATE_##stateName##_N, \
     STATE_##stateName##_NE, \
@@ -35,6 +45,7 @@ class WalkPathfindingComponent;
     STATE_##stateName##_W, \
     STATE_##stateName##_NW
 
+// pour la création des animations, de chaque côté
 #define CREATE_ANIM_GEN(animName, animPrefix, speed) \
     animName##N = createAnim(name + "_" + #animPrefix + "_n_", speed); \
     animName##NE = createAnim(name + "_" + #animPrefix + "_ne_", speed); \
@@ -45,9 +56,12 @@ class WalkPathfindingComponent;
     animName##W = createAnim(name + "_" + #animPrefix + "_w_", speed); \
     animName##NW = createAnim(name + "_" + #animPrefix + "_nw_", speed);
 
+// pour définir les components (8 par type d'animation, donc)
 #define DEF_ANIM_GEN(animName) \
     SpriteAnimationComponent *animName##N, *animName##NE, *animName##E, *animName##SE, *animName##S, *animName##SW, *animName##W, *animName##NW;
 
+
+// pour désactiver toutes les animations d'un certain type
 #define DISABLE_ANIM_GEN(animName) \
     animName##N->setEnabled(false); \
     animName##NE->setEnabled(false); \
@@ -58,6 +72,8 @@ class WalkPathfindingComponent;
     animName##W->setEnabled(false); \
     animName##NW->setEnabled(false);
 
+
+// pour activer la bonne animation
 #define SELECT_ANIM_GEN(stateName, animName) \
     if(currentState == STATE_##stateName##_N) animName##N->setEnabled(true); \
     if(currentState == STATE_##stateName##_NE) animName##NE->setEnabled(true); \
@@ -76,14 +92,13 @@ class Soldier : public Sprite
 {
 public:
 
-    enum TYPE_SOLDIER {
-
+    enum TYPE_SOLDIER { // type de soldat
         TYPE_KNIGHT,
         TYPE_FAIRY,
         TYPE_ARCHER
     };
 
-    enum STATE_ANIM {
+    enum STATE_ANIM { // type pour l'état actuel de l'animation (exemple : marcher au nord)
 
         STATE_ANIM_GEN(LOOKING),
         STATE_ANIM_GEN(WALK),
@@ -99,9 +114,9 @@ public:
 
     TYPE_SOLDIER getType() const;
 
-    void selectStateWalk(QVector2D dir);
-    void selectStateLooking(QVector2D dir);
-    void selectStateAttack(QVector2D dir);
+    void selectStateWalk(QVector2D dir); // choisir la bonne direction d'anim walk
+    void selectStateLooking(QVector2D dir); // choisir la bonne direction d'anim idle
+    void selectStateAttack(QVector2D dir); // choisir la bonne direction d'anim attack
 
     void selectAnim();
 
@@ -126,7 +141,7 @@ protected:
 
     TYPE_SOLDIER type;
 
-    SpriteAnimationComponent *createAnim(string name, int speed);
+    SpriteAnimationComponent *createAnim(string name, int speed); // pour créer un component d'animation d'un certain type (walk,...)
 
     STATE_ANIM currentState;
 

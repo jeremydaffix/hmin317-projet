@@ -25,13 +25,9 @@ void WalkPathfindingComponent::fixedUpdate()
         QVector2D pos2 = QVector2D(pos.x(), pos.y());
         QVector2D cas = gameMap->posToCase(pos2);
 
-        //QVector2D targetCase = QVector2D(5,4);
-
-
         if(path.size() == 0) // calcul d'un nouveau chemin
         {
             path = gameMap->calcPath(cas, gameMap->posToCase(targetPos));
-
         }
 
 
@@ -46,8 +42,6 @@ void WalkPathfindingComponent::fixedUpdate()
 
             dir = (gameMap->caseToPos(next) - pos2).normalized(); // direction vers la prochaine position du chemin
 
-            //getContainer()->setLocalPosition(pos + dir / 150. * 5.); // on avance dans cette direction
-            //soldier->selectStateWalk(dir);
             moveTowards(dir);
 
             if((path.size() > 1 && next == cas) || // arrivé dans la case du point suivant
@@ -76,8 +70,6 @@ void WalkPathfindingComponent::fixedUpdate()
         {
             //qDebug("FINISHED ! :)");
 
-            //soldier->setLife(0); // finalement on les laisse un peu à l'arrivée pour éventuellement taper les bâtiments
-
             soldier->disableAnims();
         }
     }
@@ -87,7 +79,7 @@ void WalkPathfindingComponent::fixedUpdate()
 
 
 
-QVector2D WalkPathfindingComponent::getTargetPos() const
+QVector2D WalkPathfindingComponent::getTargetPos() const // position vers laquelle on va (ne change pas même si la target bouge ensuite)
 {
     return gameMap->posToCase(targetPos);
 }
@@ -122,14 +114,14 @@ void WalkPathfindingComponent::moveTowards(QVector2D dir)
     QVector3D pos = getContainer()->getLocalPosition();
     QVector3D newPos = (pos + dir / 150. * 4.);
 
-    if(isPosFree(newPos)) {
+    if(isPosFree(newPos)) { // position libre ?
 
         getContainer()->setLocalPosition(newPos); // on avance dans cette direction
 
         soldier->selectStateWalk(dir);
     }
 
-    else {
+    else { // sinon on se pose oklm
 
         //moveTowards(QVector2D(dir.x(), -dir.y()));
         soldier->disableAnims();

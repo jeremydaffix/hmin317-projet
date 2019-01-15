@@ -28,7 +28,7 @@ void LifeComponent::fixedUpdate()
     //sprite->setLocalPosition(soldier->getLocalPosition() + QVector3D( - ((0.04 - w) / 2.) ,0.30, 0));
     sprite->setLocalScale(QVector2D(w, 0.007));
 
-    if(cptFrames % (60) == 0) soldier->setLife(life - 3); // malus toutes les s
+    if(cptFrames % (60) == 0) soldier->setLife(life - 3); // malus toutes les secondes
 
     ++cptFrames;
 }

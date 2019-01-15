@@ -26,10 +26,6 @@ void EnemyAIComponent::fixedUpdate()
     if(getContainer() == NULL) return;
 
 
-    //player1->getBuilding(0)->NextBuilding();
-    //player1->tryMoveTarget(1, 0, 1, gameMap);
-
-
     if(cptFrames % 60 == 0 && gameMap->getIsInitialized() /*&& gameMap->getWidth() > 0*/)
     {
         //qDebug() << "AI ENEMY";

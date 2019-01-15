@@ -6,6 +6,10 @@
 
 class Soldier;
 
+// classe de composant gérant la vie d'un soldat
+// elle s'occupe du sprite d'affichage de la vie
+// et du "malus temporel"
+
 class LifeComponent : public Component
 {
 public:

@@ -5,6 +5,10 @@
 #include <engine/sprite.h>
 
 
+// classe composant à associer à un Sprite
+// permet d'activer un effet graphique
+// pour le moment : seulement highlight
+
 class EffectSpriteComponent : public Component
 {
 public:

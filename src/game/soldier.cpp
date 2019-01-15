@@ -244,7 +244,7 @@ void Soldier::die()
     //qse.setSource(QUrl(QString("qrc:/resources/sounds/Battlecry.wav")));
     qse.setSource(QUrl(QString("qrc:/resources/sounds/ghost.wav")));
     qse.setVolume(0.30);
-    qse.play();
+    //qse.play();
 
 }
 

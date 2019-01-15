@@ -12,6 +12,10 @@
 #include <iomanip>
 
 
+// classe principale du jeu
+// hérite de Game et doit redéfinir certaines fonctions (initialisations,...)
+
+
 class ImaginaWars : public Game
 {
 public:
@@ -35,9 +39,12 @@ public:
     void unregisterBuilding(BuildingComponent *b);
 
 
+    // liste des soldats utilisée pour que les soldats ne se marchent pas dessus les uns les autres
+    // + pour la détection d'ennemis
     std::list<Soldier *> getSoldiers() const;
     void setSoldiers(const std::list<Soldier *> &value);
 
+    // liste des bâtiments utilisée pour détecter les bâtiments ennemis à proximité
     std::list<BuildingComponent *> getBuildings() const;
     void setBuildings(const std::list<BuildingComponent *> &value);
 
