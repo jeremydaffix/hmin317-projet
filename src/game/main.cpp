@@ -75,7 +75,9 @@ int main(int argc, char *argv[])
 #ifndef QT_NO_OPENGL
 
    ImaginaWars game;
-   game.show();
+   //game.show();
+   //game.showFullScreen();
+   game.showMaximized();
 
 
 #else

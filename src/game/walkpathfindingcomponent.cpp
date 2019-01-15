@@ -1,8 +1,12 @@
 #include "walkpathfindingcomponent.h"
 
+#include <game/imaginawars.h>
+
+
 WalkPathfindingComponent::WalkPathfindingComponent(GameMap *gm)
 {
     gameMap = gm;
+    iw = (ImaginaWars *)ImaginaWars::getInstance();
 
     targetPos = QVector2D(0,0);
 }
@@ -62,8 +66,6 @@ void WalkPathfindingComponent::fixedUpdate()
         {
             dir = (targetPos - QVector2D(getContainer()->getLocalPosition().x(), getContainer()->getLocalPosition().y())).normalized();
 
-            //getContainer()->setLocalPosition(getContainer()->getLocalPosition() + dir / 150.);
-            //soldier->selectStateWalk(dir);
             moveTowards(dir);
         }
 
@@ -72,11 +74,11 @@ void WalkPathfindingComponent::fixedUpdate()
 
         if(path.size() == 0 && getContainer()->getLocalPosition().distanceToPoint(targetPos) <= 0.05)
         {
-            //qDebug() << getContainer()->getLocalPosition().distanceToPoint(targetPos);
-             //((Soldier*)getContainer())->selectStateLooking(dir);
             //qDebug("FINISHED ! :)");
 
-            soldier->setLife(0);
+            //soldier->setLife(0); // finalement on les laisse un peu à l'arrivée pour éventuellement taper les bâtiments
+
+            soldier->disableAnims();
         }
     }
 
@@ -99,43 +101,37 @@ void WalkPathfindingComponent::setTargetPos(const QVector2D &value) // on passe 
 
 bool WalkPathfindingComponent::isPosFree(QVector3D pos)
 {
-    /*float nearestDist = 999999.;
-    Soldier *nearestSoldier = NULL;
+    std::list<Soldier*> soldiers = iw->getSoldiers();
+    std::list<Soldier*>::iterator it;
 
     for (it = soldiers.begin( ); it != soldiers.end(); ++it)
     {
-        if((*it)->getPlayer()->getNumPlayer() != soldier->getPlayer()->getNumPlayer()) // ennemi !!!
-        {
+        float dist = (*it)->getLocalPosition().distanceToPoint(pos);
 
+        if((*it) != soldier && dist <= 0.1) return false; // déja quelqu'un trop près
+    }
 
-            float dist = (*it)->getLocalPosition().distanceToPoint(soldier->getLocalPosition());
+    // MARCHE MAIS ENGENDRE DES QUEUES
 
-
-            if(dist <= 0.5) { // on est suffisamment prets pour se fighter
-
-                if(dist < nearestDist) { // plus prets que les autres ennemis
-
-                    nearestDist = dist;
-                    nearestSoldier = (*it);
-                }
-            }
-        }
-
-    }*/
-
-    return true;
+    return true; // c'est bon on peut avancer
 }
 
 
 void WalkPathfindingComponent::moveTowards(QVector2D dir)
 {
     QVector3D pos = getContainer()->getLocalPosition();
-    QVector3D newPos = (pos + dir / 150. * 5.);
+    QVector3D newPos = (pos + dir / 150. * 4.);
 
     if(isPosFree(newPos)) {
 
         getContainer()->setLocalPosition(newPos); // on avance dans cette direction
 
         soldier->selectStateWalk(dir);
+    }
+
+    else {
+
+        //moveTowards(QVector2D(dir.x(), -dir.y()));
+        soldier->disableAnims();
     }
 }

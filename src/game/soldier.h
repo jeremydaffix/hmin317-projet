@@ -105,6 +105,8 @@ public:
 
     void selectAnim();
 
+    void disableAnims();
+
     int getLife();
     void setLife(int l);
 
@@ -133,6 +135,8 @@ protected:
     int life = 100;
 
     Sprite *lifeSprite;
+
+    QSoundEffect qse; // pour pouvoir faire jouer le même qse par plusieurs soldats en même temps
 };
 
 #endif // SOLDIER_H

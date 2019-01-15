@@ -48,7 +48,10 @@ void GameObject::removeChild(GameObject *child)
     //if(std::find(children.begin(), children.end(), child) != children.end()) children.erase(std::find(children.begin(), children.end(), child));
 
     auto pos = std::find(children.begin(), children.end(), child);
-    if(pos != children.end()) children.erase(pos);
+    if(pos != children.end())
+    {
+        children.erase(pos);
+    }
 
     child->setParent(NULL);
 
@@ -143,7 +146,7 @@ void GameObject::fixedUpdate()
     }
 
 
-    // ensuite on passage le message à la suite de la hiérarchie
+    // ensuite on passe le message à la suite de la hiérarchie
 
     std::list<GameObject*>::iterator it;
     for (it = children.begin(); it != children.end(); ++it)
@@ -163,10 +166,10 @@ void GameObject::destroy()
     for (itComp = l.begin() ; itComp != l.end(); ++itComp)
     {
         (*itComp)->setEnabled(false);
-        delete (*itComp);
+        //delete (*itComp);
     }
 
-    components.clear();
+    components.clear(); // clear() appelle aussi les delete
 
 
     // libération des gameobjects enfants
@@ -175,10 +178,10 @@ void GameObject::destroy()
     for (it = children.begin(); it != children.end(); ++it)
     {
         (*it)->destroy();
-        delete (*it);
+        //delete (*it);
     }
 
-    children.clear();
+    children.clear(); // clear() appelle aussi les delete
 }
 
 // ***

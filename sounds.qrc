@@ -1,0 +1,54 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/sounds/battleThemeA.mp3</file>
+        <file>resources/sounds/battle_sound_effects_0/battle_sound_effects/Bow.wav</file>
+        <file>resources/sounds/battle_sound_effects_0/battle_sound_effects/swish_2.wav</file>
+        <file>resources/sounds/battle_sound_effects_0/battle_sound_effects/swish_3.wav</file>
+        <file>resources/sounds/battle_sound_effects_0/battle_sound_effects/swish_4.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/magic1.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/spell.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/swing.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/swing2.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/swing3.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/sword-unsheathe.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/sword-unsheathe2.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/sword-unsheathe3.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/sword-unsheathe4.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/sword-unsheathe5.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/interface/interface1.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/interface/interface2.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/interface/interface3.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/interface/interface4.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/interface/interface5.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/interface/interface6.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/armor-light.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/beads.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/bottle.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/bubble.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/bubble2.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/bubble3.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/chainmail1.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/chainmail2.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/cloth-heavy.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/cloth.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/coin.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/coin2.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/coin3.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/metal-ringing.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/metal-small1.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/metal-small2.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/metal-small3.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/wood-small.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/misc/burp.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/misc/random1.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/misc/random2.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/misc/random3.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/misc/random4.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/misc/random5.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/misc/random6.wav</file>
+        <file>resources/sounds/Battlecry.wav</file>
+        <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/sword-unsheathe2_44.wav</file>
+        <file>resources/sounds/qubodupImpactMetal.wav</file>
+        <file>resources/sounds/ghost.wav</file>
+    </qresource>
+</RCC>

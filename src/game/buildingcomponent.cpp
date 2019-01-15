@@ -25,7 +25,7 @@ BuildingComponent::BuildingComponent(BuildingComponent::TYPE_BUILDING t, int i, 
 
 BuildingComponent::~BuildingComponent()
 {
-    ((ImaginaWars*)ImaginaWars::getInstance())->unregisterBuilding(this);
+    //((ImaginaWars*)ImaginaWars::getInstance())->unregisterBuilding(this); // pas besoin car supprimé par graph de scene
 }
 
 
@@ -89,6 +89,8 @@ void BuildingComponent::fixedUpdate()
 
         }
 
+        ResourcesManager::getInstance()->getGameSound("interface4")->play();
+
         //cptFrames = -99999; // debug
     }
 
@@ -98,7 +100,8 @@ void BuildingComponent::fixedUpdate()
 
 void BuildingComponent::NextBuilding()
 {
-    type = (TYPE_BUILDING) ((type + 1) % TYPE_BUILDING_LENGTH);
+    //type = (TYPE_BUILDING) ((type + 1) % TYPE_BUILDING_LENGTH);
+    type = (TYPE_BUILDING) ((type + 1) % 3); // pour le moment on ne gère pas bâtiment technologique et tour de garde
 
     refreshTexture(); // change la texture en fonction du nouveau type de bâtiment
 }

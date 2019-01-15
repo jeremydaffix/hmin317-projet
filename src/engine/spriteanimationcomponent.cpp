@@ -65,6 +65,6 @@ void SpriteAnimationComponent::addTexture(QOpenGLTexture *t)
 
 void SpriteAnimationComponent::clearTextures()
 {
-    textures.clear();
+    textures.clear(); ////
 }
 

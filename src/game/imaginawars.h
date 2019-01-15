@@ -46,6 +46,8 @@ protected:
     void initShaders() override;
     void initTextures() override;
 
+    void initSounds();
+
     void mouseReleaseEvent(QMouseEvent *e) override;
 
 

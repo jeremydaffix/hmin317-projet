@@ -14,7 +14,6 @@
   ameliorer pathfinding : zigzag
 
   component ennemyai
-
   IA ennemi
 
   IA soldats (component soldierai)
@@ -43,6 +42,12 @@
   http://www.reinerstilesets.de/graphics/2d-grafiken/2d-humans/ (public domain)
   https://kenney.nl/assets/medieval-rts (CC0 1.0 Universal)
 
+  https://opengameart.org/content/battle-sound-effects (CC0)
+  https://opengameart.org/content/battlecry (CC By 3.0)
+  https://opengameart.org/content/rpg-sound-pack (CC0)
+  https://opengameart.org/content/impact (CC0)
+  https://opengameart.org/content/ghost (CC0)
+
   https://github.com/quantumelixir/pathfinding
 
  */
@@ -69,17 +74,6 @@ void ImaginaWars::startGame()
     gameMap->BuildMap();
     GameScene::getInstance()->addChild(gameMap);
 
-    //gm->calcPath(QVector2D(1, 1), QVector2D(9, 9));
-
-
-    /*spr = new Soldier(Soldier::TYPE_KNIGHT, player1, gameMap, NULL,
-                             QVector2D(0, 0),
-                             0,
-                             QVector2D(0.055, 0.055),
-                             ResourcesManager::getInstance()->getGameShader("texturetoon"));
-
-    GameScene::getInstance()->addChild(spr);*/
-
 
     player1->setPosTarget(0, QVector2D(7,9));
     player1->setPosTarget(1, QVector2D(7,5));
@@ -97,6 +91,16 @@ void ImaginaWars::startGame()
     GameScene::getInstance()->setLocalRotation(QQuaternion::fromEulerAngles(0, 0, 0));
     GameScene::getInstance()->setLocalPosition(QVector3D(0,0,15));
 
+
+    // sons
+
+    initSounds();
+
+    ResourcesManager::getInstance()->getGameSound("battlecry")->play();
+
+    // musique de fond
+
+    ResourcesManager::getInstance()->playBackgroundMusic("qrc:/resources/sounds/battleThemeA.mp3");
 
 }
 
@@ -207,7 +211,54 @@ void ImaginaWars::initTextures()
     // fonts
 
    //ResourcesManager::getInstance()->addGameFont("arial", ResourcesManager::getInstance()->loadFont(":/resources/fonts/arial.ttf"));
-   //ResourcesManager::getInstance()->addGameFont("gameover", ResourcesManager::getInstance()->loadFont(":/resources/fonts/Game-Over.ttf"));
+    //ResourcesManager::getInstance()->addGameFont("gameover", ResourcesManager::getInstance()->loadFont(":/resources/fonts/Game-Over.ttf"));
+}
+
+void ImaginaWars::initSounds()
+{
+    ResourcesManager::getInstance()->addGameSound("battlecry",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/Battlecry.wav", 1.0));
+
+
+    ResourcesManager::getInstance()->addGameSound("bow",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/battle_sound_effects_0/battle_sound_effects/Bow.wav"));
+
+    ResourcesManager::getInstance()->addGameSound("swish2",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/battle_sound_effects_0/battle_sound_effects/swish_2.wav"));
+
+    ResourcesManager::getInstance()->addGameSound("swish3",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/battle_sound_effects_0/battle_sound_effects/swish_3.wav"));
+
+    ResourcesManager::getInstance()->addGameSound("swish4",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/battle_sound_effects_0/battle_sound_effects/swish_4.wav"));
+
+
+    ResourcesManager::getInstance()->addGameSound("sword",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/sword-unsheathe2.wav"));
+
+    ResourcesManager::getInstance()->addGameSound("swing",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/swing.wav"));
+
+    ResourcesManager::getInstance()->addGameSound("spell",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/spell.wav"));
+
+
+
+    ResourcesManager::getInstance()->addGameSound("interface2",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/rpg_sound_pack/RPG Sound Pack/interface/interface2.wav"));
+
+    ResourcesManager::getInstance()->addGameSound("interface4",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/rpg_sound_pack/RPG Sound Pack/interface/interface4.wav"));
+
+
+
+    ResourcesManager::getInstance()->addGameSound("chainmail1",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/chainmail1.wav"));
+
+    ResourcesManager::getInstance()->addGameSound("chainmail2",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/chainmail2.wav"));
+
+
 }
 
 
@@ -288,14 +339,12 @@ void ImaginaWars::registerBuilding(BuildingComponent *b)
 
 void ImaginaWars::unregisterSoldier(Soldier *s)
 {
-    //soldiers.remove(s);
     auto pos = std::find(soldiers.begin(), soldiers.end(), s);
     if(pos != soldiers.end()) soldiers.erase(pos);
 }
 
 void ImaginaWars::unregisterBuilding(BuildingComponent *b)
 {
-    //buildings.remove(b);
     auto pos = std::find(buildings.begin(), buildings.end(), b);
     if(pos != buildings.end()) buildings.erase(pos);
 }
@@ -323,16 +372,22 @@ void ImaginaWars::keyReleaseEvent(QKeyEvent *e)
 {
     QVector3D newPos;
 
+    if(e->key() == Qt::Key_Exit)
+    {
+        this->close();
+    }
 
     // batiments
     switch(e->key())
     {
         case Qt::Key_1:
             player1->getBuilding(0)->NextBuilding();
+            ResourcesManager::getInstance()->getGameSound("chainmail1")->play();
         break;
 
         case Qt::Key_2:
             player1->getBuilding(1)->NextBuilding();
+            ResourcesManager::getInstance()->getGameSound("chainmail2")->play();
         break;
 
         default:
@@ -389,15 +444,25 @@ void ImaginaWars::keyReleaseEvent(QKeyEvent *e)
         break;
     }
 
-    if(fxlight1) target1->addComponent(new EffectSpriteComponent(
-                                       EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.25,
+    if(fxlight1)
+    {
+        target1->addComponent(new EffectSpriteComponent(
+                                       EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.15,
                                        ResourcesManager::getInstance()->getGameShader("texture"),
                                        ResourcesManager::getInstance()->getGameShader("texturelight")));
 
-    else if (fxdark1) target1->addComponent(new EffectSpriteComponent(
-                          EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.25,
+        ResourcesManager::getInstance()->getGameSound("swing")->play();
+    }
+
+    else if (fxdark1)
+    {
+        target1->addComponent(new EffectSpriteComponent(
+                          EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.15,
                           ResourcesManager::getInstance()->getGameShader("texture"),
                           ResourcesManager::getInstance()->getGameShader("texturedark")));
+
+        ResourcesManager::getInstance()->getGameSound("interface2")->play();
+    }
 
 
     // target 2
@@ -449,15 +514,25 @@ void ImaginaWars::keyReleaseEvent(QKeyEvent *e)
         break;
     }
 
-    if(fxlight2) target2->addComponent(new EffectSpriteComponent(
-                                       EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.25,
+    if(fxlight2)
+    {
+        target2->addComponent(new EffectSpriteComponent(
+                                       EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.15,
                                        ResourcesManager::getInstance()->getGameShader("texture"),
                                        ResourcesManager::getInstance()->getGameShader("texturelight")));
 
-    else if (fxdark2) target2->addComponent(new EffectSpriteComponent(
-                          EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.25,
+        ResourcesManager::getInstance()->getGameSound("swing")->play();
+    }
+
+    else if (fxdark2)
+    {
+        target2->addComponent(new EffectSpriteComponent(
+                          EffectSpriteComponent::TYPE_HIGHLIGHT, 60 * 0.15,
                           ResourcesManager::getInstance()->getGameShader("texture"),
                           ResourcesManager::getInstance()->getGameShader("texturedark")));
+
+        ResourcesManager::getInstance()->getGameSound("interface2")->play();
+    }
 }
 
 

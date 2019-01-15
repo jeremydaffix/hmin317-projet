@@ -9,6 +9,9 @@ SoldierAIComponent::SoldierAIComponent(Soldier *s)
 {
     soldier = s;
     iw = (ImaginaWars*)ImaginaWars::getInstance();
+
+    qse.setLoopCount(1);
+    qse.setVolume(0.25);
 }
 
 void SoldierAIComponent::update()
@@ -75,9 +78,57 @@ void SoldierAIComponent::fixedUpdate()
                 else if(soldier->getType() == Soldier::TYPE_FAIRY && nearestSoldier->getType() == Soldier::TYPE_KNIGHT) deg *= 4; // volants forts contre fantassins
 
                 nearestSoldier->setLife(nearestSoldier->getLife() - deg);
+
             }
 
 
+            // SONS DE LA BATAILLE QUI TUE
+
+            if(soldier->getType() == Soldier::TYPE_ARCHER)
+            {
+                qse.setVolume(0.45);
+
+                if(cptFrames % 50 == 0)
+                {
+                    qse.stop();
+                    qse.setSource(QUrl(QString("qrc:/resources/sounds/battle_sound_effects_0/battle_sound_effects/Bow.wav")));
+                    qse.play();
+                }
+            }
+
+            else if(soldier->getType() == Soldier::TYPE_KNIGHT)
+            {
+                if(cptFrames % 75 == 0)
+                {
+                    qse.stop();
+                    qse.setSource(QUrl(QString("qrc:/resources/sounds/qubodupImpactMetal.wav")));
+                    qse.play();
+                }
+
+                else if(cptFrames % 50 == 0)
+                {
+                    qse.stop();
+                    qse.setSource(QUrl(QString("qrc:/resources/sounds/battle_sound_effects_0/battle_sound_effects/swish_4.wav")));
+                    qse.play();
+                }
+
+                else if(cptFrames % 25 == 0)
+                {
+                    qse.stop();
+                    qse.setSource(QUrl(QString("qrc:/resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/sword-unsheathe2_44.wav")));
+                    qse.play();
+                }
+            }
+
+            else if(soldier->getType() == Soldier::TYPE_FAIRY)
+            {
+                if(cptFrames % 120 == 0)
+                {
+                    qse.stop();
+                    qse.setSource(QUrl(QString("qrc:/resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/spell.wav")));
+                    qse.play();
+                }
+            }
         }
 
         else // on reprend notre route si plus d'ennemis à proximité

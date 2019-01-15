@@ -43,6 +43,13 @@ ResourcesManager::~ResourcesManager()
 
         delete t.second;
     }*/
+
+    for( const auto& t : gameSounds )
+    {
+        //std::cout << "freeing sound " << t.first << std::endl;
+
+        delete t.second;
+    }
 }
 
 void ResourcesManager::addGameShader(std::string name, QOpenGLShaderProgram *sh)
@@ -53,6 +60,11 @@ void ResourcesManager::addGameShader(std::string name, QOpenGLShaderProgram *sh)
 void ResourcesManager::addGameTexture(std::string name, QOpenGLTexture *tex)
 {
     gameTextures[name] = tex;
+}
+
+void ResourcesManager::addGameSound(std::string name, QSoundEffect *e)
+{
+    gameSounds[name] = e;
 }
 
 /*void ResourcesManager::addGameFont(std::string name, FT_Face *font)
@@ -68,6 +80,11 @@ QOpenGLShaderProgram *ResourcesManager::getGameShader(std::string name)
 QOpenGLTexture *ResourcesManager::getGameTexture(std::string name)
 {
     return gameTextures[name];
+}
+
+QSoundEffect *ResourcesManager::getGameSound(std::string name)
+{
+    return gameSounds[name];
 }
 
 /*FT_Face *ResourcesManager::getGameFont(std::string name)
@@ -130,6 +147,45 @@ QOpenGLShaderProgram *ResourcesManager::loadShader(QString vpath, QString fpath)
 
      return texture;
  }
+
+ QSoundEffect *ResourcesManager::loadSound(std::string path, float v)
+ {
+     // bien MAIS avec une seule instance on ne peut jouer le son qu'une seule fois en même temps !
+     // si besoin de jouer le même son plusieurs fois en même temps
+     // -> directement utiliser des QSoundEffect dans le jeu
+
+     QSoundEffect *effect = new QSoundEffect();
+     effect->setSource(QUrl(QString(path.c_str())));
+     effect->setLoopCount(1);
+     effect->setVolume(v);
+     //effect->play();
+
+     return effect;
+ }
+
+ void ResourcesManager::playBackgroundMusic(std::string path, int v)
+ {
+     qmp.stop();
+     qmpl.clear();
+
+     qmp.setVolume(v);
+
+     qmpl.addMedia(QUrl(QString(path.c_str())));
+     //qmpl.setCurrentIndex(0);
+     qmpl.setPlaybackMode(QMediaPlaylist::Loop);
+
+     qmp.setPlaylist(&qmpl);
+     qmp.play(); // loop ?
+ }
+
+ /*void ResourcesManager::playSoundEffect(std::string path, float v, int loop)
+ {
+     QSoundEffect effect;
+     effect.setSource(QUrl(QString(path.c_str())));
+     effect.setLoopCount(loop);
+     effect.setVolume(v);
+     effect.play();
+ }*/
 
  /*FT_Face *ResourcesManager::loadFont(std::string path)
  {

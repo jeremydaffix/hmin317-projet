@@ -1,4 +1,4 @@
-QT       += core gui widgets
+QT       += core gui widgets multimedia
 
 TARGET = projet
 TEMPLATE = app
@@ -70,7 +70,8 @@ RESOURCES += \
     textures.qrc \
     shaders.qrc \
     game.qrc \
-    fonts.qrc
+    fonts.qrc \
+    sounds.qrc
 
 LIBS += -lboost_system -lboost_random
 

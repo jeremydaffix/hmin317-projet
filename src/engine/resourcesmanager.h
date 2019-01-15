@@ -6,6 +6,11 @@
 #include <QOpenGLTexture>
 #include <QOpenGLShaderProgram>
 
+#include <QtMultimedia/QMediaPlayer>
+#include <QtMultimedia/QMediaPlaylist>
+#include <QtMultimedia/QSoundEffect>
+
+
 //#include <ft2build.h>
 //#include FT_FREETYPE_H
 
@@ -26,10 +31,12 @@ public:
     void addGameShader(std::string name, QOpenGLShaderProgram* sh);
     void addGameTexture(std::string name, QOpenGLTexture* tex);
     //void addGameFont(std::string name, FT_Face* font);
+    void addGameSound(std::string name, QSoundEffect * e);
 
     QOpenGLShaderProgram* getGameShader(std::string name);
     QOpenGLTexture* getGameTexture(std::string name);
     //FT_Face * getGameFont(std::string name);
+    QSoundEffect *getGameSound(std::string name);
 
 
     // raccourci pour charger un shader
@@ -42,9 +49,16 @@ public:
     // raccourci pour charger une police
     //FT_Face *loadFont(std::string path);
 
+    // raccourci pour charger un son
+    QSoundEffect *loadSound(std::string path, float v = 0.65);
+
 
     // transformer un texte en texture
     //QOpenGLTexture *createTextureFromText(std::string txt, int size, FT_Face *font);
+
+
+    void playBackgroundMusic(std::string path, int v = 40);
+    //void playSoundEffect(std::string path, float v = 0.75, int loop = 1);
 
 protected:
     static ResourcesManager *instance;
@@ -56,6 +70,10 @@ protected:
     std::unordered_map<std::string, QOpenGLShaderProgram*> gameShaders;
     std::unordered_map<std::string, QOpenGLTexture*> gameTextures;
     //std::unordered_map<std::string, FT_Face*> gameFonts;
+    std::unordered_map<std::string, QSoundEffect*> gameSounds;
+
+    QMediaPlayer qmp;
+    QMediaPlaylist qmpl;
 
     //FT_Library ft;
 

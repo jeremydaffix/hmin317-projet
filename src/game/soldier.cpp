@@ -59,13 +59,17 @@ Soldier::Soldier(TYPE_SOLDIER t, GamePlayer *p, GameMap *gm, QVector2D goTo, QOp
     createGeometry();
 
     ((ImaginaWars*)ImaginaWars::getInstance())->registerSoldier(this);
+
+
+    qse.setLoopCount(1);
+    qse.setVolume(0.65);
 }
 
 Soldier::~Soldier()
 {
     qDebug() << "DESTROYING SOLDIER";
 
-    ((ImaginaWars*)ImaginaWars::getInstance())->unregisterSoldier(this);
+    //((ImaginaWars*)ImaginaWars::getInstance())->unregisterSoldier(this); // pas besoin car supprimé par graph de scene
 }
 
 WalkPathfindingComponent *Soldier::getPathfinding() const
@@ -185,13 +189,18 @@ void Soldier::selectStateAttack(QVector2D dir)
 
 void Soldier::selectAnim()
 {
-    DISABLE_ANIM_GEN(walk)
-    DISABLE_ANIM_GEN(looking)
-    DISABLE_ANIM_GEN(attack)
+    disableAnims();
 
     SELECT_ANIM_GEN(WALK, walk)
     SELECT_ANIM_GEN(LOOKING, looking)
     SELECT_ANIM_GEN(ATTACK, attack)
+}
+
+void Soldier::disableAnims()
+{
+    DISABLE_ANIM_GEN(walk)
+    DISABLE_ANIM_GEN(looking)
+    DISABLE_ANIM_GEN(attack)
 }
 
 
@@ -202,6 +211,8 @@ int Soldier::getLife()
 
 void Soldier::setLife(int l)
 {
+    if(life <= 0) return; // éviter de mourir plusieurs fois
+
     if (l <= 0)
     {
         life = 0;
@@ -216,9 +227,24 @@ void Soldier::die()
 {
     //qDebug("RIP");
 
-    //destroy(); // suppression contenu (components et enfants)
+    ((ImaginaWars*)ImaginaWars::getInstance())->unregisterSoldier(this); // on doit supprimer de la liste AVANT de supprimer l'objet
+
+    // on laisse un corps qu'on tourne
+    // et on nettoie les components / children / ...
+
+    destroy(); // suppression contenu (components et enfants)
     //GameScene::getInstance()->removeChild(this); // on enleve de la scene
     //delete this;
+
+
+    setLocalRotation(QQuaternion::fromEulerAngles(QVector3D(0,0,90)));
+
+    //ResourcesManager::getInstance()->getGameSound("battlecry")->play();
+    //qse.setSource(QUrl(QString("qrc:/resources/sounds/Battlecry.wav")));
+    qse.setSource(QUrl(QString("qrc:/resources/sounds/ghost.wav")));
+    qse.setVolume(0.30);
+    qse.play();
+
 }
 
 
