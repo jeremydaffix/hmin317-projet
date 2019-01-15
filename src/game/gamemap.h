@@ -41,12 +41,15 @@ public:
 
     void HighlightTile(int, int x);
 
+    bool getIsInitialized() const;
+
 protected:
     Sprite* addSprite(std::string name, int caseX, int caseY, int rot = 0, float z = 0.00);
-    int width, height;
+    int width = 0, height = 0;
     QString path;
     unsigned char* walkableMap = NULL;
     void initWalkableMap();
+    bool isInitialized = false;
 };
 
 #endif // GAMEMAP_H

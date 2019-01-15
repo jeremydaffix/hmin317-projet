@@ -238,6 +238,7 @@ void Soldier::die()
 
 
     setLocalRotation(QQuaternion::fromEulerAngles(QVector3D(0,0,90)));
+    setLocalPosition(getLocalPosition() + QVector3D(0,0,-0.01));
 
     //ResourcesManager::getInstance()->getGameSound("battlecry")->play();
     //qse.setSource(QUrl(QString("qrc:/resources/sounds/Battlecry.wav")));

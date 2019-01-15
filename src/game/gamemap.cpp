@@ -164,6 +164,9 @@ void GameMap::BuildMap()
                 walkableMap[width * y + x] = 0;
             }
     }
+
+
+    isInitialized = true;
 }
 
 std::list<QVector2D> GameMap::calcPath(QVector2D start, QVector2D target)
@@ -271,4 +274,9 @@ void GameMap::initWalkableMap()
             walkableMap[width * j + i] = 1;
         }
     }
+}
+
+bool GameMap::getIsInitialized() const
+{
+    return isInitialized;
 }

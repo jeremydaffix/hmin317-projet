@@ -51,7 +51,7 @@ void BuildingComponent::fixedUpdate()
         if(type == TYPE_KNIGHT)
         {
              soldier = new Soldier(Soldier::TYPE_KNIGHT, player, gameMap, player->getPosTarget(id), NULL,
-                                         QVector2D(sprite->getLocalPosition().x() + decal, sprite->getLocalPosition().y() + 0.5),
+                                         QVector3D(sprite->getLocalPosition().x() + decal, sprite->getLocalPosition().y() + 0.5, 0.02),
                                          0,
                                          QVector2D(0.055, 0.055),
                                          ResourcesManager::getInstance()->getGameShader("texturetoon"));
@@ -63,7 +63,7 @@ void BuildingComponent::fixedUpdate()
         else if(type == TYPE_FAIRY)
         {
              soldier = new Soldier(Soldier::TYPE_FAIRY, player, gameMap, player->getPosTarget(id), NULL,
-                                         QVector2D(sprite->getLocalPosition().x() +  decal, sprite->getLocalPosition().y() + 0.5),
+                                         QVector3D(sprite->getLocalPosition().x() +  decal, sprite->getLocalPosition().y() + 0.5, 0.02),
                                          0,
                                          QVector2D(0.070, 0.070),
                                          ResourcesManager::getInstance()->getGameShader("texturetoon"));
@@ -75,7 +75,7 @@ void BuildingComponent::fixedUpdate()
         else if(type == TYPE_ARCHER)
         {
              soldier = new Soldier(Soldier::TYPE_ARCHER, player, gameMap, player->getPosTarget(id), NULL,
-                                         QVector2D(sprite->getLocalPosition().x() +  decal, sprite->getLocalPosition().y() + 0.5),
+                                         QVector3D(sprite->getLocalPosition().x() +  decal, sprite->getLocalPosition().y() + 0.5, 0.02),
                                          0,
                                          QVector2D(0.060, 0.060),
                                          ResourcesManager::getInstance()->getGameShader("texturetoon"));

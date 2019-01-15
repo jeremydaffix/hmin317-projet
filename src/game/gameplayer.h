@@ -10,6 +10,7 @@
 #include <game/effectspritecomponent.h>
 //#<include <game/buildingcomponent.h>
 //#include <game/gamemap.h>
+#include <game/enemyAIComponent.h>
 
 
 class BuildingComponent;
@@ -49,6 +50,9 @@ protected:
 
     QVector2D posTarget[2];
     BuildingComponent *building[2];
+
+    EnemyAIComponent *enemyAI;
+    GameObject enemyAIGO;
 
 };
 

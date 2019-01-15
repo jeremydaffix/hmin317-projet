@@ -15,12 +15,14 @@ GamePlayer::GamePlayer(GamePlayer::TYPE_PLAYER t, int n)
 
     if(type == TYPE_HUMAN)
     {
-        // add component
+        // add component manette
     }
 
     else if(type == TYPE_AI)
     {
-
+        enemyAI = new EnemyAIComponent(this);
+        enemyAIGO.addComponent(enemyAI);
+        GameScene::getInstance()->addChild(&enemyAIGO);
     }
 }
 

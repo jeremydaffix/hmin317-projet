@@ -5,13 +5,11 @@
 
   TODO
 
-  kill soldier (bug global suppression ou pas)
+  bug kill soldier ?
 
-  petit generateur de code (component et gameobject)
+  petit generateur de code (gameobject)
 
-  collisions entre soldats (ou du moins les eviter, check si prochain mvt empiète sur qq1)
-
-  ameliorer pathfinding : zigzag
+  ameliorer pathfinding : zigzag (ou laisser ça donne un genre)
 
   component ennemyai
   IA ennemi
@@ -23,12 +21,9 @@
     sinon continuer vers target initiale
     si arrivés target = s'évaporent (+ perdent 1pv par s, bonus defenseur)
 
-  gestion life (building et soldier)
+  gestion life (building)
 
-  bonus?
-
-  sons
-  musique
+  bonus random sur la map?
 
   integrer manette
 
@@ -372,7 +367,7 @@ void ImaginaWars::keyReleaseEvent(QKeyEvent *e)
 {
     QVector3D newPos;
 
-    if(e->key() == Qt::Key_Exit)
+    if(e->key() == Qt::Key_Escape)
     {
         this->close();
     }

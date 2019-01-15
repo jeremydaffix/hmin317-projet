@@ -5,7 +5,6 @@ TEMPLATE = app
 
 INCLUDEPATH += src/
 INCLUDEPATH += /usr/include/boost/
-INCLUDEPATH += /usr/include/freetype2/
 
 SOURCES += \
     src/engine/component.cpp \
@@ -34,7 +33,8 @@ SOURCES += \
     src/game/humanplayercomponent.cpp \
     src/game/debugcomponent.cpp \
     src/game/lifecomponent.cpp \
-    src/game/soldierAIComponent.cpp
+    src/game/soldierAIComponent.cpp \
+    src/game/enemyAIComponent.cpp
 
 SOURCES +=
 
@@ -64,7 +64,8 @@ HEADERS += \
     src/game/humanplayercomponent.h \
     src/game/debugcomponent.h \
     src/game/lifecomponent.h \
-    src/game/soldierAIComponent.h
+    src/game/soldierAIComponent.h \
+    src/game/enemyAIComponent.h
 
 RESOURCES += \
     textures.qrc \
