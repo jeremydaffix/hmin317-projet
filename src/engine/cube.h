@@ -10,7 +10,8 @@
 class Cube : public Model3D
 {
 public:
-    Cube(QVector3D pos = QVector3D(), QQuaternion rot = QQuaternion(), QVector3D sc = QVector3D(1, 1, 1), QOpenGLShaderProgram* sh = NULL, QOpenGLTexture *tex = NULL);
+    Cube(QVector3D pos = QVector3D(), QQuaternion rot = QQuaternion(), QVector3D sc = QVector3D(1, 1, 1),
+         QOpenGLShaderProgram* sh = NULL, QOpenGLTexture *tex = NULL);
 
     // les 2 méthodes à redéfinir et spécifiques à la création / affichage des sommets du Cube !
     void createGeometry();

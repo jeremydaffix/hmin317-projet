@@ -2,4 +2,4 @@
 *.autosave
 projet.pro.user
 build-Project-Desktop-Debug
-
+build*

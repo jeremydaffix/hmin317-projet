@@ -13,12 +13,18 @@ class Sprite : public Model3D
 public:
 
     // constructeur adapté d'un plan normal avec une texture
-    Sprite(QVector3D pos = QVector3D(), QQuaternion rot = QQuaternion(), QVector3D sc = QVector3D(1, 1, 1), QOpenGLShaderProgram* sh = NULL, QOpenGLTexture *tex = NULL);
+    Sprite(QVector3D pos = QVector3D(), QQuaternion rot = QQuaternion(), QVector3D sc = QVector3D(1, 1, 1),
+           QOpenGLShaderProgram* sh = NULL, QOpenGLTexture *tex = NULL);
 
-    // constructeur plus adapté à une "vision 2D"
-    //Sprite(QString path, QVector2D pos = QVector2D(), float rot = 0, QVector2D sc = QVector2D(1, 1), QOpenGLShaderProgram* sh = NULL);
-    Sprite(std::string name, QVector3D pos = QVector3D(), float rot = 0, QVector2D sc = QVector2D(1, 1), QOpenGLShaderProgram* sh = NULL);
-    Sprite(QOpenGLTexture *tex, QVector3D pos = QVector3D(), float rot = 0, QVector2D sc = QVector2D(1, 1), QOpenGLShaderProgram* sh = NULL);
+
+    // constructeurs plus adaptés à une "vision 2D"
+
+    Sprite(std::string name, QVector3D pos = QVector3D(), float rot = 0, QVector2D sc = QVector2D(1, 1),
+           QOpenGLShaderProgram* sh = NULL);
+
+    Sprite(QOpenGLTexture *tex, QVector3D pos = QVector3D(), float rot = 0, QVector2D sc = QVector2D(1, 1),
+           QOpenGLShaderProgram* sh = NULL);
+
 
     // les 2 méthodes à redéfinir et spécifiques à la création / affichage des sommets du Plan !
     void createGeometry();

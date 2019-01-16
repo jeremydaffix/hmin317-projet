@@ -14,13 +14,6 @@
   component ennemyai
   IA ennemi
 
-  IA soldats (component soldierai)
-    aller en direction target
-    si cible < distance : aller a la plus proche
-    si cible < distance attaque : attaquer (ou capture si neutral?)
-    sinon continuer vers target initiale
-    si arrivés target = s'évaporent (+ perdent 1pv par s, bonus defenseur)
-
   gestion life (building)
 
   bonus random sur la map?
@@ -43,6 +36,8 @@
   https://opengameart.org/content/impact (CC0)
   https://opengameart.org/content/ghost (CC0)
   https://opengameart.org/content/rumbleexplosion (CC By 3.0)
+
+  https://opengameart.org/content/battle-theme-a (CC0)
 
   https://github.com/quantumelixir/pathfinding
 
