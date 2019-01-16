@@ -31,10 +31,13 @@ void main()
 
 
     // modification couleurs
-    float f = 2.25;
-    r = float(int(r * f)) / f;
-    g = float(int(g * f)) / f;
-    b = float(int(b * f)) / f;
+
+    float f = 2.0;
+    float f2 = 0.25;
+
+    r = float(int(r * f)) / f + f2;
+    g = float(int(g * f)) / f + f2;
+    b = float(int(b * f)) / f + f2;
 
     newcol = vec4(r,g,b,a);
 

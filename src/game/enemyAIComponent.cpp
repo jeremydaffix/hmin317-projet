@@ -45,12 +45,12 @@ void EnemyAIComponent::fixedUpdate()
         int r0024 = dist002(rnd);
 
 
-        if(r1001 < 10) {
+        if(r1001 < 20) {
 
             player->getBuilding(r0021)->NextBuilding();
         }
 
-        else if(r1001 < 50)
+        else if(r1001 < 60)
         {
             /*if(r1002 < 25) player->tryMoveTarget(r0021, 0, 1, gameMap);
             else if(r1002 < 50) player->tryMoveTarget(r0021, 0, -1, gameMap);

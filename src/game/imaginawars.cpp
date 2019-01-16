@@ -70,8 +70,11 @@ void ImaginaWars::startGame()
     player1->setPosTarget(0, QVector2D(7,9));
     player1->setPosTarget(1, QVector2D(7,5));
 
-    player2->setPosTarget(0, QVector2D(12, 4));
-    player2->setPosTarget(1, QVector2D(12, 6));
+    //player2->setPosTarget(0, QVector2D(12, 4));
+    //player2->setPosTarget(1, QVector2D(12, 6));
+
+    player2->setPosTarget(0, QVector2D(18, 10));
+    player2->setPosTarget(1, QVector2D(18, 2));
 
     // sprites pour les targets du joueur humain
     target1 = new Sprite("targetred1", QVector3D(gameMap->caseToPos(player1->getPosTarget(0))), 0, QVector2D(0.1,0.1));
