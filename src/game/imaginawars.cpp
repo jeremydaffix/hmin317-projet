@@ -42,6 +42,7 @@
   https://opengameart.org/content/rpg-sound-pack (CC0)
   https://opengameart.org/content/impact (CC0)
   https://opengameart.org/content/ghost (CC0)
+  https://opengameart.org/content/rumbleexplosion (CC By 3.0)
 
   https://github.com/quantumelixir/pathfinding
 
@@ -208,6 +209,13 @@ void ImaginaWars::initTextures()
                                                     ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/custom/lifeorange.png")));
 
 
+    ResourcesManager::getInstance()->addGameTexture("win",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/custom/win.png")));
+
+    ResourcesManager::getInstance()->addGameTexture("lose",
+                                                    ResourcesManager::getInstance()->loadTexture(QString::fromStdString(":/resources/textures/custom/lose.png")));
+
+
     // fonts
 
    //ResourcesManager::getInstance()->addGameFont("arial", ResourcesManager::getInstance()->loadFont(":/resources/fonts/arial.ttf"));
@@ -259,6 +267,11 @@ void ImaginaWars::initSounds()
                                                     ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/rpg_sound_pack/RPG Sound Pack/inventory/chainmail2.wav"));
 
 
+    ResourcesManager::getInstance()->addGameSound("ghost",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/ghost.wav"));
+
+    ResourcesManager::getInstance()->addGameSound("boom",
+                                                    ResourcesManager::getInstance()->loadSound("qrc:/resources/sounds/rumble.wav", 1.0));
 }
 
 
@@ -311,6 +324,8 @@ void ImaginaWars::setBuildings(const std::list<BuildingComponent *> &value)
 {
     buildings = value;
 }
+
+
 
 std::list<Soldier *> ImaginaWars::getSoldiers() const
 {
@@ -607,4 +622,23 @@ void ImaginaWars::mouseReleaseEvent(QMouseEvent *e)
 */
 }
 
+
+
+void ImaginaWars::win()
+{
+    qDebug() << "YOU WIN";
+
+    Sprite *s = new Sprite("win", QVector3D(), 0, QVector2D(1, 0.18));
+    s->createGeometry();
+    GameScene::getInstance()->addChild(s);
+}
+
+void ImaginaWars::lose()
+{
+    qDebug() << "YOU LOSE";
+
+    Sprite *s = new Sprite("lose", QVector3D(), 0, QVector2D(1, 0.18));
+    s->createGeometry();
+    GameScene::getInstance()->addChild(s);
+}
 

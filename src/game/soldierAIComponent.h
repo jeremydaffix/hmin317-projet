@@ -32,6 +32,8 @@ public:
 
     QSoundEffect qse; // pour pouvoir faire jouer le même qse par plusieurs soldats en même temps
 
+    void emitSoundBattle();
+
 };
 
 #endif // SOLDIERAICOMPONENT_H

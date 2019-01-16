@@ -34,7 +34,8 @@ SOURCES += \
     src/game/debugcomponent.cpp \
     src/game/lifecomponent.cpp \
     src/game/soldierAIComponent.cpp \
-    src/game/enemyAIComponent.cpp
+    src/game/enemyAIComponent.cpp \
+    src/game/lifeBuildingComponent.cpp
 
 SOURCES +=
 
@@ -65,7 +66,8 @@ HEADERS += \
     src/game/debugcomponent.h \
     src/game/lifecomponent.h \
     src/game/soldierAIComponent.h \
-    src/game/enemyAIComponent.h
+    src/game/enemyAIComponent.h \
+    src/game/lifeBuildingComponent.h
 
 RESOURCES += \
     textures.qrc \

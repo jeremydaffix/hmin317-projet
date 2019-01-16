@@ -21,6 +21,8 @@ BuildingComponent::BuildingComponent(BuildingComponent::TYPE_BUILDING t, int i, 
     //refreshTexture();
 
     ((ImaginaWars*)ImaginaWars::getInstance())->registerBuilding(this);
+
+
 }
 
 BuildingComponent::~BuildingComponent()
@@ -41,9 +43,25 @@ void BuildingComponent::fixedUpdate()
 
     sprite = (Sprite*)getContainer();
 
-    if(cptFrames % turnDuration == (turnDuration - 1)) // seulement toutes les x secondes : on génére une unité
+
+    // création du sprite et component pour la gestion de la vie
+    if(lifeSprite == NULL)
+    {
+        if(player->getNumPlayer() == 0) lifeSprite = new Sprite("lifered", QVector3D(0, 0, 0.1), 0, QVector2D(0.04, 0.007), sprite->getShader());
+        else lifeSprite = new Sprite("lifeorange", QVector3D(0, 0, 0.1), 0, QVector2D(0.04, 0.007), sprite->getShader());
+
+        lifeSprite->createGeometry();
+        lifeSprite->addComponent(new LifeBuildingComponent(this, sprite));
+
+        GameScene::getInstance()->addChild(lifeSprite);
+    }
+
+
+    if(cptFrames % turnDuration == (turnDuration - 1) && life > 0) // seulement toutes les x secondes : on génére une unité
     {
         //qDebug() << "GENERATE UNIT " << type << " - " << QString(player->getName().c_str());
+
+        //if(player->getNumPlayer() == 1) return; // pour cheater :o
 
         int decal = player->getNumPlayer() == 0 ? -0.8 : 1.5; // pour ne pas poper sur le bâtiment
         Soldier *soldier;
@@ -100,6 +118,8 @@ void BuildingComponent::fixedUpdate()
 
 void BuildingComponent::NextBuilding() // sélectionner le prochain type de bâtiment
 {
+    if(life <= 0) return;
+
     //type = (TYPE_BUILDING) ((type + 1) % TYPE_BUILDING_LENGTH);
     type = (TYPE_BUILDING) ((type + 1) % 3); // pour le moment on ne gère pas bâtiment technologique et tour de garde
 
@@ -136,6 +156,18 @@ void BuildingComponent::refreshTexture() // sélectionner et afficher la bonne t
     }
 }
 
+Sprite *BuildingComponent::getSprite() const
+{
+    return sprite;
+}
+
+
+
+GamePlayer *BuildingComponent::getPlayer() const
+{
+    return player;
+}
+
 int BuildingComponent::getLife() const
 {
     return life;
@@ -143,6 +175,37 @@ int BuildingComponent::getLife() const
 
 void BuildingComponent::setLife(int value)
 {
-    life = value;
+    if(life <= 0) return; // éviter de casser plusieurs fois
+
+    if (value <= 0)
+    {
+        life = 0;
+        kc();
+    }
+
+    else life = value;
+}
+
+
+void BuildingComponent::kc()
+{
+    qDebug() << "BUILDING DESTROYED";
+
+
+    ((ImaginaWars*)ImaginaWars::getInstance())->unregisterBuilding(this); // on doit supprimer de la liste AVANT de supprimer l'objet
+
+    sprite->setLocalRotation(QQuaternion::fromEulerAngles(QVector3D(0,0,180)));
+    sprite->setLocalPosition(sprite->getLocalPosition() + QVector3D(0,-0.3,-0.01));
+    sprite->setLocalScale(QVector3D(0.1,0.06,0.1));
+
+    ResourcesManager::getInstance()->getGameSound("boom")->play();
+
+
+    // condition de victoire = détruire un seul ou tous les bâtiments ?
+    // à voir ce qui est le plus intéressant pour le gameplay et la stratégie
+    // pour le moment : un seul, il faut donc défendre ses 2 bâtiments
+
+    if(!player->isHuman()) ((ImaginaWars*)Game::getInstance())->win();
+    else ((ImaginaWars*)Game::getInstance())->lose();
 }
 

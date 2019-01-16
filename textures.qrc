@@ -1438,5 +1438,7 @@
         <file>resources/textures/custom/lifered.png</file>
         <file>resources/textures/custom/targetorange1.png</file>
         <file>resources/textures/custom/targetorange2.png</file>
+        <file>resources/textures/custom/win.png</file>
+        <file>resources/textures/custom/lose.png</file>
     </qresource>
 </RCC>

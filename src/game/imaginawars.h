@@ -48,6 +48,9 @@ public:
     std::list<BuildingComponent *> getBuildings() const;
     void setBuildings(const std::list<BuildingComponent *> &value);
 
+    void win(); // image gagnant
+    void lose(); // image perdant
+
 protected:
 
     void initShaders() override;

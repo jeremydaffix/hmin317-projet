@@ -51,6 +51,8 @@ public:
     int getNumPlayer() const;
     void setNumPlayer(int value);
 
+    bool isHuman();
+
 protected:
 
     int numPlayer;

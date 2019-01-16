@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="64.882946"
-     inkscape:cy="756.59471"
+     inkscape:cx="177.0258"
+     inkscape:cy="469.45185"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -35,7 +35,9 @@
      inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -237,5 +239,31 @@
        style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:11.88822174;stroke-miterlimit:4;stroke-dasharray:95.10577563, 23.77644391000000113, 11.88822195000000015, 23.77644391000000113;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-xdpi="17.626236"
        inkscape:export-ydpi="17.626236" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60.26020432px;line-height:1.25;font-family:'Game Over';-inkscape-font-specification:'Game Over, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="14.322598"
+       y="218.52945"
+       id="text840"
+       inkscape:export-xdpi="244.82698"
+       inkscape:export-ydpi="244.82698"><tspan
+         sodipodi:role="line"
+         id="tspan838"
+         x="14.322598"
+         y="218.52945"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60.26020432px;font-family:'Game Over';-inkscape-font-specification:'Game Over, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00ff00;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">YOU WIN</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.80442047px;line-height:1.25;font-family:'Game Over';-inkscape-font-specification:'Game Over, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="20.714447"
+       y="249.80359"
+       id="text840-8"
+       inkscape:export-xdpi="249.86685"
+       inkscape:export-ydpi="249.86685"><tspan
+         sodipodi:role="line"
+         id="tspan838-6"
+         x="20.714447"
+         y="249.80359"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.80442047px;font-family:'Game Over';-inkscape-font-specification:'Game Over, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">EPIC FAIL</tspan></text>
   </g>
 </svg>

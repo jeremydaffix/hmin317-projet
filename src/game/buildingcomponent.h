@@ -5,6 +5,7 @@
 #include <game/gameplayer.h>
 //#include <game/imaginawars.h>
 //#include <game/soldier.h>
+#include <game/lifeBuildingComponent.h>
 
 // classe componsant pour les bâtiments
 // en fonction du type de bâtiment (knight, archer, fée) sélectionné,
@@ -39,6 +40,12 @@ public:
     int getLife() const;
     void setLife(int value);
 
+    GamePlayer *getPlayer() const;
+
+    Sprite *getSprite() const;
+
+    void kc(); // bâtiment tout cassé
+
 protected:
 
     void refreshTexture();
@@ -51,13 +58,16 @@ protected:
 
     int id;
 
-    GamePlayer *player;
-    GameMap *gameMap;
+    GamePlayer *player = NULL;
+    GameMap *gameMap = NULL;
 
     int life = 500;
 
 
     static int turnDuration; // x seconds per turn
+
+    Sprite *lifeSprite = NULL; // pour affichage vie bâtiment
+    LifeBuildingComponent *lifeBuildingComponent = NULL;
 };
 
 #endif // BUILDING_H

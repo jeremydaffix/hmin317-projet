@@ -18,6 +18,9 @@
 #include <iostream>
 
 
+// cette classe s'occupe de gérer les ressources
+// de différents types (sprites, sons,...)
+
 class ResourcesManager : public QObject
 {
 public:
@@ -28,11 +31,13 @@ public:
     virtual ~ResourcesManager();
 
 
+    // ajouter une ressource au dictionnaire de ressources, sous un nom
     void addGameShader(std::string name, QOpenGLShaderProgram* sh);
     void addGameTexture(std::string name, QOpenGLTexture* tex);
     //void addGameFont(std::string name, FT_Face* font);
     void addGameSound(std::string name, QSoundEffect * e);
 
+    // récupérer une ressource dans le dictionnaire de ressources, à partir de son nom
     QOpenGLShaderProgram* getGameShader(std::string name);
     QOpenGLTexture* getGameTexture(std::string name);
     //FT_Face * getGameFont(std::string name);

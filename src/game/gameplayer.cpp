@@ -92,3 +92,9 @@ void GamePlayer::setNumPlayer(int value)
 }
 
 
+bool GamePlayer::isHuman()
+{
+    return type == TYPE_HUMAN;
+}
+
+

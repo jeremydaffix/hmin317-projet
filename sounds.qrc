@@ -50,5 +50,6 @@
         <file>resources/sounds/rpg_sound_pack/RPG Sound Pack/battle/sword-unsheathe2_44.wav</file>
         <file>resources/sounds/qubodupImpactMetal.wav</file>
         <file>resources/sounds/ghost.wav</file>
+        <file>resources/sounds/rumble.wav</file>
     </qresource>
 </RCC>
